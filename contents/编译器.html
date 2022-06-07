@@ -1,0 +1,1321 @@
+<!DOCTYPE html>
+<html><head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<title>Zotero 报告</title>
+		<link rel="stylesheet" type="text/css" href="data:text/css;base64,Ym9keSB7CgliYWNrZ3JvdW5kOiB3aGl0ZTsKfQoKYSB7Cgl0ZXh0LWRlY29yYXRpb246IHVuZGVybGluZTsKfQoKYm9keSB7CglwYWRkaW5nOiAwOwp9Cgp1bC5yZXBvcnQgbGkuaXRlbSB7Cglib3JkZXItdG9wOiA0cHggc29saWQgIzU1NTsKCXBhZGRpbmctdG9wOiAxZW07CglwYWRkaW5nLWxlZnQ6IDFlbTsKCXBhZGRpbmctcmlnaHQ6IDFlbTsKCW1hcmdpbi1ib3R0b206IDJlbTsKfQoKaDEsIGgyLCBoMywgaDQsIGg1LCBoNiB7Cglmb250LXdlaWdodDogbm9ybWFsOwp9CgpoMiB7CgltYXJnaW46IDAgMCAuNWVtOwp9CgpoMi5wYXJlbnRJdGVtIHsKCWZvbnQtd2VpZ2h0OiBib2xkOwoJZm9udC1zaXplOiAxZW07CglwYWRkaW5nOiAwIDAgLjVlbTsKCWJvcmRlci1ib3R0b206IDFweCBzb2xpZCAjY2NjOwp9CgovKiBJZiBjb21iaW5pbmcgY2hpbGRyZW4sIGRpc3BsYXkgcGFyZW50IHNsaWdodGx5IGxhcmdlciAqLwp1bC5yZXBvcnQuY29tYmluZUNoaWxkSXRlbXMgaDIucGFyZW50SXRlbSB7Cglmb250LXNpemU6IDEuMWVtOwoJcGFkZGluZy1ib3R0b206IC43NWVtOwoJbWFyZ2luLWJvdHRvbTogLjRlbTsKfQoKaDIucGFyZW50SXRlbSAudGl0bGUgewoJZm9udC13ZWlnaHQ6IG5vcm1hbDsKfQoKaDMgewoJbWFyZ2luLWJvdHRvbTogLjZlbTsKCWZvbnQtd2VpZ2h0OiBib2xkICFpbXBvcnRhbnQ7Cglmb250LXNpemU6IDFlbTsKCWRpc3BsYXk6IGJsb2NrOwp9CgovKiBNZXRhZGF0YSB0YWJsZSAqLwp0aCB7Cgl2ZXJ0aWNhbC1hbGlnbjogdG9wOwoJdGV4dC1hbGlnbjogcmlnaHQ7Cgl3aWR0aDogMTUlOwoJd2hpdGUtc3BhY2U6IG5vd3JhcDsKfQoKdGQgewoJcGFkZGluZy1sZWZ0OiAuNWVtOwp9CgoKdWwucmVwb3J0LCB1bC5ub3RlcywgdWwudGFncyB7CglsaXN0LXN0eWxlOiBub25lOwoJbWFyZ2luLWxlZnQ6IDA7CglwYWRkaW5nLWxlZnQ6IDA7Cn0KCi8qIFRhZ3MgKi8KaDMudGFncyB7Cglmb250LXNpemU6IDEuMWVtOwp9Cgp1bC50YWdzIHsKCWxpbmUtaGVpZ2h0OiAxLjc1ZW07CglsaXN0LXN0eWxlOiBub25lOwp9Cgp1bC50YWdzIGxpIHsKCWRpc3BsYXk6IGlubGluZTsKfQoKdWwudGFncyBsaTpub3QoOmxhc3QtY2hpbGQpOmFmdGVyIHsKCWNvbnRlbnQ6ICcsICc7Cn0KCgovKiBDaGlsZCBub3RlcyAqLwpoMy5ub3RlcyB7Cglmb250LXNpemU6IDEuMWVtOwp9Cgp1bC5ub3RlcyB7CgltYXJnaW4tYm90dG9tOiAxLjJlbTsKfQoKdWwubm90ZXMgPiBsaTpmaXJzdC1jaGlsZCBwIHsKCW1hcmdpbi10b3A6IDA7Cn0KCnVsLm5vdGVzID4gbGkgewoJcGFkZGluZzogLjdlbSAwOwp9Cgp1bC5ub3RlcyA+IGxpOm5vdCg6bGFzdC1jaGlsZCkgewoJYm9yZGVyLWJvdHRvbTogMXB4ICNjY2Mgc29saWQ7Cn0KCgp1bC5ub3RlcyA+IGxpIHA6Zmlyc3QtY2hpbGQgewoJbWFyZ2luLXRvcDogMDsKfQoKdWwubm90ZXMgPiBsaSBwOmxhc3QtY2hpbGQgewoJbWFyZ2luLWJvdHRvbTogMDsKfQoKLyogQWRkIHF1b3RhdGlvbiBtYXJrcyBhcm91bmQgYmxvY2txdW90ZSAqLwp1bC5ub3RlcyA+IGxpIGJsb2NrcXVvdGUgcDpub3QoOmVtcHR5KTpiZWZvcmUsCmxpLm5vdGUgYmxvY2txdW90ZSBwOm5vdCg6ZW1wdHkpOmJlZm9yZSB7Cgljb250ZW50OiAn4oCcJzsKfQoKdWwubm90ZXMgPiBsaSBibG9ja3F1b3RlIHA6bm90KDplbXB0eSk6bGFzdC1jaGlsZDphZnRlciwKbGkubm90ZSBibG9ja3F1b3RlIHA6bm90KDplbXB0eSk6bGFzdC1jaGlsZDphZnRlciB7Cgljb250ZW50OiAn4oCdJzsKfQoKLyogUHJlc2VydmUgd2hpdGVzcGFjZSBvbiBwbGFpbnRleHQgbm90ZXMgKi8KdWwubm90ZXMgbGkgcC5wbGFpbnRleHQsIGxpLm5vdGUgcC5wbGFpbnRleHQsIGRpdi5ub3RlIHAucGxhaW50ZXh0IHsKCXdoaXRlLXNwYWNlOiBwcmUtd3JhcDsKfQoKLyogRGlzcGxheSB0YWdzIHdpdGhpbiBjaGlsZCBub3RlcyBpbmxpbmUgKi8KdWwubm90ZXMgaDMudGFncyB7CglkaXNwbGF5OiBpbmxpbmU7Cglmb250LXNpemU6IDFlbTsKfQoKdWwubm90ZXMgaDMudGFnczphZnRlciB7Cgljb250ZW50OiAnICc7Cn0KCnVsLm5vdGVzIHVsLnRhZ3MgewoJZGlzcGxheTogaW5saW5lOwp9Cgp1bC5ub3RlcyB1bC50YWdzIGxpOm5vdCg6bGFzdC1jaGlsZCk6YWZ0ZXIgewoJY29udGVudDogJywgJzsKfQoKCi8qIENoaWxkIGF0dGFjaG1lbnRzICovCmgzLmF0dGFjaG1lbnRzIHsKCWZvbnQtc2l6ZTogMS4xZW07Cn0KCnVsLmF0dGFjaG1lbnRzIGxpIHsKCXBhZGRpbmctdG9wOiAuNWVtOwp9Cgp1bC5hdHRhY2htZW50cyBkaXYubm90ZSB7CgltYXJnaW4tbGVmdDogMmVtOwp9Cgp1bC5hdHRhY2htZW50cyBkaXYubm90ZSBwOmZpcnN0LWNoaWxkIHsKCW1hcmdpbi10b3A6IC43NWVtOwp9CgpkaXYgdGFibGUgewoJYm9yZGVyLWNvbGxhcHNlOiBjb2xsYXBzZTsKfQoKZGl2IHRhYmxlIHRkLCBkaXYgdGFibGUgdGggewoJYm9yZGVyOiAxcHggI2NjYyBzb2xpZDsKCWJvcmRlci1jb2xsYXBzZTogY29sbGFwc2U7Cgl3b3JkLWJyZWFrOiBicmVhay1hbGw7Cn0KCmRpdiB0YWJsZSB0ZCBwOmVtcHR5OjphZnRlciwgZGl2IHRhYmxlIHRoIHA6ZW1wdHk6OmFmdGVyIHsKCWNvbnRlbnQ6ICJcMDBhMCI7Cn0KCmRpdiB0YWJsZSB0ZCAqOmZpcnN0LWNoaWxkLCBkaXYgdGFibGUgdGggKjpmaXJzdC1jaGlsZCB7CgltYXJnaW4tdG9wOiAwOwp9CgpkaXYgdGFibGUgdGQgKjpsYXN0LWNoaWxkLCBkaXYgdGFibGUgdGggKjpsYXN0LWNoaWxkIHsKCW1hcmdpbi1ib3R0b206IDA7Cn0K">
+		<link rel="stylesheet" type="text/css" media="screen,projection" href="data:text/css;base64,LyogR2VuZXJpYyBzdHlsZXMgKi8KYm9keSB7Cglmb250OiA2Mi41JSBHZW9yZ2lhLCBUaW1lcywgc2VyaWY7Cgl3aWR0aDogNzgwcHg7CgltYXJnaW46IDAgYXV0bzsKfQoKaDIgewoJZm9udC1zaXplOiAxLjVlbTsKCWxpbmUtaGVpZ2h0OiAxLjVlbTsKCWZvbnQtZmFtaWx5OiBHZW9yZ2lhLCBUaW1lcywgc2VyaWY7Cn0KCnAgewoJbGluZS1oZWlnaHQ6IDEuNWVtOwp9CgphOmxpbmssIGE6dmlzaXRlZCB7Cgljb2xvcjogIzkwMDsKfQoKYTpob3ZlciwgYTphY3RpdmUgewoJY29sb3I6ICM3Nzc7Cn0KCgp1bC5yZXBvcnQgewoJZm9udC1zaXplOiAxLjRlbTsKCXdpZHRoOiA2ODBweDsKCW1hcmdpbjogMCBhdXRvOwoJcGFkZGluZzogMjBweCAyMHB4Owp9CgovKiBNZXRhZGF0YSB0YWJsZSAqLwp0YWJsZSB7Cglib3JkZXI6IDFweCAjY2NjIHNvbGlkOwoJb3ZlcmZsb3c6IGF1dG87Cgl3aWR0aDogMTAwJTsKCW1hcmdpbjogLjFlbSBhdXRvIC43NWVtOwoJcGFkZGluZzogMC41ZW07Cn0K">
+		<link rel="stylesheet" type="text/css" media="print" href="data:text/css;base64,Ym9keSB7Cglmb250OiAxMnB0ICJUaW1lcyBOZXcgUm9tYW4iLCBUaW1lcywgR2VvcmdpYSwgc2VyaWY7CgltYXJnaW46IDA7Cgl3aWR0aDogYXV0bzsKCWNvbG9yOiBibGFjazsKfQoKLyogUGFnZSBCcmVha3MgKHBhZ2UtYnJlYWstaW5zaWRlIG9ubHkgcmVjb2duaXplZCBieSBPcGVyYSkgKi8KaDEsIGgyLCBoMywgaDQsIGg1LCBoNiB7CglwYWdlLWJyZWFrLWFmdGVyOiBhdm9pZDsKCXBhZ2UtYnJlYWstaW5zaWRlOiBhdm9pZDsKfQoKdWwsIG9sLCBkbCB7CglwYWdlLWJyZWFrLWluc2lkZTogYXZvaWQ7Cgljb2xvci1hZGp1c3Q6IGV4YWN0Owp9CgpoMiB7Cglmb250LXNpemU6IDEuM2VtOwoJbGluZS1oZWlnaHQ6IDEuM2VtOwp9CgphIHsKCWNvbG9yOiAjMDAwOwoJdGV4dC1kZWNvcmF0aW9uOiBub25lOwp9Cg==">
+	</head>
+	<body>
+		<ul class="report combineChildItems">
+			<li id="item_NS3FXF9M" class="item journalArticle">
+			<h2>TVM: An Automated End-to-End Optimizing Compiler for Deep Learning</h2>
+				<table>
+					<tbody><tr>
+						<th>类型</th>
+						<td>期刊文章</td>
+					</tr>
+					<tr>
+						<th class="author">作者</th>
+						<td>Tianqi Chen</td>
+					</tr>
+					<tr>
+						<th class="author">作者</th>
+						<td>Thierry Moreau</td>
+					</tr>
+					<tr>
+						<th class="author">作者</th>
+						<td>Ziheng Jiang</td>
+					</tr>
+					<tr>
+						<th class="author">作者</th>
+						<td>Lianmin Zheng</td>
+					</tr>
+					<tr>
+						<th class="author">作者</th>
+						<td>Eddie Yan</td>
+					</tr>
+					<tr>
+						<th class="author">作者</th>
+						<td>Meghan Cowan</td>
+					</tr>
+					<tr>
+						<th class="author">作者</th>
+						<td>Haichen Shen</td>
+					</tr>
+					<tr>
+						<th class="author">作者</th>
+						<td>Leyuan Wang</td>
+					</tr>
+					<tr>
+						<th class="author">作者</th>
+						<td>Yuwei Hu</td>
+					</tr>
+					<tr>
+						<th class="author">作者</th>
+						<td>Luis Ceze</td>
+					</tr>
+					<tr>
+						<th class="author">作者</th>
+						<td>Carlos Guestrin</td>
+					</tr>
+					<tr>
+						<th class="author">作者</th>
+						<td>Arvind Krishnamurthy</td>
+					</tr>
+					<tr>
+					<th>摘要</th>
+						<td>Scalable frameworks, such as TensorFlow, MXNet, Caffe, and 
+PyTorch drive the current popularity and utility of deep learning. 
+However, these frameworks are optimized for a narrow range of 
+server-class GPUs and deploying workloads to other platforms such as 
+mobile phones, embedded devices, and specialized accelerators (e.g., 
+FPGAs, ASICs) requires laborious manual effort. We propose TVM, an 
+end-to-end optimization stack that exposes graph-level and 
+operator-level optimizations to provide performance portability to deep 
+learning workloads across diverse hardware back-ends. We discuss the 
+optimization challenges speciﬁc to deep learning that TVM solves: 
+high-level operator fusion, low-level memory reuse across threads, 
+mapping to arbitrary hardware primitives, and memory latency hiding. 
+Experimental results demonstrate that TVM delivers performance across 
+hardware back-ends that is competitive with state-of-theart libraries 
+for low-power CPU and server-class GPUs. We also demonstrate TVM’s 
+ability to target new hardware accelerator back-ends by targeting an 
+FPGA-based generic deep learning accelerator. The compiler 
+infrastructure is open sourced.</td>
+					</tr>
+					<tr>
+					<th>日期</th>
+						<td>2018-10-05</td>
+					</tr>
+					<tr>
+					<th>语言</th>
+						<td>en</td>
+					</tr>
+					<tr>
+					<th>短标题</th>
+						<td>TVM</td>
+					</tr>
+					<tr>
+					<th>馆藏目录</th>
+						<td>arXiv.org</td>
+					</tr>
+					<tr>
+					<th>URL</th>
+						<td><a href="http://arxiv.org/abs/1802.04799">http://arxiv.org/abs/1802.04799</a></td>
+					</tr>
+					<tr>
+					<th>访问时间</th>
+						<td>2021/10/11 下午7:01:40</td>
+					</tr>
+					<tr>
+					<th>其它</th>
+						<td>arXiv: 1802.04799</td>
+					</tr>
+					<tr>
+					<th>期刊</th>
+						<td>arXiv:1802.04799 [cs]</td>
+					</tr>
+					<tr>
+					<th>添加日期</th>
+						<td>2021/10/11 下午7:01:40</td>
+					</tr>
+					<tr>
+					<th>修改日期</th>
+						<td>2021/10/11 下午7:01:40</td>
+					</tr>
+				</tbody></table>
+				<h3 class="tags">标签：</h3>
+				<ul class="tags">
+					<li>Computer Science - Artificial Intelligence</li>
+					<li>Computer Science - Machine Learning</li>
+					<li>Computer Science - Programming Languages</li>
+				</ul>
+				<h3 class="notes">笔记：</h3>
+				<ul class="notes">
+					<li id="item_JWPQHGHT">
+<p class="plaintext">Comment: Significantly improved version, add automated optimization</p>
+					</li>
+				</ul>
+				<h3 class="attachments">附件</h3>
+				<ul class="attachments">
+					<li id="item_QE5KPHRU">Chen 等。 - 2018 - TVM An Automated End-to-End Optimizing Compiler f.pdf					</li>
+				</ul>
+			</li>
+
+
+			<li id="item_QBABD3YF" class="item journalArticle">
+			<h2>The Deep Learning Compiler: A Comprehensive Survey</h2>
+				<table>
+					<tbody><tr>
+						<th>类型</th>
+						<td>期刊文章</td>
+					</tr>
+					<tr>
+						<th class="author">作者</th>
+						<td>Mingzhen Li</td>
+					</tr>
+					<tr>
+						<th class="author">作者</th>
+						<td>Yi Liu</td>
+					</tr>
+					<tr>
+						<th class="author">作者</th>
+						<td>Xiaoyan Liu</td>
+					</tr>
+					<tr>
+						<th class="author">作者</th>
+						<td>Qingxiao Sun</td>
+					</tr>
+					<tr>
+						<th class="author">作者</th>
+						<td>Xin You</td>
+					</tr>
+					<tr>
+						<th class="author">作者</th>
+						<td>Hailong Yang</td>
+					</tr>
+					<tr>
+						<th class="author">作者</th>
+						<td>Zhongzhi Luan</td>
+					</tr>
+					<tr>
+						<th class="author">作者</th>
+						<td>Lin Gan</td>
+					</tr>
+					<tr>
+						<th class="author">作者</th>
+						<td>Guangwen Yang</td>
+					</tr>
+					<tr>
+						<th class="author">作者</th>
+						<td>Depei Qian</td>
+					</tr>
+					<tr>
+					<th>摘要</th>
+						<td>The difﬁculty of deploying various deep learning (DL) models 
+on diverse DL hardware has boosted the research and development of DL 
+compilers in the community. Several DL compilers have been proposed from
+ both industry and academia such as Tensorﬂow XLA and TVM. Similarly, 
+the DL compilers take the DL models described in different DL frameworks
+ as input, and then generate optimized codes for diverse DL hardware as 
+output. However, none of the existing survey has analyzed the unique 
+design architecture of the DL compilers comprehensively. In this 
+article, we perform a comprehensive survey of existing DL compilers by 
+dissecting the commonly adopted design in details, with emphasis on the 
+DL oriented multi-level IRs, and frontend/backend optimizations. We 
+present detailed analysis on the design of multi-level IRs and 
+illustrate the commonly adopted optimization techniques. Finally, 
+several insights are highlighted as the potential research directions of
+ DL compiler. This is the ﬁrst survey article focusing on the design 
+architecture of DL compilers, which we hope can pave the road for future
+ research towards DL compiler.</td>
+					</tr>
+					<tr>
+					<th>日期</th>
+						<td>2021-3-1</td>
+					</tr>
+					<tr>
+					<th>语言</th>
+						<td>en</td>
+					</tr>
+					<tr>
+					<th>短标题</th>
+						<td>The Deep Learning Compiler</td>
+					</tr>
+					<tr>
+					<th>馆藏目录</th>
+						<td>DOI.org (Crossref)</td>
+					</tr>
+					<tr>
+					<th>URL</th>
+						<td><a href="https://ieeexplore.ieee.org/document/9222299/">https://ieeexplore.ieee.org/document/9222299/</a></td>
+					</tr>
+					<tr>
+					<th>访问时间</th>
+						<td>2021/10/11 下午7:01:12</td>
+					</tr>
+					<tr>
+					<th>卷</th>
+						<td>32</td>
+					</tr>
+					<tr>
+					<th>页码</th>
+						<td>708-727</td>
+					</tr>
+					<tr>
+					<th>期刊</th>
+						<td>IEEE Transactions on Parallel and Distributed Systems</td>
+					</tr>
+					<tr>
+					<th>DOI</th>
+						<td><a href="http://doi.org/10.1109/TPDS.2020.3030548">10.1109/TPDS.2020.3030548</a></td>
+					</tr>
+					<tr>
+					<th>期</th>
+						<td>3</td>
+					</tr>
+					<tr>
+					<th>刊名缩写</th>
+						<td>IEEE Trans. Parallel Distrib. Syst.</td>
+					</tr>
+					<tr>
+					<th>ISSN</th>
+						<td>1045-9219, 1558-2183, 2161-9883</td>
+					</tr>
+					<tr>
+					<th>添加日期</th>
+						<td>2021/10/11 下午7:01:12</td>
+					</tr>
+					<tr>
+					<th>修改日期</th>
+						<td>2021/10/11 下午7:01:12</td>
+					</tr>
+				</tbody></table>
+				<h3 class="attachments">附件</h3>
+				<ul class="attachments">
+					<li id="item_QQFHNGT8">Li 等。 - 2021 - The Deep Learning Compiler A Comprehensive Survey.pdf					</li>
+				</ul>
+			</li>
+
+
+			<li id="item_IRZPZ4M3" class="item journalArticle">
+			<h2>Relay: A High-Level Compiler for Deep Learning</h2>
+				<table>
+					<tbody><tr>
+						<th>类型</th>
+						<td>期刊文章</td>
+					</tr>
+					<tr>
+						<th class="author">作者</th>
+						<td>Jared Roesch</td>
+					</tr>
+					<tr>
+						<th class="author">作者</th>
+						<td>Steven Lyubomirsky</td>
+					</tr>
+					<tr>
+						<th class="author">作者</th>
+						<td>Marisa Kirisame</td>
+					</tr>
+					<tr>
+						<th class="author">作者</th>
+						<td>Logan Weber</td>
+					</tr>
+					<tr>
+						<th class="author">作者</th>
+						<td>Josh Pollock</td>
+					</tr>
+					<tr>
+						<th class="author">作者</th>
+						<td>Luis Vega</td>
+					</tr>
+					<tr>
+						<th class="author">作者</th>
+						<td>Ziheng Jiang</td>
+					</tr>
+					<tr>
+						<th class="author">作者</th>
+						<td>Tianqi Chen</td>
+					</tr>
+					<tr>
+						<th class="author">作者</th>
+						<td>Thierry Moreau</td>
+					</tr>
+					<tr>
+						<th class="author">作者</th>
+						<td>Zachary Tatlock</td>
+					</tr>
+					<tr>
+					<th>摘要</th>
+						<td>Frameworks for writing, compiling, and optimizing deep 
+learning (DL) models have recently enabled progress in areas like 
+computer vision and natural language processing. Extending these 
+frameworks to accommodate the rapidly diversifying landscape of DL 
+models and hardware platforms presents challenging tradeoffs between 
+expressivity, composability, and portability. We present Relay, a new 
+compiler framework for DL. Relay’s functional, statically typed 
+intermediate representation (IR) uniﬁes and generalizes existing DL IRs 
+to express state-of-the-art models. The introduction of Relay’s 
+expressive IR requires careful design of domain-speciﬁc optimizations, 
+addressed via Relay’s extension mechanisms. Using these extension 
+mechanisms, Relay supports a uniﬁed compiler that can target a variety 
+of hardware platforms. Our evaluation demonstrates Relay’s competitive 
+performance for a broad class of models and devices (CPUs, GPUs, and 
+emerging accelerators). Relay’s design demonstrates how a uniﬁed IR can 
+provide expressivity, composability, and portability without 
+compromising performance.</td>
+					</tr>
+					<tr>
+					<th>日期</th>
+						<td>2019-08-24</td>
+					</tr>
+					<tr>
+					<th>语言</th>
+						<td>en</td>
+					</tr>
+					<tr>
+					<th>短标题</th>
+						<td>Relay</td>
+					</tr>
+					<tr>
+					<th>馆藏目录</th>
+						<td>arXiv.org</td>
+					</tr>
+					<tr>
+					<th>URL</th>
+						<td><a href="http://arxiv.org/abs/1904.08368">http://arxiv.org/abs/1904.08368</a></td>
+					</tr>
+					<tr>
+					<th>访问时间</th>
+						<td>2021/10/11 下午7:00:09</td>
+					</tr>
+					<tr>
+					<th>其它</th>
+						<td>arXiv: 1904.08368</td>
+					</tr>
+					<tr>
+					<th>期刊</th>
+						<td>arXiv:1904.08368 [cs, stat]</td>
+					</tr>
+					<tr>
+					<th>添加日期</th>
+						<td>2021/10/11 下午7:00:09</td>
+					</tr>
+					<tr>
+					<th>修改日期</th>
+						<td>2021/10/11 下午7:00:09</td>
+					</tr>
+				</tbody></table>
+				<h3 class="tags">标签：</h3>
+				<ul class="tags">
+					<li>Computer Science - Machine Learning</li>
+					<li>Statistics - Machine Learning</li>
+					<li>Computer Science - Programming Languages</li>
+				</ul>
+				<h3 class="attachments">附件</h3>
+				<ul class="attachments">
+					<li id="item_876D2VBL">Roesch 等。 - 2019 - Relay A High-Level Compiler for Deep Learning.pdf					</li>
+				</ul>
+			</li>
+
+
+			<li id="item_ILEBKZJR" class="item conferencePaper">
+			<h2>Optimizing the Memory Hierarchy by Compositing Automatic Transformations on Computations and Data</h2>
+				<table>
+					<tbody><tr>
+						<th>类型</th>
+						<td>会议论文</td>
+					</tr>
+					<tr>
+						<th class="author">作者</th>
+						<td>Jie Zhao</td>
+					</tr>
+					<tr>
+						<th class="author">作者</th>
+						<td>Peng Di</td>
+					</tr>
+					<tr>
+					<th>摘要</th>
+						<td>Optimizing compilers exploit the memory hierarchy using loop 
+tiling and fusion, but these two transformations usually interfere with 
+each other due to the oversight of transformations on data in memories. 
+We present a novel composition of loop tiling and fusion in this paper. 
+Unlike existing tiling-afterfusion algorithms that only transform 
+computation spaces, our approach ﬁrst applies rectangular/parallelogram 
+tiling to live-out computation spaces for ﬁtting the memory hierarchy, 
+followed by the computation of the memory footprints required by each 
+tile. The upwards exposed data extracted from the memory footprints are 
+used to determine the tile shapes of intermediate computation spaces, 
+allowing the construction of arbitrary tile shapes. Finally, our 
+technique implements a post-tiling fusion strategy for maximizing data 
+locality without losing tilability or parallelism of live-out 
+computation spaces, thereby enabling storage reduction and reuse, and 
+optimizing the memory hierarchy. We demonstrate that our approach can 
+achieve superior performance on both CPU and GPU architectures over the 
+state of the art by experimenting on 11 benchmarks extracted from 
+numerous domains including neural networks, image processing, sparse 
+matrix computation and linear algebra. Also, the results of the 
+ResNet-50 model on an AI accelerator show that our approach can obtain 
+16% performance improvement.</td>
+					</tr>
+					<tr>
+					<th>日期</th>
+						<td>10/2020</td>
+					</tr>
+					<tr>
+					<th>语言</th>
+						<td>en</td>
+					</tr>
+					<tr>
+					<th>馆藏目录</th>
+						<td>DOI.org (Crossref)</td>
+					</tr>
+					<tr>
+					<th>URL</th>
+						<td><a href="https://ieeexplore.ieee.org/document/9251965/">https://ieeexplore.ieee.org/document/9251965/</a></td>
+					</tr>
+					<tr>
+					<th>访问时间</th>
+						<td>2022/5/26 下午7:10:59</td>
+					</tr>
+					<tr>
+					<th>地点</th>
+						<td>Athens, Greece</td>
+					</tr>
+					<tr>
+					<th>出版社</th>
+						<td>IEEE</td>
+					</tr>
+					<tr>
+					<th>ISBN</th>
+						<td>978-1-72817-383-2</td>
+					</tr>
+					<tr>
+					<th>页码</th>
+						<td>427-441</td>
+					</tr>
+					<tr>
+					<th>投递标题</th>
+						<td>2020 53rd Annual IEEE/ACM International Symposium on Microarchitecture (MICRO)</td>
+					</tr>
+					<tr>
+					<th>学术会议名称</th>
+						<td>2020 53rd Annual IEEE/ACM International Symposium on Microarchitecture (MICRO)</td>
+					</tr>
+					<tr>
+					<th>DOI</th>
+						<td><a href="http://doi.org/10.1109/MICRO50266.2020.00044">10.1109/MICRO50266.2020.00044</a></td>
+					</tr>
+					<tr>
+					<th>添加日期</th>
+						<td>2022/5/26 下午7:10:59</td>
+					</tr>
+					<tr>
+					<th>修改日期</th>
+						<td>2022/5/26 下午7:11:00</td>
+					</tr>
+				</tbody></table>
+				<h3 class="attachments">附件</h3>
+				<ul class="attachments">
+					<li id="item_QWH8PADU">Zhao 和 Di - 2020 - Optimizing the Memory Hierarchy by Compositing Aut.pdf					</li>
+				</ul>
+			</li>
+
+
+			<li id="item_MELFHXXG" class="item journalArticle">
+			<h2>Learning to Optimize Tensor Programs</h2>
+				<table>
+					<tbody><tr>
+						<th>类型</th>
+						<td>期刊文章</td>
+					</tr>
+					<tr>
+						<th class="author">作者</th>
+						<td>Tianqi Chen</td>
+					</tr>
+					<tr>
+						<th class="author">作者</th>
+						<td>Lianmin Zheng</td>
+					</tr>
+					<tr>
+						<th class="author">作者</th>
+						<td>Eddie Yan</td>
+					</tr>
+					<tr>
+						<th class="author">作者</th>
+						<td>Ziheng Jiang</td>
+					</tr>
+					<tr>
+						<th class="author">作者</th>
+						<td>Thierry Moreau</td>
+					</tr>
+					<tr>
+						<th class="author">作者</th>
+						<td>Luis Ceze</td>
+					</tr>
+					<tr>
+						<th class="author">作者</th>
+						<td>Carlos Guestrin</td>
+					</tr>
+					<tr>
+						<th class="author">作者</th>
+						<td>Arvind Krishnamurthy</td>
+					</tr>
+					<tr>
+					<th>摘要</th>
+						<td>We introduce a learning-based framework to optimize tensor 
+programs for deep learning workloads. Efﬁcient implementations of tensor
+ operators, such as matrix multiplication and high dimensional 
+convolution, are key enablers of effective deep learning systems. 
+However, current systems rely on manually optimized libraries, e.g., 
+cuDNN, that support only a narrow range of server class GPUs. Such 
+reliance limits the applicability of high-level graph optimizations and 
+incurs signiﬁcant engineering costs when deploying to new hardware 
+targets. We use learning to remove this engineering burden. We learn 
+domain-speciﬁc statistical cost models to guide the search of tensor 
+operator implementations over billions of possible program variants. We 
+further accelerate the search using effective model transfer across 
+workloads. Experimental results show that our framework delivers 
+performance that is competitive with state-of-the-art hand-tuned 
+libraries for low-power CPUs, mobile GPUs, and server-class GPUs.</td>
+					</tr>
+					<tr>
+					<th>日期</th>
+						<td>2019-01-08</td>
+					</tr>
+					<tr>
+					<th>语言</th>
+						<td>en</td>
+					</tr>
+					<tr>
+					<th>馆藏目录</th>
+						<td>arXiv.org</td>
+					</tr>
+					<tr>
+					<th>URL</th>
+						<td><a href="http://arxiv.org/abs/1805.08166">http://arxiv.org/abs/1805.08166</a></td>
+					</tr>
+					<tr>
+					<th>访问时间</th>
+						<td>2021/10/11 下午7:00:05</td>
+					</tr>
+					<tr>
+					<th>其它</th>
+						<td>arXiv: 1805.08166</td>
+					</tr>
+					<tr>
+					<th>期刊</th>
+						<td>arXiv:1805.08166 [cs, stat]</td>
+					</tr>
+					<tr>
+					<th>添加日期</th>
+						<td>2021/10/11 下午7:00:05</td>
+					</tr>
+					<tr>
+					<th>修改日期</th>
+						<td>2021/10/11 下午7:00:05</td>
+					</tr>
+				</tbody></table>
+				<h3 class="tags">标签：</h3>
+				<ul class="tags">
+					<li>Computer Science - Machine Learning</li>
+					<li>Statistics - Machine Learning</li>
+				</ul>
+				<h3 class="notes">笔记：</h3>
+				<ul class="notes">
+					<li id="item_SDHUNCLH">
+<p class="plaintext">Comment: NeurIPS 2018</p>
+					</li>
+				</ul>
+				<h3 class="attachments">附件</h3>
+				<ul class="attachments">
+					<li id="item_FENSF7AD">Chen 等。 - 2019 - Learning to Optimize Tensor Programs.pdf					</li>
+				</ul>
+			</li>
+
+
+			<li id="item_PMDM4HHM" class="item attachment">
+			<h2>JeffDean.pdf</h2>
+				<table>
+					<tbody><tr>
+						<th>类型</th>
+						<td>附件</td>
+					</tr>
+					<tr>
+					<th>添加日期</th>
+						<td>2021/10/11 下午6:58:42</td>
+					</tr>
+					<tr>
+					<th>修改日期</th>
+						<td>2021/10/11 下午6:58:42</td>
+					</tr>
+				</tbody></table>
+			</li>
+
+
+			<li id="item_4RGCUSZI" class="item journalArticle">
+			<h2>FusionStitching: Deep Fusion and Code Generation for Tensorflow Computations on GPUs</h2>
+				<table>
+					<tbody><tr>
+						<th>类型</th>
+						<td>期刊文章</td>
+					</tr>
+					<tr>
+						<th class="author">作者</th>
+						<td>Guoping Long</td>
+					</tr>
+					<tr>
+						<th class="author">作者</th>
+						<td>Jun Yang</td>
+					</tr>
+					<tr>
+						<th class="author">作者</th>
+						<td>Kai Zhu</td>
+					</tr>
+					<tr>
+						<th class="author">作者</th>
+						<td>Wei Lin</td>
+					</tr>
+					<tr>
+					<th>摘要</th>
+						<td>In recent years, there is a surge on machine learning 
+applications in industry. Many of them are based on popular AI 
+frameworks like Tensorﬂow, Torch, Caffe, or MxNet, etc,and are enpowered
+ by accelerator platforms such as GPUs. One important challenge of 
+running Tensorﬂow computations on GPUs is the ﬁne granularity problem, 
+namely, FLOPS of individual ops are far from enough to fully exploit the
+ computing power of underlying accelerators. The XLA framework provides a
+ solid foundation to explore this problem further. In this paper, we 
+propose FusionStitching, a novel, comprehensive Op fusion and code 
+generation system to stitch computations into large GPU kernels. 
+Experimental results on four public models and two of our large inhouse 
+applications show another 55% (geometric mean) reduction of GPU kernel 
+launches, compared to the XLA fusion baseline. This increases the E2E 
+performance of both of our latency critical inhouse applications up to 
+20%.</td>
+					</tr>
+					<tr>
+					<th>日期</th>
+						<td>2018-11-13</td>
+					</tr>
+					<tr>
+					<th>语言</th>
+						<td>en</td>
+					</tr>
+					<tr>
+					<th>短标题</th>
+						<td>FusionStitching</td>
+					</tr>
+					<tr>
+					<th>馆藏目录</th>
+						<td>arXiv.org</td>
+					</tr>
+					<tr>
+					<th>URL</th>
+						<td><a href="http://arxiv.org/abs/1811.05213">http://arxiv.org/abs/1811.05213</a></td>
+					</tr>
+					<tr>
+					<th>访问时间</th>
+						<td>2021/10/11 下午6:59:58</td>
+					</tr>
+					<tr>
+					<th>其它</th>
+						<td>arXiv: 1811.05213</td>
+					</tr>
+					<tr>
+					<th>期刊</th>
+						<td>arXiv:1811.05213 [cs]</td>
+					</tr>
+					<tr>
+					<th>添加日期</th>
+						<td>2021/10/11 下午6:59:58</td>
+					</tr>
+					<tr>
+					<th>修改日期</th>
+						<td>2021/10/11 下午6:59:58</td>
+					</tr>
+				</tbody></table>
+				<h3 class="tags">标签：</h3>
+				<ul class="tags">
+					<li>Computer Science - Distributed, Parallel, and Cluster Computing</li>
+					<li>Computer Science - Mathematical Software</li>
+				</ul>
+				<h3 class="notes">笔记：</h3>
+				<ul class="notes">
+					<li id="item_XRRD9FA4">
+<p class="plaintext">Comment: 11 pages, 8 figures</p>
+					</li>
+				</ul>
+				<h3 class="attachments">附件</h3>
+				<ul class="attachments">
+					<li id="item_UDIFSL6I">Long 等。 - 2018 - FusionStitching Deep Fusion and Code Generation f.pdf					</li>
+				</ul>
+			</li>
+
+
+			<li id="item_KYENBGVD" class="item conferencePaper">
+			<h2>DistIR: An Intermediate Representation for Optimizing Distributed Neural Networks</h2>
+				<table>
+					<tbody><tr>
+						<th>类型</th>
+						<td>会议论文</td>
+					</tr>
+					<tr>
+						<th class="author">作者</th>
+						<td>Keshav Santhanam</td>
+					</tr>
+					<tr>
+						<th class="author">作者</th>
+						<td>Siddharth Krishna</td>
+					</tr>
+					<tr>
+						<th class="author">作者</th>
+						<td>Ryota Tomioka</td>
+					</tr>
+					<tr>
+						<th class="author">作者</th>
+						<td>Andrew Fitzgibbon</td>
+					</tr>
+					<tr>
+						<th class="author">作者</th>
+						<td>Tim Harris</td>
+					</tr>
+					<tr>
+					<th>日期</th>
+						<td>2021-04-26</td>
+					</tr>
+					<tr>
+					<th>语言</th>
+						<td>en</td>
+					</tr>
+					<tr>
+					<th>短标题</th>
+						<td>DistIR</td>
+					</tr>
+					<tr>
+					<th>馆藏目录</th>
+						<td>DOI.org (Crossref)</td>
+					</tr>
+					<tr>
+					<th>URL</th>
+						<td><a href="https://dl.acm.org/doi/10.1145/3437984.3458829">https://dl.acm.org/doi/10.1145/3437984.3458829</a></td>
+					</tr>
+					<tr>
+					<th>访问时间</th>
+						<td>2022/3/28 下午11:59:26</td>
+					</tr>
+					<tr>
+					<th>地点</th>
+						<td>Online United Kingdom</td>
+					</tr>
+					<tr>
+					<th>出版社</th>
+						<td>ACM</td>
+					</tr>
+					<tr>
+					<th>ISBN</th>
+						<td>978-1-4503-8298-4</td>
+					</tr>
+					<tr>
+					<th>页码</th>
+						<td>15-23</td>
+					</tr>
+					<tr>
+					<th>投递标题</th>
+						<td>Proceedings of the 1st Workshop on Machine Learning and Systems</td>
+					</tr>
+					<tr>
+					<th>学术会议名称</th>
+						<td>EuroSys '21: Sixteenth European Conference on Computer Systems</td>
+					</tr>
+					<tr>
+					<th>DOI</th>
+						<td><a href="http://doi.org/10.1145/3437984.3458829">10.1145/3437984.3458829</a></td>
+					</tr>
+					<tr>
+					<th>添加日期</th>
+						<td>2022/3/28 下午11:59:26</td>
+					</tr>
+					<tr>
+					<th>修改日期</th>
+						<td>2022/3/28 下午11:59:26</td>
+					</tr>
+				</tbody></table>
+				<h3 class="attachments">附件</h3>
+				<ul class="attachments">
+					<li id="item_BC9BWBRE">Santhanam 等。 - 2021 - DistIR An Intermediate Representation for Optimiz.pdf					</li>
+				</ul>
+			</li>
+
+
+			<li id="item_2QRM785C" class="item conferencePaper">
+			<h2>DISC: A Dynamic Shape Compiler for Machine Learning Workloads</h2>
+				<table>
+					<tbody><tr>
+						<th>类型</th>
+						<td>会议论文</td>
+					</tr>
+					<tr>
+						<th class="author">作者</th>
+						<td>K. Zhu</td>
+					</tr>
+					<tr>
+						<th class="author">作者</th>
+						<td>W.Y. Zhao</td>
+					</tr>
+					<tr>
+						<th class="author">作者</th>
+						<td>Z. Zheng</td>
+					</tr>
+					<tr>
+						<th class="author">作者</th>
+						<td>T.Y. Guo</td>
+					</tr>
+					<tr>
+						<th class="author">作者</th>
+						<td>P.Z. Zhao</td>
+					</tr>
+					<tr>
+						<th class="author">作者</th>
+						<td>J.J. Bai</td>
+					</tr>
+					<tr>
+						<th class="author">作者</th>
+						<td>J. Yang</td>
+					</tr>
+					<tr>
+						<th class="author">作者</th>
+						<td>X.Y. Liu</td>
+					</tr>
+					<tr>
+						<th class="author">作者</th>
+						<td>L.S. Diao</td>
+					</tr>
+					<tr>
+						<th class="author">作者</th>
+						<td>W. Lin</td>
+					</tr>
+					<tr>
+					<th>摘要</th>
+						<td>Many recent machine learning models show dynamic shape 
+characteristics. However, existing AI compiler optimization systems 
+suffer a lot from problems brought by dynamic shape models, including 
+compilation overhead, memory usage, optimization pipeline and deployment
+ complexity. This paper provides a compiler system to natively support 
+optimization for dynamic shape workloads, named DISC . DISC enriches a 
+set of IR to form a fully dynamic shape representation. It generates the
+ runtime flow at compile time to support processing dynamic shape based 
+logic, which avoids the interpretation overhead at runtime and enlarges 
+the opportunity of host-device co-optimization. It addresses the kernel 
+fusion problem of dynamic shapes with shape propagation and constraints 
+collecting methods. This is the first work to demonstrate how to build 
+an end-to-end dynamic shape compiler based on MLIR infrastructure. 
+Experiments show that DISC achieves up to 3.3× speedup than 
+TensorFlow/PyTorch, and 1.8× than Nimble.</td>
+					</tr>
+					<tr>
+					<th>日期</th>
+						<td>2021-04-26</td>
+					</tr>
+					<tr>
+					<th>语言</th>
+						<td>en</td>
+					</tr>
+					<tr>
+					<th>短标题</th>
+						<td>DISC</td>
+					</tr>
+					<tr>
+					<th>馆藏目录</th>
+						<td>DOI.org (Crossref)</td>
+					</tr>
+					<tr>
+					<th>URL</th>
+						<td><a href="https://dl.acm.org/doi/10.1145/3437984.3458838">https://dl.acm.org/doi/10.1145/3437984.3458838</a></td>
+					</tr>
+					<tr>
+					<th>访问时间</th>
+						<td>2022/3/30 下午7:06:57</td>
+					</tr>
+					<tr>
+					<th>地点</th>
+						<td>Online United Kingdom</td>
+					</tr>
+					<tr>
+					<th>出版社</th>
+						<td>ACM</td>
+					</tr>
+					<tr>
+					<th>ISBN</th>
+						<td>978-1-4503-8298-4</td>
+					</tr>
+					<tr>
+					<th>页码</th>
+						<td>89-95</td>
+					</tr>
+					<tr>
+					<th>投递标题</th>
+						<td>Proceedings of the 1st Workshop on Machine Learning and Systems</td>
+					</tr>
+					<tr>
+					<th>学术会议名称</th>
+						<td>EuroSys '21: Sixteenth European Conference on Computer Systems</td>
+					</tr>
+					<tr>
+					<th>DOI</th>
+						<td><a href="http://doi.org/10.1145/3437984.3458838">10.1145/3437984.3458838</a></td>
+					</tr>
+					<tr>
+					<th>添加日期</th>
+						<td>2022/3/30 下午7:06:57</td>
+					</tr>
+					<tr>
+					<th>修改日期</th>
+						<td>2022/3/30 下午7:06:57</td>
+					</tr>
+				</tbody></table>
+				<h3 class="attachments">附件</h3>
+				<ul class="attachments">
+					<li id="item_MMEAT86Z">Zhu 等。 - 2021 - DISC A Dynamic Shape Compiler for Machine Learnin.pdf					</li>
+				</ul>
+			</li>
+
+
+			<li id="item_BZBB727G" class="item journalArticle">
+			<h2>Apollo: Automatic Partition-based Operator Fusion through Layer by Layer Optimization</h2>
+				<table>
+					<tbody><tr>
+						<th>类型</th>
+						<td>期刊文章</td>
+					</tr>
+					<tr>
+						<th class="author">作者</th>
+						<td>Jie Zhao</td>
+					</tr>
+					<tr>
+						<th class="author">作者</th>
+						<td>Xiong Gao</td>
+					</tr>
+					<tr>
+						<th class="author">作者</th>
+						<td>Ruijie Xia</td>
+					</tr>
+					<tr>
+						<th class="author">作者</th>
+						<td>Zhaochuang Zhang</td>
+					</tr>
+					<tr>
+						<th class="author">作者</th>
+						<td>Deshi Chen</td>
+					</tr>
+					<tr>
+						<th class="author">作者</th>
+						<td>Lei Chen</td>
+					</tr>
+					<tr>
+						<th class="author">作者</th>
+						<td>Renwei Zhang</td>
+					</tr>
+					<tr>
+						<th class="author">作者</th>
+						<td>Zhen Geng</td>
+					</tr>
+					<tr>
+						<th class="author">作者</th>
+						<td>Bin Cheng</td>
+					</tr>
+					<tr>
+						<th class="author">作者</th>
+						<td>Xuefeng Jin</td>
+					</tr>
+					<tr>
+					<th>摘要</th>
+						<td>We study fusion for deep neural networks (DNNs) in a 
+just-in-time (JIT) compilation framework APOLLO. It considers both 
+memory- and compute-bound tensor operators for fusion, and integrates 
+graph-level node grouping and operator-level loop fusion closely, 
+widening the fusion search space. APOLLO enables the upward feedback 
+from the downstream loop optimizer, enforcing the graph engine to 
+regenerate partition patterns amenable to the downstream pass and thus 
+resolving the scalability issue. Besides data locality, APOLLO also 
+exploits the parallelism between independent tensor operators, further 
+improving the performance of DNN workloads. Experimental results on 
+training workloads show that APOLLO outperforms TensorFlow and XLA by 
+1.86× and 1.37× on a single GPU, and 1.96× and 1.18× on multiple GPUs. 
+APOLLO also improves the performance of a vendor-provided DNN framework 
+by 19.7% on a domain-speciﬁc accelerator. In addition, the results of 
+inference workloads demonstrate the general applicability of our fusion 
+framework.</td>
+					</tr>
+					<tr>
+					<th>语言</th>
+						<td>en</td>
+					</tr>
+					<tr>
+					<th>馆藏目录</th>
+						<td>Zotero</td>
+					</tr>
+					<tr>
+					<th>页码</th>
+						<td>19</td>
+					</tr>
+					<tr>
+					<th>添加日期</th>
+						<td>2022/6/7 下午7:57:20</td>
+					</tr>
+					<tr>
+					<th>修改日期</th>
+						<td>2022/6/7 下午7:57:20</td>
+					</tr>
+				</tbody></table>
+				<h3 class="attachments">附件</h3>
+				<ul class="attachments">
+					<li id="item_CPSYNXTR">Zhao 等。 - Apollo Automatic Partition-based Operator Fusion .pdf					</li>
+				</ul>
+			</li>
+
+
+			<li id="item_B92S4ALQ" class="item journalArticle">
+			<h2>Alpa: Automating Inter- and Intra-Operator Parallelism for Distributed Deep Learning</h2>
+				<table>
+					<tbody><tr>
+						<th>类型</th>
+						<td>期刊文章</td>
+					</tr>
+					<tr>
+						<th class="author">作者</th>
+						<td>Lianmin Zheng</td>
+					</tr>
+					<tr>
+						<th class="author">作者</th>
+						<td>Zhuohan Li</td>
+					</tr>
+					<tr>
+						<th class="author">作者</th>
+						<td>Hao Zhang</td>
+					</tr>
+					<tr>
+						<th class="author">作者</th>
+						<td>Yonghao Zhuang</td>
+					</tr>
+					<tr>
+						<th class="author">作者</th>
+						<td>Zhifeng Chen</td>
+					</tr>
+					<tr>
+						<th class="author">作者</th>
+						<td>Yanping Huang</td>
+					</tr>
+					<tr>
+						<th class="author">作者</th>
+						<td>Yida Wang</td>
+					</tr>
+					<tr>
+						<th class="author">作者</th>
+						<td>Yuanzhong Xu</td>
+					</tr>
+					<tr>
+						<th class="author">作者</th>
+						<td>Danyang Zhuo</td>
+					</tr>
+					<tr>
+						<th class="author">作者</th>
+						<td>Joseph E. Gonzalez</td>
+					</tr>
+					<tr>
+						<th class="author">作者</th>
+						<td>Ion Stoica</td>
+					</tr>
+					<tr>
+					<th>摘要</th>
+						<td>Alpa automates model-parallel training of large deep learning 
+(DL) models by generating execution plans that unify data, operator, and
+ pipeline parallelism. Existing model-parallel training systems either 
+require users to manually create a parallelization plan or automatically
+ generate one from a limited space of model parallelism conﬁgurations, 
+which does not sufﬁce to scale out complex DL models on distributed 
+compute devices. Alpa distributes the training of large DL models by 
+viewing parallelisms as two hierarchical levels: inter-operator and 
+intra-operator parallelisms. Based on it, Alpa constructs a new 
+hierarchical space for massive model-parallel execution plans. Alpa 
+designs a number of compilation passes to automatically derive the 
+optimal parallel execution plan in each independent parallelism level 
+and implements an efﬁcient runtime to orchestrate the two-level parallel
+ execution on distributed compute devices. Our evaluation shows Alpa 
+generates parallelization plans that match or outperform handtuned 
+model-parallel training systems even on models they are designed for. 
+Unlike specialized systems, Alpa also generalizes to models with 
+heterogeneous architectures and models without manually-designed plans.</td>
+					</tr>
+					<tr>
+					<th>日期</th>
+						<td>2022-01-28</td>
+					</tr>
+					<tr>
+					<th>语言</th>
+						<td>en</td>
+					</tr>
+					<tr>
+					<th>短标题</th>
+						<td>Alpa</td>
+					</tr>
+					<tr>
+					<th>馆藏目录</th>
+						<td>arXiv.org</td>
+					</tr>
+					<tr>
+					<th>URL</th>
+						<td><a href="http://arxiv.org/abs/2201.12023">http://arxiv.org/abs/2201.12023</a></td>
+					</tr>
+					<tr>
+					<th>访问时间</th>
+						<td>2022/4/5 下午4:03:27</td>
+					</tr>
+					<tr>
+					<th>其它</th>
+						<td>arXiv: 2201.12023</td>
+					</tr>
+					<tr>
+					<th>期刊</th>
+						<td>arXiv:2201.12023 [cs]</td>
+					</tr>
+					<tr>
+					<th>添加日期</th>
+						<td>2022/4/5 下午4:03:27</td>
+					</tr>
+					<tr>
+					<th>修改日期</th>
+						<td>2022/4/5 下午4:03:27</td>
+					</tr>
+				</tbody></table>
+				<h3 class="tags">标签：</h3>
+				<ul class="tags">
+					<li>Computer Science - Machine Learning</li>
+					<li>Computer Science - Distributed, Parallel, and Cluster Computing</li>
+					<li>Computer Science - Programming Languages</li>
+				</ul>
+				<h3 class="attachments">附件</h3>
+				<ul class="attachments">
+					<li id="item_CKYNUP6T">Zheng 等。 - 2022 - Alpa Automating Inter- and Intra-Operator Paralle.pdf					</li>
+				</ul>
+			</li>
+
+
+			<li id="item_FNCUVCWB" class="item conferencePaper">
+			<h2>AKG: automatic kernel generation for neural processing units using polyhedral transformations</h2>
+				<table>
+					<tbody><tr>
+						<th>类型</th>
+						<td>会议论文</td>
+					</tr>
+					<tr>
+						<th class="author">作者</th>
+						<td>Jie Zhao</td>
+					</tr>
+					<tr>
+						<th class="author">作者</th>
+						<td>Bojie Li</td>
+					</tr>
+					<tr>
+						<th class="author">作者</th>
+						<td>Wang Nie</td>
+					</tr>
+					<tr>
+						<th class="author">作者</th>
+						<td>Zhen Geng</td>
+					</tr>
+					<tr>
+						<th class="author">作者</th>
+						<td>Renwei Zhang</td>
+					</tr>
+					<tr>
+						<th class="author">作者</th>
+						<td>Xiong Gao</td>
+					</tr>
+					<tr>
+						<th class="author">作者</th>
+						<td>Bin Cheng</td>
+					</tr>
+					<tr>
+						<th class="author">作者</th>
+						<td>Chen Wu</td>
+					</tr>
+					<tr>
+						<th class="author">作者</th>
+						<td>Yun Cheng</td>
+					</tr>
+					<tr>
+						<th class="author">作者</th>
+						<td>Zheng Li</td>
+					</tr>
+					<tr>
+						<th class="author">作者</th>
+						<td>Peng Di</td>
+					</tr>
+					<tr>
+						<th class="author">作者</th>
+						<td>Kun Zhang</td>
+					</tr>
+					<tr>
+						<th class="author">作者</th>
+						<td>Xuefeng Jin</td>
+					</tr>
+					<tr>
+					<th>摘要</th>
+						<td>Existing tensor compilers have proven their effectiveness in 
+deploying deep neural networks on general-purpose hardware like CPU and 
+GPU, but optimizing for neural processing units (NPUs) is still 
+challenging due to the heterogeneous compute units and complicated 
+memory hierarchy.</td>
+					</tr>
+					<tr>
+					<th>日期</th>
+						<td>2021-06-19</td>
+					</tr>
+					<tr>
+					<th>语言</th>
+						<td>en</td>
+					</tr>
+					<tr>
+					<th>短标题</th>
+						<td>AKG</td>
+					</tr>
+					<tr>
+					<th>馆藏目录</th>
+						<td>DOI.org (Crossref)</td>
+					</tr>
+					<tr>
+					<th>URL</th>
+						<td><a href="https://dl.acm.org/doi/10.1145/3453483.3454106">https://dl.acm.org/doi/10.1145/3453483.3454106</a></td>
+					</tr>
+					<tr>
+					<th>访问时间</th>
+						<td>2022/5/26 下午7:13:51</td>
+					</tr>
+					<tr>
+					<th>地点</th>
+						<td>Virtual Canada</td>
+					</tr>
+					<tr>
+					<th>出版社</th>
+						<td>ACM</td>
+					</tr>
+					<tr>
+					<th>ISBN</th>
+						<td>978-1-4503-8391-2</td>
+					</tr>
+					<tr>
+					<th>页码</th>
+						<td>1233-1248</td>
+					</tr>
+					<tr>
+					<th>投递标题</th>
+						<td>Proceedings of the 42nd ACM SIGPLAN International Conference on Programming Language Design and Implementation</td>
+					</tr>
+					<tr>
+					<th>学术会议名称</th>
+						<td>PLDI '21: 42nd ACM SIGPLAN International Conference on Programming Language Design and Implementation</td>
+					</tr>
+					<tr>
+					<th>DOI</th>
+						<td><a href="http://doi.org/10.1145/3453483.3454106">10.1145/3453483.3454106</a></td>
+					</tr>
+					<tr>
+					<th>添加日期</th>
+						<td>2022/5/26 下午7:13:51</td>
+					</tr>
+					<tr>
+					<th>修改日期</th>
+						<td>2022/5/26 下午7:13:51</td>
+					</tr>
+				</tbody></table>
+				<h3 class="attachments">附件</h3>
+				<ul class="attachments">
+					<li id="item_B8I5QPBS">Zhao 等。 - 2021 - AKG automatic kernel generation for neural proces.pdf					</li>
+				</ul>
+			</li>
+
+		</ul>
+	
+</body></html>

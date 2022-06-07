@@ -1,0 +1,563 @@
+<!DOCTYPE html>
+<html><head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<title>Zotero 报告</title>
+		<link rel="stylesheet" type="text/css" href="data:text/css;base64,Ym9keSB7CgliYWNrZ3JvdW5kOiB3aGl0ZTsKfQoKYSB7Cgl0ZXh0LWRlY29yYXRpb246IHVuZGVybGluZTsKfQoKYm9keSB7CglwYWRkaW5nOiAwOwp9Cgp1bC5yZXBvcnQgbGkuaXRlbSB7Cglib3JkZXItdG9wOiA0cHggc29saWQgIzU1NTsKCXBhZGRpbmctdG9wOiAxZW07CglwYWRkaW5nLWxlZnQ6IDFlbTsKCXBhZGRpbmctcmlnaHQ6IDFlbTsKCW1hcmdpbi1ib3R0b206IDJlbTsKfQoKaDEsIGgyLCBoMywgaDQsIGg1LCBoNiB7Cglmb250LXdlaWdodDogbm9ybWFsOwp9CgpoMiB7CgltYXJnaW46IDAgMCAuNWVtOwp9CgpoMi5wYXJlbnRJdGVtIHsKCWZvbnQtd2VpZ2h0OiBib2xkOwoJZm9udC1zaXplOiAxZW07CglwYWRkaW5nOiAwIDAgLjVlbTsKCWJvcmRlci1ib3R0b206IDFweCBzb2xpZCAjY2NjOwp9CgovKiBJZiBjb21iaW5pbmcgY2hpbGRyZW4sIGRpc3BsYXkgcGFyZW50IHNsaWdodGx5IGxhcmdlciAqLwp1bC5yZXBvcnQuY29tYmluZUNoaWxkSXRlbXMgaDIucGFyZW50SXRlbSB7Cglmb250LXNpemU6IDEuMWVtOwoJcGFkZGluZy1ib3R0b206IC43NWVtOwoJbWFyZ2luLWJvdHRvbTogLjRlbTsKfQoKaDIucGFyZW50SXRlbSAudGl0bGUgewoJZm9udC13ZWlnaHQ6IG5vcm1hbDsKfQoKaDMgewoJbWFyZ2luLWJvdHRvbTogLjZlbTsKCWZvbnQtd2VpZ2h0OiBib2xkICFpbXBvcnRhbnQ7Cglmb250LXNpemU6IDFlbTsKCWRpc3BsYXk6IGJsb2NrOwp9CgovKiBNZXRhZGF0YSB0YWJsZSAqLwp0aCB7Cgl2ZXJ0aWNhbC1hbGlnbjogdG9wOwoJdGV4dC1hbGlnbjogcmlnaHQ7Cgl3aWR0aDogMTUlOwoJd2hpdGUtc3BhY2U6IG5vd3JhcDsKfQoKdGQgewoJcGFkZGluZy1sZWZ0OiAuNWVtOwp9CgoKdWwucmVwb3J0LCB1bC5ub3RlcywgdWwudGFncyB7CglsaXN0LXN0eWxlOiBub25lOwoJbWFyZ2luLWxlZnQ6IDA7CglwYWRkaW5nLWxlZnQ6IDA7Cn0KCi8qIFRhZ3MgKi8KaDMudGFncyB7Cglmb250LXNpemU6IDEuMWVtOwp9Cgp1bC50YWdzIHsKCWxpbmUtaGVpZ2h0OiAxLjc1ZW07CglsaXN0LXN0eWxlOiBub25lOwp9Cgp1bC50YWdzIGxpIHsKCWRpc3BsYXk6IGlubGluZTsKfQoKdWwudGFncyBsaTpub3QoOmxhc3QtY2hpbGQpOmFmdGVyIHsKCWNvbnRlbnQ6ICcsICc7Cn0KCgovKiBDaGlsZCBub3RlcyAqLwpoMy5ub3RlcyB7Cglmb250LXNpemU6IDEuMWVtOwp9Cgp1bC5ub3RlcyB7CgltYXJnaW4tYm90dG9tOiAxLjJlbTsKfQoKdWwubm90ZXMgPiBsaTpmaXJzdC1jaGlsZCBwIHsKCW1hcmdpbi10b3A6IDA7Cn0KCnVsLm5vdGVzID4gbGkgewoJcGFkZGluZzogLjdlbSAwOwp9Cgp1bC5ub3RlcyA+IGxpOm5vdCg6bGFzdC1jaGlsZCkgewoJYm9yZGVyLWJvdHRvbTogMXB4ICNjY2Mgc29saWQ7Cn0KCgp1bC5ub3RlcyA+IGxpIHA6Zmlyc3QtY2hpbGQgewoJbWFyZ2luLXRvcDogMDsKfQoKdWwubm90ZXMgPiBsaSBwOmxhc3QtY2hpbGQgewoJbWFyZ2luLWJvdHRvbTogMDsKfQoKLyogQWRkIHF1b3RhdGlvbiBtYXJrcyBhcm91bmQgYmxvY2txdW90ZSAqLwp1bC5ub3RlcyA+IGxpIGJsb2NrcXVvdGUgcDpub3QoOmVtcHR5KTpiZWZvcmUsCmxpLm5vdGUgYmxvY2txdW90ZSBwOm5vdCg6ZW1wdHkpOmJlZm9yZSB7Cgljb250ZW50OiAn4oCcJzsKfQoKdWwubm90ZXMgPiBsaSBibG9ja3F1b3RlIHA6bm90KDplbXB0eSk6bGFzdC1jaGlsZDphZnRlciwKbGkubm90ZSBibG9ja3F1b3RlIHA6bm90KDplbXB0eSk6bGFzdC1jaGlsZDphZnRlciB7Cgljb250ZW50OiAn4oCdJzsKfQoKLyogUHJlc2VydmUgd2hpdGVzcGFjZSBvbiBwbGFpbnRleHQgbm90ZXMgKi8KdWwubm90ZXMgbGkgcC5wbGFpbnRleHQsIGxpLm5vdGUgcC5wbGFpbnRleHQsIGRpdi5ub3RlIHAucGxhaW50ZXh0IHsKCXdoaXRlLXNwYWNlOiBwcmUtd3JhcDsKfQoKLyogRGlzcGxheSB0YWdzIHdpdGhpbiBjaGlsZCBub3RlcyBpbmxpbmUgKi8KdWwubm90ZXMgaDMudGFncyB7CglkaXNwbGF5OiBpbmxpbmU7Cglmb250LXNpemU6IDFlbTsKfQoKdWwubm90ZXMgaDMudGFnczphZnRlciB7Cgljb250ZW50OiAnICc7Cn0KCnVsLm5vdGVzIHVsLnRhZ3MgewoJZGlzcGxheTogaW5saW5lOwp9Cgp1bC5ub3RlcyB1bC50YWdzIGxpOm5vdCg6bGFzdC1jaGlsZCk6YWZ0ZXIgewoJY29udGVudDogJywgJzsKfQoKCi8qIENoaWxkIGF0dGFjaG1lbnRzICovCmgzLmF0dGFjaG1lbnRzIHsKCWZvbnQtc2l6ZTogMS4xZW07Cn0KCnVsLmF0dGFjaG1lbnRzIGxpIHsKCXBhZGRpbmctdG9wOiAuNWVtOwp9Cgp1bC5hdHRhY2htZW50cyBkaXYubm90ZSB7CgltYXJnaW4tbGVmdDogMmVtOwp9Cgp1bC5hdHRhY2htZW50cyBkaXYubm90ZSBwOmZpcnN0LWNoaWxkIHsKCW1hcmdpbi10b3A6IC43NWVtOwp9CgpkaXYgdGFibGUgewoJYm9yZGVyLWNvbGxhcHNlOiBjb2xsYXBzZTsKfQoKZGl2IHRhYmxlIHRkLCBkaXYgdGFibGUgdGggewoJYm9yZGVyOiAxcHggI2NjYyBzb2xpZDsKCWJvcmRlci1jb2xsYXBzZTogY29sbGFwc2U7Cgl3b3JkLWJyZWFrOiBicmVhay1hbGw7Cn0KCmRpdiB0YWJsZSB0ZCBwOmVtcHR5OjphZnRlciwgZGl2IHRhYmxlIHRoIHA6ZW1wdHk6OmFmdGVyIHsKCWNvbnRlbnQ6ICJcMDBhMCI7Cn0KCmRpdiB0YWJsZSB0ZCAqOmZpcnN0LWNoaWxkLCBkaXYgdGFibGUgdGggKjpmaXJzdC1jaGlsZCB7CgltYXJnaW4tdG9wOiAwOwp9CgpkaXYgdGFibGUgdGQgKjpsYXN0LWNoaWxkLCBkaXYgdGFibGUgdGggKjpsYXN0LWNoaWxkIHsKCW1hcmdpbi1ib3R0b206IDA7Cn0K">
+		<link rel="stylesheet" type="text/css" media="screen,projection" href="data:text/css;base64,LyogR2VuZXJpYyBzdHlsZXMgKi8KYm9keSB7Cglmb250OiA2Mi41JSBHZW9yZ2lhLCBUaW1lcywgc2VyaWY7Cgl3aWR0aDogNzgwcHg7CgltYXJnaW46IDAgYXV0bzsKfQoKaDIgewoJZm9udC1zaXplOiAxLjVlbTsKCWxpbmUtaGVpZ2h0OiAxLjVlbTsKCWZvbnQtZmFtaWx5OiBHZW9yZ2lhLCBUaW1lcywgc2VyaWY7Cn0KCnAgewoJbGluZS1oZWlnaHQ6IDEuNWVtOwp9CgphOmxpbmssIGE6dmlzaXRlZCB7Cgljb2xvcjogIzkwMDsKfQoKYTpob3ZlciwgYTphY3RpdmUgewoJY29sb3I6ICM3Nzc7Cn0KCgp1bC5yZXBvcnQgewoJZm9udC1zaXplOiAxLjRlbTsKCXdpZHRoOiA2ODBweDsKCW1hcmdpbjogMCBhdXRvOwoJcGFkZGluZzogMjBweCAyMHB4Owp9CgovKiBNZXRhZGF0YSB0YWJsZSAqLwp0YWJsZSB7Cglib3JkZXI6IDFweCAjY2NjIHNvbGlkOwoJb3ZlcmZsb3c6IGF1dG87Cgl3aWR0aDogMTAwJTsKCW1hcmdpbjogLjFlbSBhdXRvIC43NWVtOwoJcGFkZGluZzogMC41ZW07Cn0K">
+		<link rel="stylesheet" type="text/css" media="print" href="data:text/css;base64,Ym9keSB7Cglmb250OiAxMnB0ICJUaW1lcyBOZXcgUm9tYW4iLCBUaW1lcywgR2VvcmdpYSwgc2VyaWY7CgltYXJnaW46IDA7Cgl3aWR0aDogYXV0bzsKCWNvbG9yOiBibGFjazsKfQoKLyogUGFnZSBCcmVha3MgKHBhZ2UtYnJlYWstaW5zaWRlIG9ubHkgcmVjb2duaXplZCBieSBPcGVyYSkgKi8KaDEsIGgyLCBoMywgaDQsIGg1LCBoNiB7CglwYWdlLWJyZWFrLWFmdGVyOiBhdm9pZDsKCXBhZ2UtYnJlYWstaW5zaWRlOiBhdm9pZDsKfQoKdWwsIG9sLCBkbCB7CglwYWdlLWJyZWFrLWluc2lkZTogYXZvaWQ7Cgljb2xvci1hZGp1c3Q6IGV4YWN0Owp9CgpoMiB7Cglmb250LXNpemU6IDEuM2VtOwoJbGluZS1oZWlnaHQ6IDEuM2VtOwp9CgphIHsKCWNvbG9yOiAjMDAwOwoJdGV4dC1kZWNvcmF0aW9uOiBub25lOwp9Cg==">
+	</head>
+	<body>
+		<ul class="report combineChildItems">
+			<li id="item_KH97QEJZ" class="item journalArticle">
+			<h2>PipeTransformer: Automated Elastic Pipelining for Distributed Training of Large-scale Models</h2>
+				<table>
+					<tbody><tr>
+						<th>类型</th>
+						<td>期刊文章</td>
+					</tr>
+					<tr>
+						<th class="author">作者</th>
+						<td>Chaoyang He</td>
+					</tr>
+					<tr>
+						<th class="author">作者</th>
+						<td>Shen Li</td>
+					</tr>
+					<tr>
+						<th class="author">作者</th>
+						<td>Mahdi Soltanolkotabi</td>
+					</tr>
+					<tr>
+						<th class="author">作者</th>
+						<td>Salman Avestimehr</td>
+					</tr>
+					<tr>
+					<th>摘要</th>
+						<td>The size of Transformer models is growing at an unprecedented 
+rate. It has taken less than one year to reach trillion-level parameters
+ since the release of GPT-3 (175B). Training such models requires both 
+substantial engineering efforts and enormous computing resources, which 
+are luxuries most research teams cannot afford. In this paper, we 
+propose PipeTransformer, which leverages automated elastic pipelining 
+for efﬁcient distributed training of Transformer models. In 
+PipeTransformer, we design an adaptive on the ﬂy freeze algorithm that 
+can identify and freeze some layers gradually during training, and an 
+elastic pipelining system that can dynamically allocate resources to 
+train the remaining active layers. More speciﬁcally, PipeTransformer 
+automatically excludes frozen layers from the pipeline, packs active 
+layers into fewer GPUs, and forks more replicas to increase 
+data-parallel width. We evaluate PipeTransformer using Vision 
+Transformer (ViT) on ImageNet and BERT on SQuAD and GLUE datasets. Our 
+results show that compared to the state-of-the-art baseline, 
+PipeTransformer attains up to 2.83fold speedup without losing accuracy. 
+We also provide various performance analyses for a more comprehensive 
+understanding of our algorithmic and system-wise design. Finally, we 
+have modularized our training system with ﬂexible APIs and made the 
+source code publicly available at https://DistML.ai.</td>
+					</tr>
+					<tr>
+					<th>语言</th>
+						<td>en</td>
+					</tr>
+					<tr>
+					<th>馆藏目录</th>
+						<td>Zotero</td>
+					</tr>
+					<tr>
+					<th>页码</th>
+						<td>10</td>
+					</tr>
+					<tr>
+					<th>添加日期</th>
+						<td>2021/10/11 下午7:01:49</td>
+					</tr>
+					<tr>
+					<th>修改日期</th>
+						<td>2021/10/11 下午7:01:49</td>
+					</tr>
+				</tbody></table>
+				<h3 class="attachments">附件</h3>
+				<ul class="attachments">
+					<li id="item_ZQAHXCVH">He 等。 - PipeTransformer Automated Elastic Pipelining for .pdf					</li>
+				</ul>
+			</li>
+
+
+			<li id="item_G2PVFSZ8" class="item attachment">
+			<h2>PipeDream Generalized Pipeline Parallelism for DNN Training.pdf</h2>
+				<table>
+					<tbody><tr>
+						<th>类型</th>
+						<td>附件</td>
+					</tr>
+					<tr>
+					<th>添加日期</th>
+						<td>2021/10/11 下午6:59:10</td>
+					</tr>
+					<tr>
+					<th>修改日期</th>
+						<td>2021/10/11 下午6:59:10</td>
+					</tr>
+				</tbody></table>
+			</li>
+
+
+			<li id="item_UFVR9Z3J" class="item journalArticle">
+			<h2>Pipe-SGD: A Decentralized Pipelined SGD Framework for Distributed Deep Net Training</h2>
+				<table>
+					<tbody><tr>
+						<th>类型</th>
+						<td>期刊文章</td>
+					</tr>
+					<tr>
+						<th class="author">作者</th>
+						<td>Youjie Li</td>
+					</tr>
+					<tr>
+						<th class="author">作者</th>
+						<td>Mingchao Yu</td>
+					</tr>
+					<tr>
+						<th class="author">作者</th>
+						<td>Songze Li</td>
+					</tr>
+					<tr>
+						<th class="author">作者</th>
+						<td>Salman Avestimehr</td>
+					</tr>
+					<tr>
+						<th class="author">作者</th>
+						<td>Nam Sung Kim</td>
+					</tr>
+					<tr>
+						<th class="author">作者</th>
+						<td>Alexander Schwing</td>
+					</tr>
+					<tr>
+					<th>摘要</th>
+						<td>Distributed training of deep nets is an important technique to
+ address some of the present day computing challenges like memory 
+consumption and computational demands. Classical distributed approaches,
+ synchronous or asynchronous, are based on the parameter server 
+architecture, i.e., worker nodes compute gradients which are 
+communicated to the parameter server while updated parameters are 
+returned. Recently, distributed training with AllReduce operations 
+gained popularity as well. While many of those operations seem 
+appealing, little is reported about wall-clock training time 
+improvements. In this paper, we carefully analyze the AllReduce based 
+setup, propose timing models which include network latency, bandwidth, 
+cluster size and compute time, and demonstrate that a pipelined training
+ with a width of two combines the best of both synchronous and 
+asynchronous training. Speciﬁcally, for a setup consisting of a 
+four-node GPU cluster we show wall-clock time training improvements of 
+up to 5.4× compared to conventional approaches.</td>
+					</tr>
+					<tr>
+					<th>语言</th>
+						<td>en</td>
+					</tr>
+					<tr>
+					<th>馆藏目录</th>
+						<td>Zotero</td>
+					</tr>
+					<tr>
+					<th>页码</th>
+						<td>12</td>
+					</tr>
+					<tr>
+					<th>添加日期</th>
+						<td>2021/10/11 下午7:02:29</td>
+					</tr>
+					<tr>
+					<th>修改日期</th>
+						<td>2021/10/11 下午7:02:29</td>
+					</tr>
+				</tbody></table>
+				<h3 class="attachments">附件</h3>
+				<ul class="attachments">
+					<li id="item_WE8BERD3">Li 等。 - Pipe-SGD A Decentralized Pipelined SGD Framework .pdf					</li>
+				</ul>
+			</li>
+
+
+			<li id="item_5ZXKUCFS" class="item journalArticle">
+			<h2>GPipe: Efficient Training of Giant Neural Networks using Pipeline Parallelism</h2>
+				<table>
+					<tbody><tr>
+						<th>类型</th>
+						<td>期刊文章</td>
+					</tr>
+					<tr>
+						<th class="author">作者</th>
+						<td>Yanping Huang</td>
+					</tr>
+					<tr>
+						<th class="author">作者</th>
+						<td>Youlong Cheng</td>
+					</tr>
+					<tr>
+						<th class="author">作者</th>
+						<td>Ankur Bapna</td>
+					</tr>
+					<tr>
+						<th class="author">作者</th>
+						<td>Orhan Firat</td>
+					</tr>
+					<tr>
+						<th class="author">作者</th>
+						<td>Mia Xu Chen</td>
+					</tr>
+					<tr>
+						<th class="author">作者</th>
+						<td>Dehao Chen</td>
+					</tr>
+					<tr>
+						<th class="author">作者</th>
+						<td>HyoukJoong Lee</td>
+					</tr>
+					<tr>
+						<th class="author">作者</th>
+						<td>Jiquan Ngiam</td>
+					</tr>
+					<tr>
+						<th class="author">作者</th>
+						<td>Quoc V. Le</td>
+					</tr>
+					<tr>
+						<th class="author">作者</th>
+						<td>Yonghui Wu</td>
+					</tr>
+					<tr>
+						<th class="author">作者</th>
+						<td>Zhifeng Chen</td>
+					</tr>
+					<tr>
+					<th>摘要</th>
+						<td>Scaling up deep neural network capacity has been known as an 
+effective approach to improving model quality for several different 
+machine learning tasks. In many cases, increasing model capacity beyond 
+the memory limit of a single accelerator has required developing special
+ algorithms or infrastructure. These solutions are often 
+architecture-speciﬁc and do not transfer to other tasks. To address the 
+need for efﬁcient and task-independent model parallelism, we introduce 
+GPipe, a pipeline parallelism library that allows scaling any network 
+that can be expressed as a sequence of layers. By pipelining different 
+sub-sequences of layers on separate accelerators, GPipe provides the 
+ﬂexibility of scaling a variety of different networks to gigantic sizes 
+efﬁciently. Moreover, GPipe utilizes a novel batchsplitting pipelining 
+algorithm, resulting in almost linear speedup when a model is 
+partitioned across multiple accelerators. We demonstrate the advantages 
+of GPipe by training large-scale neural networks on two different tasks 
+with distinct network architectures: (i) Image Classiﬁcation: We train a
+ 557-million-parameter AmoebaNet model and attain a top-1 accuracy of 
+84.4% on ImageNet-2012, (ii) Multilingual Neural Machine Translation: We
+ train a single 6-billion-parameter, 128-layer Transformer model on a 
+corpus spanning over 100 languages and achieve better quality than all 
+bilingual models.</td>
+					</tr>
+					<tr>
+					<th>日期</th>
+						<td>2019-07-25</td>
+					</tr>
+					<tr>
+					<th>语言</th>
+						<td>en</td>
+					</tr>
+					<tr>
+					<th>短标题</th>
+						<td>GPipe</td>
+					</tr>
+					<tr>
+					<th>馆藏目录</th>
+						<td>arXiv.org</td>
+					</tr>
+					<tr>
+					<th>URL</th>
+						<td><a href="http://arxiv.org/abs/1811.06965">http://arxiv.org/abs/1811.06965</a></td>
+					</tr>
+					<tr>
+					<th>访问时间</th>
+						<td>2021/10/11 下午7:02:23</td>
+					</tr>
+					<tr>
+					<th>其它</th>
+						<td>arXiv: 1811.06965</td>
+					</tr>
+					<tr>
+					<th>期刊</th>
+						<td>arXiv:1811.06965 [cs]</td>
+					</tr>
+					<tr>
+					<th>添加日期</th>
+						<td>2021/10/11 下午7:02:23</td>
+					</tr>
+					<tr>
+					<th>修改日期</th>
+						<td>2021/10/11 下午7:02:23</td>
+					</tr>
+				</tbody></table>
+				<h3 class="tags">标签：</h3>
+				<ul class="tags">
+					<li>Computer Science - Computer Vision and Pattern Recognition</li>
+				</ul>
+				<h3 class="notes">笔记：</h3>
+				<ul class="notes">
+					<li id="item_IR4FFRCG">
+<p class="plaintext">Comment: 11 pages. Work in progress. Copyright 2018 by the authors</p>
+					</li>
+				</ul>
+				<h3 class="attachments">附件</h3>
+				<ul class="attachments">
+					<li id="item_V9RX9QQT">Huang 等。 - 2019 - GPipe Efficient Training of Giant Neural Networks.pdf					</li>
+				</ul>
+			</li>
+
+
+			<li id="item_6DE449UX" class="item journalArticle">
+			<h2>DAPPLE: A Pipelined Data Parallel Approach for Training Large Models</h2>
+				<table>
+					<tbody><tr>
+						<th>类型</th>
+						<td>期刊文章</td>
+					</tr>
+					<tr>
+						<th class="author">作者</th>
+						<td>Shiqing Fan</td>
+					</tr>
+					<tr>
+						<th class="author">作者</th>
+						<td>Yi Rong</td>
+					</tr>
+					<tr>
+						<th class="author">作者</th>
+						<td>Chen Meng</td>
+					</tr>
+					<tr>
+						<th class="author">作者</th>
+						<td>Zongyan Cao</td>
+					</tr>
+					<tr>
+						<th class="author">作者</th>
+						<td>Siyu Wang</td>
+					</tr>
+					<tr>
+						<th class="author">作者</th>
+						<td>Zhen Zheng</td>
+					</tr>
+					<tr>
+						<th class="author">作者</th>
+						<td>Chuan Wu</td>
+					</tr>
+					<tr>
+						<th class="author">作者</th>
+						<td>Guoping Long</td>
+					</tr>
+					<tr>
+						<th class="author">作者</th>
+						<td>Jun Yang</td>
+					</tr>
+					<tr>
+						<th class="author">作者</th>
+						<td>Lixue Xia</td>
+					</tr>
+					<tr>
+						<th class="author">作者</th>
+						<td>Lansong Diao</td>
+					</tr>
+					<tr>
+						<th class="author">作者</th>
+						<td>Xiaoyong Liu</td>
+					</tr>
+					<tr>
+						<th class="author">作者</th>
+						<td>Wei Lin</td>
+					</tr>
+					<tr>
+					<th>摘要</th>
+						<td>It is a challenging task to train large DNN models on 
+sophisticated GPU platforms with diversiﬁed interconnect capabilities. 
+Recently, pipelined training has been proposed as an effective approach 
+for improving device utilization. However, there are still several 
+tricky issues to address: improving computing efﬁciency while ensuring 
+convergence, and reducing memory usage without incurring additional 
+computing costs. We propose DAPPLE, a synchronous training framework 
+which combines data parallelism and pipeline parallelism for large DNN 
+models. It features a novel parallelization strategy planner to solve 
+the partition and placement problems, and explores the optimal hybrid 
+strategies of data and pipeline parallelism. We also propose a new 
+runtime scheduling algorithm to reduce device memory usage, which is 
+orthogonal to re-computation approach and does not come at the expense 
+of training throughput. Experiments show that DAPPLE planner 
+consistently outperforms strategies generated by PipeDreams planner by 
+up to 3.23× speedup under synchronous training scenarios, and DAPPLE 
+runtime outperforms GPipe by 1.6× speedup of training throughput and 
+saves 12% of memory consumption at the same time.</td>
+					</tr>
+					<tr>
+					<th>日期</th>
+						<td>2020-07-02</td>
+					</tr>
+					<tr>
+					<th>语言</th>
+						<td>en</td>
+					</tr>
+					<tr>
+					<th>短标题</th>
+						<td>DAPPLE</td>
+					</tr>
+					<tr>
+					<th>馆藏目录</th>
+						<td>arXiv.org</td>
+					</tr>
+					<tr>
+					<th>URL</th>
+						<td><a href="http://arxiv.org/abs/2007.01045">http://arxiv.org/abs/2007.01045</a></td>
+					</tr>
+					<tr>
+					<th>访问时间</th>
+						<td>2021/10/11 下午7:02:13</td>
+					</tr>
+					<tr>
+					<th>其它</th>
+						<td>arXiv: 2007.01045</td>
+					</tr>
+					<tr>
+					<th>期刊</th>
+						<td>arXiv:2007.01045 [cs]</td>
+					</tr>
+					<tr>
+					<th>添加日期</th>
+						<td>2021/10/11 下午7:02:13</td>
+					</tr>
+					<tr>
+					<th>修改日期</th>
+						<td>2021/10/11 下午7:02:13</td>
+					</tr>
+				</tbody></table>
+				<h3 class="tags">标签：</h3>
+				<ul class="tags">
+					<li>Computer Science - Distributed, Parallel, and Cluster Computing</li>
+				</ul>
+				<h3 class="attachments">附件</h3>
+				<ul class="attachments">
+					<li id="item_GSULK4YB">Fan 等。 - 2020 - DAPPLE A Pipelined Data Parallel Approach for Tra.pdf					</li>
+				</ul>
+			</li>
+
+
+			<li id="item_EEYMIBLA" class="item journalArticle">
+			<h2>Auto-MAP: A DQN Framework for Exploring Distributed Execution Plans for DNN Workloads</h2>
+				<table>
+					<tbody><tr>
+						<th>类型</th>
+						<td>期刊文章</td>
+					</tr>
+					<tr>
+						<th class="author">作者</th>
+						<td>Siyu Wang</td>
+					</tr>
+					<tr>
+						<th class="author">作者</th>
+						<td>Yi Rong</td>
+					</tr>
+					<tr>
+						<th class="author">作者</th>
+						<td>Shiqing Fan</td>
+					</tr>
+					<tr>
+						<th class="author">作者</th>
+						<td>Zhen Zheng</td>
+					</tr>
+					<tr>
+						<th class="author">作者</th>
+						<td>LanSong Diao</td>
+					</tr>
+					<tr>
+						<th class="author">作者</th>
+						<td>Guoping Long</td>
+					</tr>
+					<tr>
+						<th class="author">作者</th>
+						<td>Jun Yang</td>
+					</tr>
+					<tr>
+						<th class="author">作者</th>
+						<td>Xiaoyong Liu</td>
+					</tr>
+					<tr>
+						<th class="author">作者</th>
+						<td>Wei Lin</td>
+					</tr>
+					<tr>
+					<th>摘要</th>
+						<td>The last decade has witnessed growth in the computational 
+requirements for training deep neural networks. Current approaches 
+(e.g., data/model parallelism, pipeline parallelism) parallelize 
+training tasks onto multiple devices. However, these approaches always 
+rely on specific deep learning frameworks and requires elaborate manual 
+design, which make it difficult to maintain and share between different 
+type of models. In this paper, we propose Auto-MAP, a framework for 
+exploring distributed execution plans for DNN workloads, which can 
+automatically discovering fast parallelization strategies through 
+reinforcement learning on IR level of deep learning models. Efficient 
+exploration remains a major challenge for reinforcement learning. We 
+leverage DQN with task-specific pruning strategies to help efficiently 
+explore the search space including optimized strategies. Our evaluation 
+shows that Auto-MAP can find the optimal solution in two hours, while 
+achieving better throughput on several NLP and convolution models.</td>
+					</tr>
+					<tr>
+					<th>日期</th>
+						<td>2020-07-08</td>
+					</tr>
+					<tr>
+					<th>语言</th>
+						<td>en</td>
+					</tr>
+					<tr>
+					<th>短标题</th>
+						<td>Auto-MAP</td>
+					</tr>
+					<tr>
+					<th>馆藏目录</th>
+						<td>arXiv.org</td>
+					</tr>
+					<tr>
+					<th>URL</th>
+						<td><a href="http://arxiv.org/abs/2007.04069">http://arxiv.org/abs/2007.04069</a></td>
+					</tr>
+					<tr>
+					<th>访问时间</th>
+						<td>2021/10/11 下午7:02:00</td>
+					</tr>
+					<tr>
+					<th>其它</th>
+						<td>arXiv: 2007.04069</td>
+					</tr>
+					<tr>
+					<th>期刊</th>
+						<td>arXiv:2007.04069 [cs]</td>
+					</tr>
+					<tr>
+					<th>添加日期</th>
+						<td>2021/10/11 下午7:02:00</td>
+					</tr>
+					<tr>
+					<th>修改日期</th>
+						<td>2021/10/11 下午7:02:00</td>
+					</tr>
+				</tbody></table>
+				<h3 class="tags">标签：</h3>
+				<ul class="tags">
+					<li>Computer Science - Artificial Intelligence</li>
+					<li>Computer Science - Distributed, Parallel, and Cluster Computing</li>
+				</ul>
+				<h3 class="attachments">附件</h3>
+				<ul class="attachments">
+					<li id="item_UUXKXLV4">Wang 等。 - 2020 - Auto-MAP A DQN Framework for Exploring Distribute.pdf					</li>
+				</ul>
+			</li>
+
+		</ul>
+	
+</body></html>

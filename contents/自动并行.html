@@ -1,0 +1,669 @@
+<!DOCTYPE html>
+<html><head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<title>Zotero 报告</title>
+		<link rel="stylesheet" type="text/css" href="data:text/css;base64,Ym9keSB7CgliYWNrZ3JvdW5kOiB3aGl0ZTsKfQoKYSB7Cgl0ZXh0LWRlY29yYXRpb246IHVuZGVybGluZTsKfQoKYm9keSB7CglwYWRkaW5nOiAwOwp9Cgp1bC5yZXBvcnQgbGkuaXRlbSB7Cglib3JkZXItdG9wOiA0cHggc29saWQgIzU1NTsKCXBhZGRpbmctdG9wOiAxZW07CglwYWRkaW5nLWxlZnQ6IDFlbTsKCXBhZGRpbmctcmlnaHQ6IDFlbTsKCW1hcmdpbi1ib3R0b206IDJlbTsKfQoKaDEsIGgyLCBoMywgaDQsIGg1LCBoNiB7Cglmb250LXdlaWdodDogbm9ybWFsOwp9CgpoMiB7CgltYXJnaW46IDAgMCAuNWVtOwp9CgpoMi5wYXJlbnRJdGVtIHsKCWZvbnQtd2VpZ2h0OiBib2xkOwoJZm9udC1zaXplOiAxZW07CglwYWRkaW5nOiAwIDAgLjVlbTsKCWJvcmRlci1ib3R0b206IDFweCBzb2xpZCAjY2NjOwp9CgovKiBJZiBjb21iaW5pbmcgY2hpbGRyZW4sIGRpc3BsYXkgcGFyZW50IHNsaWdodGx5IGxhcmdlciAqLwp1bC5yZXBvcnQuY29tYmluZUNoaWxkSXRlbXMgaDIucGFyZW50SXRlbSB7Cglmb250LXNpemU6IDEuMWVtOwoJcGFkZGluZy1ib3R0b206IC43NWVtOwoJbWFyZ2luLWJvdHRvbTogLjRlbTsKfQoKaDIucGFyZW50SXRlbSAudGl0bGUgewoJZm9udC13ZWlnaHQ6IG5vcm1hbDsKfQoKaDMgewoJbWFyZ2luLWJvdHRvbTogLjZlbTsKCWZvbnQtd2VpZ2h0OiBib2xkICFpbXBvcnRhbnQ7Cglmb250LXNpemU6IDFlbTsKCWRpc3BsYXk6IGJsb2NrOwp9CgovKiBNZXRhZGF0YSB0YWJsZSAqLwp0aCB7Cgl2ZXJ0aWNhbC1hbGlnbjogdG9wOwoJdGV4dC1hbGlnbjogcmlnaHQ7Cgl3aWR0aDogMTUlOwoJd2hpdGUtc3BhY2U6IG5vd3JhcDsKfQoKdGQgewoJcGFkZGluZy1sZWZ0OiAuNWVtOwp9CgoKdWwucmVwb3J0LCB1bC5ub3RlcywgdWwudGFncyB7CglsaXN0LXN0eWxlOiBub25lOwoJbWFyZ2luLWxlZnQ6IDA7CglwYWRkaW5nLWxlZnQ6IDA7Cn0KCi8qIFRhZ3MgKi8KaDMudGFncyB7Cglmb250LXNpemU6IDEuMWVtOwp9Cgp1bC50YWdzIHsKCWxpbmUtaGVpZ2h0OiAxLjc1ZW07CglsaXN0LXN0eWxlOiBub25lOwp9Cgp1bC50YWdzIGxpIHsKCWRpc3BsYXk6IGlubGluZTsKfQoKdWwudGFncyBsaTpub3QoOmxhc3QtY2hpbGQpOmFmdGVyIHsKCWNvbnRlbnQ6ICcsICc7Cn0KCgovKiBDaGlsZCBub3RlcyAqLwpoMy5ub3RlcyB7Cglmb250LXNpemU6IDEuMWVtOwp9Cgp1bC5ub3RlcyB7CgltYXJnaW4tYm90dG9tOiAxLjJlbTsKfQoKdWwubm90ZXMgPiBsaTpmaXJzdC1jaGlsZCBwIHsKCW1hcmdpbi10b3A6IDA7Cn0KCnVsLm5vdGVzID4gbGkgewoJcGFkZGluZzogLjdlbSAwOwp9Cgp1bC5ub3RlcyA+IGxpOm5vdCg6bGFzdC1jaGlsZCkgewoJYm9yZGVyLWJvdHRvbTogMXB4ICNjY2Mgc29saWQ7Cn0KCgp1bC5ub3RlcyA+IGxpIHA6Zmlyc3QtY2hpbGQgewoJbWFyZ2luLXRvcDogMDsKfQoKdWwubm90ZXMgPiBsaSBwOmxhc3QtY2hpbGQgewoJbWFyZ2luLWJvdHRvbTogMDsKfQoKLyogQWRkIHF1b3RhdGlvbiBtYXJrcyBhcm91bmQgYmxvY2txdW90ZSAqLwp1bC5ub3RlcyA+IGxpIGJsb2NrcXVvdGUgcDpub3QoOmVtcHR5KTpiZWZvcmUsCmxpLm5vdGUgYmxvY2txdW90ZSBwOm5vdCg6ZW1wdHkpOmJlZm9yZSB7Cgljb250ZW50OiAn4oCcJzsKfQoKdWwubm90ZXMgPiBsaSBibG9ja3F1b3RlIHA6bm90KDplbXB0eSk6bGFzdC1jaGlsZDphZnRlciwKbGkubm90ZSBibG9ja3F1b3RlIHA6bm90KDplbXB0eSk6bGFzdC1jaGlsZDphZnRlciB7Cgljb250ZW50OiAn4oCdJzsKfQoKLyogUHJlc2VydmUgd2hpdGVzcGFjZSBvbiBwbGFpbnRleHQgbm90ZXMgKi8KdWwubm90ZXMgbGkgcC5wbGFpbnRleHQsIGxpLm5vdGUgcC5wbGFpbnRleHQsIGRpdi5ub3RlIHAucGxhaW50ZXh0IHsKCXdoaXRlLXNwYWNlOiBwcmUtd3JhcDsKfQoKLyogRGlzcGxheSB0YWdzIHdpdGhpbiBjaGlsZCBub3RlcyBpbmxpbmUgKi8KdWwubm90ZXMgaDMudGFncyB7CglkaXNwbGF5OiBpbmxpbmU7Cglmb250LXNpemU6IDFlbTsKfQoKdWwubm90ZXMgaDMudGFnczphZnRlciB7Cgljb250ZW50OiAnICc7Cn0KCnVsLm5vdGVzIHVsLnRhZ3MgewoJZGlzcGxheTogaW5saW5lOwp9Cgp1bC5ub3RlcyB1bC50YWdzIGxpOm5vdCg6bGFzdC1jaGlsZCk6YWZ0ZXIgewoJY29udGVudDogJywgJzsKfQoKCi8qIENoaWxkIGF0dGFjaG1lbnRzICovCmgzLmF0dGFjaG1lbnRzIHsKCWZvbnQtc2l6ZTogMS4xZW07Cn0KCnVsLmF0dGFjaG1lbnRzIGxpIHsKCXBhZGRpbmctdG9wOiAuNWVtOwp9Cgp1bC5hdHRhY2htZW50cyBkaXYubm90ZSB7CgltYXJnaW4tbGVmdDogMmVtOwp9Cgp1bC5hdHRhY2htZW50cyBkaXYubm90ZSBwOmZpcnN0LWNoaWxkIHsKCW1hcmdpbi10b3A6IC43NWVtOwp9CgpkaXYgdGFibGUgewoJYm9yZGVyLWNvbGxhcHNlOiBjb2xsYXBzZTsKfQoKZGl2IHRhYmxlIHRkLCBkaXYgdGFibGUgdGggewoJYm9yZGVyOiAxcHggI2NjYyBzb2xpZDsKCWJvcmRlci1jb2xsYXBzZTogY29sbGFwc2U7Cgl3b3JkLWJyZWFrOiBicmVhay1hbGw7Cn0KCmRpdiB0YWJsZSB0ZCBwOmVtcHR5OjphZnRlciwgZGl2IHRhYmxlIHRoIHA6ZW1wdHk6OmFmdGVyIHsKCWNvbnRlbnQ6ICJcMDBhMCI7Cn0KCmRpdiB0YWJsZSB0ZCAqOmZpcnN0LWNoaWxkLCBkaXYgdGFibGUgdGggKjpmaXJzdC1jaGlsZCB7CgltYXJnaW4tdG9wOiAwOwp9CgpkaXYgdGFibGUgdGQgKjpsYXN0LWNoaWxkLCBkaXYgdGFibGUgdGggKjpsYXN0LWNoaWxkIHsKCW1hcmdpbi1ib3R0b206IDA7Cn0K">
+		<link rel="stylesheet" type="text/css" media="screen,projection" href="data:text/css;base64,LyogR2VuZXJpYyBzdHlsZXMgKi8KYm9keSB7Cglmb250OiA2Mi41JSBHZW9yZ2lhLCBUaW1lcywgc2VyaWY7Cgl3aWR0aDogNzgwcHg7CgltYXJnaW46IDAgYXV0bzsKfQoKaDIgewoJZm9udC1zaXplOiAxLjVlbTsKCWxpbmUtaGVpZ2h0OiAxLjVlbTsKCWZvbnQtZmFtaWx5OiBHZW9yZ2lhLCBUaW1lcywgc2VyaWY7Cn0KCnAgewoJbGluZS1oZWlnaHQ6IDEuNWVtOwp9CgphOmxpbmssIGE6dmlzaXRlZCB7Cgljb2xvcjogIzkwMDsKfQoKYTpob3ZlciwgYTphY3RpdmUgewoJY29sb3I6ICM3Nzc7Cn0KCgp1bC5yZXBvcnQgewoJZm9udC1zaXplOiAxLjRlbTsKCXdpZHRoOiA2ODBweDsKCW1hcmdpbjogMCBhdXRvOwoJcGFkZGluZzogMjBweCAyMHB4Owp9CgovKiBNZXRhZGF0YSB0YWJsZSAqLwp0YWJsZSB7Cglib3JkZXI6IDFweCAjY2NjIHNvbGlkOwoJb3ZlcmZsb3c6IGF1dG87Cgl3aWR0aDogMTAwJTsKCW1hcmdpbjogLjFlbSBhdXRvIC43NWVtOwoJcGFkZGluZzogMC41ZW07Cn0K">
+		<link rel="stylesheet" type="text/css" media="print" href="data:text/css;base64,Ym9keSB7Cglmb250OiAxMnB0ICJUaW1lcyBOZXcgUm9tYW4iLCBUaW1lcywgR2VvcmdpYSwgc2VyaWY7CgltYXJnaW46IDA7Cgl3aWR0aDogYXV0bzsKCWNvbG9yOiBibGFjazsKfQoKLyogUGFnZSBCcmVha3MgKHBhZ2UtYnJlYWstaW5zaWRlIG9ubHkgcmVjb2duaXplZCBieSBPcGVyYSkgKi8KaDEsIGgyLCBoMywgaDQsIGg1LCBoNiB7CglwYWdlLWJyZWFrLWFmdGVyOiBhdm9pZDsKCXBhZ2UtYnJlYWstaW5zaWRlOiBhdm9pZDsKfQoKdWwsIG9sLCBkbCB7CglwYWdlLWJyZWFrLWluc2lkZTogYXZvaWQ7Cgljb2xvci1hZGp1c3Q6IGV4YWN0Owp9CgpoMiB7Cglmb250LXNpemU6IDEuM2VtOwoJbGluZS1oZWlnaHQ6IDEuM2VtOwp9CgphIHsKCWNvbG9yOiAjMDAwOwoJdGV4dC1kZWNvcmF0aW9uOiBub25lOwp9Cg==">
+	</head>
+	<body>
+		<ul class="report combineChildItems">
+			<li id="item_ND4TNBF9" class="item conferencePaper">
+			<h2>Supporting Very Large Models using Automatic Dataflow Graph Partitioning</h2>
+				<table>
+					<tbody><tr>
+						<th>类型</th>
+						<td>会议论文</td>
+					</tr>
+					<tr>
+						<th class="author">作者</th>
+						<td>Minjie Wang</td>
+					</tr>
+					<tr>
+						<th class="author">作者</th>
+						<td>Chien-chin Huang</td>
+					</tr>
+					<tr>
+						<th class="author">作者</th>
+						<td>Jinyang Li</td>
+					</tr>
+					<tr>
+					<th>摘要</th>
+						<td>This paper presents Tofu, a system that partitions very large 
+DNN models across multiple GPU devices to reduce per-GPU memory 
+footprint. Tofu is designed to partition a dataﬂow graph of ﬁne-grained 
+tensor operators used by platforms like MXNet and TensorFlow. In order 
+to automatically partition each operator, we propose to describe the 
+semantics of an operator in a simple language inspired by Halide. To 
+optimally partition different operators in a dataﬂow graph, Tofu uses a 
+recursive search algorithm that minimizes the total communication cost. 
+Our experiments on an 8-GPU machine show that Tofu enables the training 
+of very large CNN and RNN models. It also achieves 25% - 400% speedup 
+over alternative approaches to train very large models.</td>
+					</tr>
+					<tr>
+					<th>日期</th>
+						<td>2019-03-25</td>
+					</tr>
+					<tr>
+					<th>语言</th>
+						<td>en</td>
+					</tr>
+					<tr>
+					<th>馆藏目录</th>
+						<td>DOI.org (Crossref)</td>
+					</tr>
+					<tr>
+					<th>URL</th>
+						<td><a href="https://dl.acm.org/doi/10.1145/3302424.3303953">https://dl.acm.org/doi/10.1145/3302424.3303953</a></td>
+					</tr>
+					<tr>
+					<th>访问时间</th>
+						<td>2021/10/11 下午6:52:46</td>
+					</tr>
+					<tr>
+					<th>地点</th>
+						<td>Dresden Germany</td>
+					</tr>
+					<tr>
+					<th>出版社</th>
+						<td>ACM</td>
+					</tr>
+					<tr>
+					<th>ISBN</th>
+						<td>978-1-4503-6281-8</td>
+					</tr>
+					<tr>
+					<th>页码</th>
+						<td>1-17</td>
+					</tr>
+					<tr>
+					<th>投递标题</th>
+						<td>Proceedings of the Fourteenth EuroSys Conference 2019</td>
+					</tr>
+					<tr>
+					<th>学术会议名称</th>
+						<td>EuroSys '19: Fourteenth EuroSys Conference 2019</td>
+					</tr>
+					<tr>
+					<th>DOI</th>
+						<td><a href="http://doi.org/10.1145/3302424.3303953">10.1145/3302424.3303953</a></td>
+					</tr>
+					<tr>
+					<th>添加日期</th>
+						<td>2021/10/11 下午6:52:46</td>
+					</tr>
+					<tr>
+					<th>修改日期</th>
+						<td>2021/10/11 下午6:52:46</td>
+					</tr>
+				</tbody></table>
+				<h3 class="attachments">附件</h3>
+				<ul class="attachments">
+					<li id="item_6I9S2VS7">Wang 等。 - 2019 - Supporting Very Large Models using Automatic Dataf.pdf					</li>
+				</ul>
+			</li>
+
+
+			<li id="item_UYARPV5D" class="item journalArticle">
+			<h2>Scalable Deep Learning on Distributed Infrastructures: Challenges, Techniques, and Tools</h2>
+				<table>
+					<tbody><tr>
+						<th>类型</th>
+						<td>期刊文章</td>
+					</tr>
+					<tr>
+						<th class="author">作者</th>
+						<td>Ruben Mayer</td>
+					</tr>
+					<tr>
+						<th class="author">作者</th>
+						<td>Hans-Arno Jacobsen</td>
+					</tr>
+					<tr>
+					<th>摘要</th>
+						<td>Deep Learning (DL) has had an immense success in the recent 
+past, leading to state-of-the-art results in various domains, such as 
+image recognition and natural language processing. One of the reasons 
+for this success is the increasing size of DL models and the 
+proliferation of vast amounts of training data being available. To keep 
+on improving the performance of DL, increasing the scalability of DL 
+systems is necessary. In this survey, we perform a broad and thorough 
+investigation on challenges, techniques and tools for scalable DL on 
+distributed infrastructures. This incorporates infrastructures for DL, 
+methods for parallel DL training, multi-tenant resource scheduling, and 
+the management of training and model data. Further, we analyze and 
+compare 11 current open-source DL frameworks and tools and investigate 
+which of the techniques are commonly implemented in practice. Finally, 
+we highlight future research trends in DL systems that deserve further 
+research.</td>
+					</tr>
+					<tr>
+					<th>日期</th>
+						<td>2021-01-31</td>
+					</tr>
+					<tr>
+					<th>语言</th>
+						<td>en</td>
+					</tr>
+					<tr>
+					<th>短标题</th>
+						<td>Scalable Deep Learning on Distributed Infrastructures</td>
+					</tr>
+					<tr>
+					<th>馆藏目录</th>
+						<td>DOI.org (Crossref)</td>
+					</tr>
+					<tr>
+					<th>URL</th>
+						<td><a href="https://dl.acm.org/doi/10.1145/3363554">https://dl.acm.org/doi/10.1145/3363554</a></td>
+					</tr>
+					<tr>
+					<th>访问时间</th>
+						<td>2022/6/7 下午7:55:58</td>
+					</tr>
+					<tr>
+					<th>卷</th>
+						<td>53</td>
+					</tr>
+					<tr>
+					<th>页码</th>
+						<td>1-37</td>
+					</tr>
+					<tr>
+					<th>期刊</th>
+						<td>ACM Computing Surveys</td>
+					</tr>
+					<tr>
+					<th>DOI</th>
+						<td><a href="http://doi.org/10.1145/3363554">10.1145/3363554</a></td>
+					</tr>
+					<tr>
+					<th>期</th>
+						<td>1</td>
+					</tr>
+					<tr>
+					<th>刊名缩写</th>
+						<td>ACM Comput. Surv.</td>
+					</tr>
+					<tr>
+					<th>ISSN</th>
+						<td>0360-0300, 1557-7341</td>
+					</tr>
+					<tr>
+					<th>添加日期</th>
+						<td>2022/6/7 下午7:55:58</td>
+					</tr>
+					<tr>
+					<th>修改日期</th>
+						<td>2022/6/7 下午7:55:58</td>
+					</tr>
+				</tbody></table>
+				<h3 class="attachments">附件</h3>
+				<ul class="attachments">
+					<li id="item_SG7ND3NK">Mayer 和 Jacobsen - 2021 - Scalable Deep Learning on Distributed Infrastructu.pdf					</li>
+				</ul>
+			</li>
+
+
+			<li id="item_VDGGTQI3" class="item preprint">
+			<h2>Placeto: Learning Generalizable Device Placement Algorithms for Distributed Machine Learning</h2>
+				<table>
+					<tbody><tr>
+						<th>类型</th>
+						<td>Preprint</td>
+					</tr>
+					<tr>
+						<th class="author">作者</th>
+						<td>Ravichandra Addanki</td>
+					</tr>
+					<tr>
+						<th class="author">作者</th>
+						<td>Shaileshh Bojja Venkatakrishnan</td>
+					</tr>
+					<tr>
+						<th class="author">作者</th>
+						<td>Shreyan Gupta</td>
+					</tr>
+					<tr>
+						<th class="author">作者</th>
+						<td>Hongzi Mao</td>
+					</tr>
+					<tr>
+						<th class="author">作者</th>
+						<td>Mohammad Alizadeh</td>
+					</tr>
+					<tr>
+					<th>摘要</th>
+						<td>We present Placeto, a reinforcement learning (RL) approach to 
+efﬁciently ﬁnd device placements for distributed neural network 
+training. Unlike prior approaches that only ﬁnd a device placement for a
+ speciﬁc computation graph, Placeto can learn generalizable device 
+placement policies that can be applied to any graph. We propose two key 
+ideas in our approach: (1) we represent the policy as performing 
+iterative placement improvements, rather than outputting a placement in 
+one shot; (2) we use graph embeddings to capture relevant information 
+about the structure of the computation graph, without relying on node 
+labels for indexing. These ideas allow Placeto to train efﬁciently and 
+generalize to unseen graphs. Our experiments show that Placeto requires 
+up to 6.1× fewer training steps to ﬁnd placements that are on par with 
+or better than the best placements found by prior approaches. Moreover, 
+Placeto is able to learn a generalizable placement policy for any given 
+family of graphs, which can then be used without any retraining to 
+predict optimized placements for unseen graphs from the same family. 
+This eliminates the large overhead incurred by prior RL approaches whose
+ lack of generalizability necessitates re-training from scratch every 
+time a new graph is to be placed.</td>
+					</tr>
+					<tr>
+					<th>日期</th>
+						<td>2019-06-20</td>
+					</tr>
+					<tr>
+					<th>语言</th>
+						<td>en</td>
+					</tr>
+					<tr>
+					<th>短标题</th>
+						<td>Placeto</td>
+					</tr>
+					<tr>
+					<th>馆藏目录</th>
+						<td>arXiv.org</td>
+					</tr>
+					<tr>
+					<th>URL</th>
+						<td><a href="http://arxiv.org/abs/1906.08879">http://arxiv.org/abs/1906.08879</a></td>
+					</tr>
+					<tr>
+					<th>访问时间</th>
+						<td>2022/6/7 下午7:55:50</td>
+					</tr>
+					<tr>
+					<th>其它</th>
+						<td>Number: arXiv:1906.08879
+arXiv:1906.08879 [cs, stat]</td>
+					</tr>
+					<tr>
+					<th>Repository</th>
+						<td>arXiv</td>
+					</tr>
+					<tr>
+					<th>Archive ID</th>
+						<td>arXiv:1906.08879</td>
+					</tr>
+					<tr>
+					<th>添加日期</th>
+						<td>2022/6/7 下午7:55:50</td>
+					</tr>
+					<tr>
+					<th>修改日期</th>
+						<td>2022/6/7 下午7:55:50</td>
+					</tr>
+				</tbody></table>
+				<h3 class="tags">标签：</h3>
+				<ul class="tags">
+					<li>Computer Science - Distributed, Parallel, and Cluster Computing</li>
+					<li>Computer Science - Machine Learning</li>
+					<li>Statistics - Machine Learning</li>
+				</ul>
+				<h3 class="attachments">附件</h3>
+				<ul class="attachments">
+					<li id="item_6ALGJ4I4">Addanki 等。 - 2019 - Placeto Learning Generalizable Device Placement A.pdf					</li>
+				</ul>
+			</li>
+
+
+			<li id="item_7CUD6IG5" class="item journalArticle">
+			<h2>One weird trick for parallelizing convolutional neural networks</h2>
+				<table>
+					<tbody><tr>
+						<th>类型</th>
+						<td>期刊文章</td>
+					</tr>
+					<tr>
+						<th class="author">作者</th>
+						<td>Alex Krizhevsky</td>
+					</tr>
+					<tr>
+					<th>摘要</th>
+						<td>I present a new way to parallelize the training of 
+convolutional neural networks across multiple GPUs. The method scales 
+signiﬁcantly better than all alternatives when applied to modern 
+convolutional neural networks.</td>
+					</tr>
+					<tr>
+					<th>日期</th>
+						<td>2014-04-26</td>
+					</tr>
+					<tr>
+					<th>语言</th>
+						<td>en</td>
+					</tr>
+					<tr>
+					<th>馆藏目录</th>
+						<td>arXiv.org</td>
+					</tr>
+					<tr>
+					<th>URL</th>
+						<td><a href="http://arxiv.org/abs/1404.5997">http://arxiv.org/abs/1404.5997</a></td>
+					</tr>
+					<tr>
+					<th>访问时间</th>
+						<td>2021/10/11 下午6:39:37</td>
+					</tr>
+					<tr>
+					<th>其它</th>
+						<td>arXiv: 1404.5997</td>
+					</tr>
+					<tr>
+					<th>期刊</th>
+						<td>arXiv:1404.5997 [cs]</td>
+					</tr>
+					<tr>
+					<th>添加日期</th>
+						<td>2021/10/11 下午6:39:37</td>
+					</tr>
+					<tr>
+					<th>修改日期</th>
+						<td>2021/10/11 下午6:39:37</td>
+					</tr>
+				</tbody></table>
+				<h3 class="tags">标签：</h3>
+				<ul class="tags">
+					<li>Computer Science - Machine Learning</li>
+					<li>Computer Science - Neural and Evolutionary Computing</li>
+					<li>Computer Science - Distributed, Parallel, and Cluster Computing</li>
+				</ul>
+				<h3 class="attachments">附件</h3>
+				<ul class="attachments">
+					<li id="item_GA2I5VN9">Krizhevsky - 2014 - One weird trick for parallelizing convolutional ne.pdf					</li>
+				</ul>
+			</li>
+
+
+			<li id="item_T2JDMC3H" class="item attachment">
+			<h2>GDP GENERALIZED DEVICE PLACEMENT FOR.pdf</h2>
+				<table>
+					<tbody><tr>
+						<th>类型</th>
+						<td>附件</td>
+					</tr>
+					<tr>
+					<th>添加日期</th>
+						<td>2021/10/11 下午6:55:31</td>
+					</tr>
+					<tr>
+					<th>修改日期</th>
+						<td>2021/10/11 下午6:55:31</td>
+					</tr>
+				</tbody></table>
+			</li>
+
+
+			<li id="item_97YUS7VA" class="item journalArticle">
+			<h2>Exploring Hidden Dimensions in Parallelizing Convolutional Neural Networks</h2>
+				<table>
+					<tbody><tr>
+						<th>类型</th>
+						<td>期刊文章</td>
+					</tr>
+					<tr>
+						<th class="author">作者</th>
+						<td>Zhihao Jia</td>
+					</tr>
+					<tr>
+						<th class="author">作者</th>
+						<td>Sina Lin</td>
+					</tr>
+					<tr>
+						<th class="author">作者</th>
+						<td>Charles R. Qi</td>
+					</tr>
+					<tr>
+						<th class="author">作者</th>
+						<td>Alex Aiken</td>
+					</tr>
+					<tr>
+					<th>摘要</th>
+						<td>The past few years have witnessed growth in the computational 
+requirements for training deep convolutional neural networks. Current 
+approaches parallelize training onto multiple devices by applying a 
+single parallelization strategy (e.g., data or model parallelism) to all
+ layers in a network. Although easy to reason about, these approaches 
+result in suboptimal runtime performance in largescale distributed 
+training, since different layers in a network may prefer different 
+parallelization strategies. In this paper, we propose layer-wise 
+parallelism that allows each layer in a network to use an individual 
+parallelization strategy. We jointly optimize how each layer is 
+parallelized by solving a graph search problem. Our evaluation shows 
+that layer-wise parallelism outperforms state-of-the-art approaches by 
+increasing training throughput, reducing communication costs, achieving 
+better scalability to multiple GPUs, while maintaining original network 
+accuracy.</td>
+					</tr>
+					<tr>
+					<th>日期</th>
+						<td>2018-06-09</td>
+					</tr>
+					<tr>
+					<th>语言</th>
+						<td>en</td>
+					</tr>
+					<tr>
+					<th>馆藏目录</th>
+						<td>arXiv.org</td>
+					</tr>
+					<tr>
+					<th>URL</th>
+						<td><a href="http://arxiv.org/abs/1802.04924">http://arxiv.org/abs/1802.04924</a></td>
+					</tr>
+					<tr>
+					<th>访问时间</th>
+						<td>2021/10/11 下午6:21:47</td>
+					</tr>
+					<tr>
+					<th>其它</th>
+						<td>arXiv: 1802.04924</td>
+					</tr>
+					<tr>
+					<th>期刊</th>
+						<td>arXiv:1802.04924 [cs]</td>
+					</tr>
+					<tr>
+					<th>添加日期</th>
+						<td>2021/10/11 下午6:21:47</td>
+					</tr>
+					<tr>
+					<th>修改日期</th>
+						<td>2021/10/11 下午6:21:47</td>
+					</tr>
+				</tbody></table>
+				<h3 class="tags">标签：</h3>
+				<ul class="tags">
+					<li>Computer Science - Machine Learning</li>
+					<li>Computer Science - Neural and Evolutionary Computing</li>
+					<li>Computer Science - Distributed, Parallel, and Cluster Computing</li>
+				</ul>
+				<h3 class="attachments">附件</h3>
+				<ul class="attachments">
+					<li id="item_2LMJTP4H">Jia 等。 - 2018 - Exploring Hidden Dimensions in Parallelizing Convo.pdf					</li>
+				</ul>
+			</li>
+
+
+			<li id="item_DUVZTY7W" class="item preprint">
+			<h2>Beyond Data and Model Parallelism for Deep Neural Networks</h2>
+				<table>
+					<tbody><tr>
+						<th>类型</th>
+						<td>Preprint</td>
+					</tr>
+					<tr>
+						<th class="author">作者</th>
+						<td>Zhihao Jia</td>
+					</tr>
+					<tr>
+						<th class="author">作者</th>
+						<td>Matei Zaharia</td>
+					</tr>
+					<tr>
+						<th class="author">作者</th>
+						<td>Alex Aiken</td>
+					</tr>
+					<tr>
+					<th>摘要</th>
+						<td>The computational requirements for training deep neural 
+networks (DNNs) have grown to the point that it is now standard practice
+ to parallelize training. Existing deep learning systems commonly use 
+data or model parallelism, but unfortunately, these strategies often 
+result in suboptimal parallelization performance. In this paper, we 
+deﬁne a more comprehensive search space of parallelization strategies 
+for DNNs called SOAP, which includes strategies to parallelize a DNN in 
+the Sample, Operation, Attribute, and Parameter dimensions. We also 
+propose FlexFlow, a deep learning framework that uses guided randomized 
+search of the SOAP space to ﬁnd a fast parallelization strategy for a 
+speciﬁc parallel machine. To accelerate this search, FlexFlow introduces
+ a novel execution simulator that can accurately predict a 
+parallelization strategy’s performance and is three orders of magnitude 
+faster than prior approaches that have to execute each strategy. We 
+evaluate FlexFlow with six real-world DNN benchmarks on two GPU clusters
+ and show that FlexFlow can increase training throughput by up to 3.8× 
+over state-of-the-art approaches, even when including its search time, 
+and also improves scalability.</td>
+					</tr>
+					<tr>
+					<th>日期</th>
+						<td>2018-07-14</td>
+					</tr>
+					<tr>
+					<th>语言</th>
+						<td>en</td>
+					</tr>
+					<tr>
+					<th>馆藏目录</th>
+						<td>arXiv.org</td>
+					</tr>
+					<tr>
+					<th>URL</th>
+						<td><a href="http://arxiv.org/abs/1807.05358">http://arxiv.org/abs/1807.05358</a></td>
+					</tr>
+					<tr>
+					<th>访问时间</th>
+						<td>2022/6/7 下午7:55:11</td>
+					</tr>
+					<tr>
+					<th>其它</th>
+						<td>Number: arXiv:1807.05358
+arXiv:1807.05358 [cs]</td>
+					</tr>
+					<tr>
+					<th>Repository</th>
+						<td>arXiv</td>
+					</tr>
+					<tr>
+					<th>Archive ID</th>
+						<td>arXiv:1807.05358</td>
+					</tr>
+					<tr>
+					<th>添加日期</th>
+						<td>2022/6/7 下午7:55:11</td>
+					</tr>
+					<tr>
+					<th>修改日期</th>
+						<td>2022/6/7 下午7:55:11</td>
+					</tr>
+				</tbody></table>
+				<h3 class="tags">标签：</h3>
+				<ul class="tags">
+					<li>Computer Science - Distributed, Parallel, and Cluster Computing</li>
+				</ul>
+				<h3 class="attachments">附件</h3>
+				<ul class="attachments">
+					<li id="item_YUNDX678">Jia 等。 - 2018 - Beyond Data and Model Parallelism for Deep Neural .pdf					</li>
+				</ul>
+			</li>
+
+
+			<li id="item_7H92C9UI" class="item journalArticle">
+			<h2>A HIERARCHICAL MODEL FOR DEVICE PLACEMENT</h2>
+				<table>
+					<tbody><tr>
+						<th>类型</th>
+						<td>期刊文章</td>
+					</tr>
+					<tr>
+						<th class="author">作者</th>
+						<td>Azalia Mirhoseini</td>
+					</tr>
+					<tr>
+						<th class="author">作者</th>
+						<td>Anna Goldie</td>
+					</tr>
+					<tr>
+						<th class="author">作者</th>
+						<td>Hieu Pham</td>
+					</tr>
+					<tr>
+						<th class="author">作者</th>
+						<td>Benoit Steiner</td>
+					</tr>
+					<tr>
+						<th class="author">作者</th>
+						<td>Quoc V Le</td>
+					</tr>
+					<tr>
+						<th class="author">作者</th>
+						<td>Jeff Dean</td>
+					</tr>
+					<tr>
+					<th>摘要</th>
+						<td>We introduce a hierarchical model for efﬁcient placement of 
+computational graphs onto hardware devices, especially in heterogeneous 
+environments with a mixture of CPUs, GPUs, and other computational 
+devices. Our method learns to assign graph operations to groups and to 
+allocate those groups to available devices. The grouping and device 
+allocations are learned jointly. The proposed method is trained with 
+policy gradient and requires no human intervention. Experiments with 
+widely-used computer vision and natural language models show that our 
+algorithm can ﬁnd optimized, non-trivial placements for TensorFlow 
+computational graphs with over 80,000 operations. In addition, our 
+approach outperforms placements by human experts as well as a previous 
+state-of-the-art placement method based on deep reinforcement learning. 
+Our method achieves runtime reductions of up to 60.6% per training step 
+when applied to models such as Neural Machine Translation.</td>
+					</tr>
+					<tr>
+					<th>日期</th>
+						<td>2018</td>
+					</tr>
+					<tr>
+					<th>语言</th>
+						<td>en</td>
+					</tr>
+					<tr>
+					<th>馆藏目录</th>
+						<td>Zotero</td>
+					</tr>
+					<tr>
+					<th>页码</th>
+						<td>11</td>
+					</tr>
+					<tr>
+					<th>添加日期</th>
+						<td>2021/10/11 下午6:55:34</td>
+					</tr>
+					<tr>
+					<th>修改日期</th>
+						<td>2021/10/11 下午6:55:34</td>
+					</tr>
+				</tbody></table>
+				<h3 class="attachments">附件</h3>
+				<ul class="attachments">
+					<li id="item_YG97L235">Mirhoseini 等。 - 2018 - A HIERARCHICAL MODEL FOR DEVICE PLACEMENT.pdf					</li>
+				</ul>
+			</li>
+
+		</ul>
+	
+</body></html>

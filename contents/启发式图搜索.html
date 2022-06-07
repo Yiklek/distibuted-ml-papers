@@ -1,0 +1,747 @@
+<!DOCTYPE html>
+<html><head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<title>Zotero 报告</title>
+		<link rel="stylesheet" type="text/css" href="data:text/css;base64,Ym9keSB7CgliYWNrZ3JvdW5kOiB3aGl0ZTsKfQoKYSB7Cgl0ZXh0LWRlY29yYXRpb246IHVuZGVybGluZTsKfQoKYm9keSB7CglwYWRkaW5nOiAwOwp9Cgp1bC5yZXBvcnQgbGkuaXRlbSB7Cglib3JkZXItdG9wOiA0cHggc29saWQgIzU1NTsKCXBhZGRpbmctdG9wOiAxZW07CglwYWRkaW5nLWxlZnQ6IDFlbTsKCXBhZGRpbmctcmlnaHQ6IDFlbTsKCW1hcmdpbi1ib3R0b206IDJlbTsKfQoKaDEsIGgyLCBoMywgaDQsIGg1LCBoNiB7Cglmb250LXdlaWdodDogbm9ybWFsOwp9CgpoMiB7CgltYXJnaW46IDAgMCAuNWVtOwp9CgpoMi5wYXJlbnRJdGVtIHsKCWZvbnQtd2VpZ2h0OiBib2xkOwoJZm9udC1zaXplOiAxZW07CglwYWRkaW5nOiAwIDAgLjVlbTsKCWJvcmRlci1ib3R0b206IDFweCBzb2xpZCAjY2NjOwp9CgovKiBJZiBjb21iaW5pbmcgY2hpbGRyZW4sIGRpc3BsYXkgcGFyZW50IHNsaWdodGx5IGxhcmdlciAqLwp1bC5yZXBvcnQuY29tYmluZUNoaWxkSXRlbXMgaDIucGFyZW50SXRlbSB7Cglmb250LXNpemU6IDEuMWVtOwoJcGFkZGluZy1ib3R0b206IC43NWVtOwoJbWFyZ2luLWJvdHRvbTogLjRlbTsKfQoKaDIucGFyZW50SXRlbSAudGl0bGUgewoJZm9udC13ZWlnaHQ6IG5vcm1hbDsKfQoKaDMgewoJbWFyZ2luLWJvdHRvbTogLjZlbTsKCWZvbnQtd2VpZ2h0OiBib2xkICFpbXBvcnRhbnQ7Cglmb250LXNpemU6IDFlbTsKCWRpc3BsYXk6IGJsb2NrOwp9CgovKiBNZXRhZGF0YSB0YWJsZSAqLwp0aCB7Cgl2ZXJ0aWNhbC1hbGlnbjogdG9wOwoJdGV4dC1hbGlnbjogcmlnaHQ7Cgl3aWR0aDogMTUlOwoJd2hpdGUtc3BhY2U6IG5vd3JhcDsKfQoKdGQgewoJcGFkZGluZy1sZWZ0OiAuNWVtOwp9CgoKdWwucmVwb3J0LCB1bC5ub3RlcywgdWwudGFncyB7CglsaXN0LXN0eWxlOiBub25lOwoJbWFyZ2luLWxlZnQ6IDA7CglwYWRkaW5nLWxlZnQ6IDA7Cn0KCi8qIFRhZ3MgKi8KaDMudGFncyB7Cglmb250LXNpemU6IDEuMWVtOwp9Cgp1bC50YWdzIHsKCWxpbmUtaGVpZ2h0OiAxLjc1ZW07CglsaXN0LXN0eWxlOiBub25lOwp9Cgp1bC50YWdzIGxpIHsKCWRpc3BsYXk6IGlubGluZTsKfQoKdWwudGFncyBsaTpub3QoOmxhc3QtY2hpbGQpOmFmdGVyIHsKCWNvbnRlbnQ6ICcsICc7Cn0KCgovKiBDaGlsZCBub3RlcyAqLwpoMy5ub3RlcyB7Cglmb250LXNpemU6IDEuMWVtOwp9Cgp1bC5ub3RlcyB7CgltYXJnaW4tYm90dG9tOiAxLjJlbTsKfQoKdWwubm90ZXMgPiBsaTpmaXJzdC1jaGlsZCBwIHsKCW1hcmdpbi10b3A6IDA7Cn0KCnVsLm5vdGVzID4gbGkgewoJcGFkZGluZzogLjdlbSAwOwp9Cgp1bC5ub3RlcyA+IGxpOm5vdCg6bGFzdC1jaGlsZCkgewoJYm9yZGVyLWJvdHRvbTogMXB4ICNjY2Mgc29saWQ7Cn0KCgp1bC5ub3RlcyA+IGxpIHA6Zmlyc3QtY2hpbGQgewoJbWFyZ2luLXRvcDogMDsKfQoKdWwubm90ZXMgPiBsaSBwOmxhc3QtY2hpbGQgewoJbWFyZ2luLWJvdHRvbTogMDsKfQoKLyogQWRkIHF1b3RhdGlvbiBtYXJrcyBhcm91bmQgYmxvY2txdW90ZSAqLwp1bC5ub3RlcyA+IGxpIGJsb2NrcXVvdGUgcDpub3QoOmVtcHR5KTpiZWZvcmUsCmxpLm5vdGUgYmxvY2txdW90ZSBwOm5vdCg6ZW1wdHkpOmJlZm9yZSB7Cgljb250ZW50OiAn4oCcJzsKfQoKdWwubm90ZXMgPiBsaSBibG9ja3F1b3RlIHA6bm90KDplbXB0eSk6bGFzdC1jaGlsZDphZnRlciwKbGkubm90ZSBibG9ja3F1b3RlIHA6bm90KDplbXB0eSk6bGFzdC1jaGlsZDphZnRlciB7Cgljb250ZW50OiAn4oCdJzsKfQoKLyogUHJlc2VydmUgd2hpdGVzcGFjZSBvbiBwbGFpbnRleHQgbm90ZXMgKi8KdWwubm90ZXMgbGkgcC5wbGFpbnRleHQsIGxpLm5vdGUgcC5wbGFpbnRleHQsIGRpdi5ub3RlIHAucGxhaW50ZXh0IHsKCXdoaXRlLXNwYWNlOiBwcmUtd3JhcDsKfQoKLyogRGlzcGxheSB0YWdzIHdpdGhpbiBjaGlsZCBub3RlcyBpbmxpbmUgKi8KdWwubm90ZXMgaDMudGFncyB7CglkaXNwbGF5OiBpbmxpbmU7Cglmb250LXNpemU6IDFlbTsKfQoKdWwubm90ZXMgaDMudGFnczphZnRlciB7Cgljb250ZW50OiAnICc7Cn0KCnVsLm5vdGVzIHVsLnRhZ3MgewoJZGlzcGxheTogaW5saW5lOwp9Cgp1bC5ub3RlcyB1bC50YWdzIGxpOm5vdCg6bGFzdC1jaGlsZCk6YWZ0ZXIgewoJY29udGVudDogJywgJzsKfQoKCi8qIENoaWxkIGF0dGFjaG1lbnRzICovCmgzLmF0dGFjaG1lbnRzIHsKCWZvbnQtc2l6ZTogMS4xZW07Cn0KCnVsLmF0dGFjaG1lbnRzIGxpIHsKCXBhZGRpbmctdG9wOiAuNWVtOwp9Cgp1bC5hdHRhY2htZW50cyBkaXYubm90ZSB7CgltYXJnaW4tbGVmdDogMmVtOwp9Cgp1bC5hdHRhY2htZW50cyBkaXYubm90ZSBwOmZpcnN0LWNoaWxkIHsKCW1hcmdpbi10b3A6IC43NWVtOwp9CgpkaXYgdGFibGUgewoJYm9yZGVyLWNvbGxhcHNlOiBjb2xsYXBzZTsKfQoKZGl2IHRhYmxlIHRkLCBkaXYgdGFibGUgdGggewoJYm9yZGVyOiAxcHggI2NjYyBzb2xpZDsKCWJvcmRlci1jb2xsYXBzZTogY29sbGFwc2U7Cgl3b3JkLWJyZWFrOiBicmVhay1hbGw7Cn0KCmRpdiB0YWJsZSB0ZCBwOmVtcHR5OjphZnRlciwgZGl2IHRhYmxlIHRoIHA6ZW1wdHk6OmFmdGVyIHsKCWNvbnRlbnQ6ICJcMDBhMCI7Cn0KCmRpdiB0YWJsZSB0ZCAqOmZpcnN0LWNoaWxkLCBkaXYgdGFibGUgdGggKjpmaXJzdC1jaGlsZCB7CgltYXJnaW4tdG9wOiAwOwp9CgpkaXYgdGFibGUgdGQgKjpsYXN0LWNoaWxkLCBkaXYgdGFibGUgdGggKjpsYXN0LWNoaWxkIHsKCW1hcmdpbi1ib3R0b206IDA7Cn0K">
+		<link rel="stylesheet" type="text/css" media="screen,projection" href="data:text/css;base64,LyogR2VuZXJpYyBzdHlsZXMgKi8KYm9keSB7Cglmb250OiA2Mi41JSBHZW9yZ2lhLCBUaW1lcywgc2VyaWY7Cgl3aWR0aDogNzgwcHg7CgltYXJnaW46IDAgYXV0bzsKfQoKaDIgewoJZm9udC1zaXplOiAxLjVlbTsKCWxpbmUtaGVpZ2h0OiAxLjVlbTsKCWZvbnQtZmFtaWx5OiBHZW9yZ2lhLCBUaW1lcywgc2VyaWY7Cn0KCnAgewoJbGluZS1oZWlnaHQ6IDEuNWVtOwp9CgphOmxpbmssIGE6dmlzaXRlZCB7Cgljb2xvcjogIzkwMDsKfQoKYTpob3ZlciwgYTphY3RpdmUgewoJY29sb3I6ICM3Nzc7Cn0KCgp1bC5yZXBvcnQgewoJZm9udC1zaXplOiAxLjRlbTsKCXdpZHRoOiA2ODBweDsKCW1hcmdpbjogMCBhdXRvOwoJcGFkZGluZzogMjBweCAyMHB4Owp9CgovKiBNZXRhZGF0YSB0YWJsZSAqLwp0YWJsZSB7Cglib3JkZXI6IDFweCAjY2NjIHNvbGlkOwoJb3ZlcmZsb3c6IGF1dG87Cgl3aWR0aDogMTAwJTsKCW1hcmdpbjogLjFlbSBhdXRvIC43NWVtOwoJcGFkZGluZzogMC41ZW07Cn0K">
+		<link rel="stylesheet" type="text/css" media="print" href="data:text/css;base64,Ym9keSB7Cglmb250OiAxMnB0ICJUaW1lcyBOZXcgUm9tYW4iLCBUaW1lcywgR2VvcmdpYSwgc2VyaWY7CgltYXJnaW46IDA7Cgl3aWR0aDogYXV0bzsKCWNvbG9yOiBibGFjazsKfQoKLyogUGFnZSBCcmVha3MgKHBhZ2UtYnJlYWstaW5zaWRlIG9ubHkgcmVjb2duaXplZCBieSBPcGVyYSkgKi8KaDEsIGgyLCBoMywgaDQsIGg1LCBoNiB7CglwYWdlLWJyZWFrLWFmdGVyOiBhdm9pZDsKCXBhZ2UtYnJlYWstaW5zaWRlOiBhdm9pZDsKfQoKdWwsIG9sLCBkbCB7CglwYWdlLWJyZWFrLWluc2lkZTogYXZvaWQ7Cgljb2xvci1hZGp1c3Q6IGV4YWN0Owp9CgpoMiB7Cglmb250LXNpemU6IDEuM2VtOwoJbGluZS1oZWlnaHQ6IDEuM2VtOwp9CgphIHsKCWNvbG9yOiAjMDAwOwoJdGV4dC1kZWNvcmF0aW9uOiBub25lOwp9Cg==">
+	</head>
+	<body>
+		<ul class="report combineChildItems">
+			<li id="item_HHPH9XZG" class="item conferencePaper">
+			<h2>Baechi: fast device placement of machine learning graphs</h2>
+				<table>
+					<tbody><tr>
+						<th>类型</th>
+						<td>会议论文</td>
+					</tr>
+					<tr>
+						<th class="author">作者</th>
+						<td>Beomyeol Jeon</td>
+					</tr>
+					<tr>
+						<th class="author">作者</th>
+						<td>Linda Cai</td>
+					</tr>
+					<tr>
+						<th class="author">作者</th>
+						<td>Pallavi Srivastava</td>
+					</tr>
+					<tr>
+						<th class="author">作者</th>
+						<td>Jintao Jiang</td>
+					</tr>
+					<tr>
+						<th class="author">作者</th>
+						<td>Xiaolan Ke</td>
+					</tr>
+					<tr>
+						<th class="author">作者</th>
+						<td>Yitao Meng</td>
+					</tr>
+					<tr>
+						<th class="author">作者</th>
+						<td>Cong Xie</td>
+					</tr>
+					<tr>
+						<th class="author">作者</th>
+						<td>Indranil Gupta</td>
+					</tr>
+					<tr>
+					<th>摘要</th>
+						<td>Machine Learning graphs (or models) can be challenging or 
+impossible to train when either devices have limited memory, or the 
+models are large. Splitting the model graph across multiple devices, 
+today, largely relies on learning-based approaches to generate this 
+placement. While it results in models that train fast on data (i.e., 
+with low step times), learning-based model-parallelism is 
+time-consuming, taking many hours or days to create a placement plan of 
+operators on devices. We present the Baechi system, where we adopt an 
+algorithmic approach to the placement problem for running machine 
+learning training graphs on a small cluster of memory-constrained 
+devices. We implemented Baechi so that it works modularly with 
+TensorFlow. Our experimental results using GPUs show that Baechi 
+generates placement plans in time 654×–206K × faster than today’s 
+learning-based approaches, and the placed model’s step time is only up 
+to 6.2% higher than expert-based placements.</td>
+					</tr>
+					<tr>
+					<th>日期</th>
+						<td>2020-10-12</td>
+					</tr>
+					<tr>
+					<th>语言</th>
+						<td>en</td>
+					</tr>
+					<tr>
+					<th>短标题</th>
+						<td>Baechi</td>
+					</tr>
+					<tr>
+					<th>馆藏目录</th>
+						<td>DOI.org (Crossref)</td>
+					</tr>
+					<tr>
+					<th>URL</th>
+						<td><a href="https://dl.acm.org/doi/10.1145/3419111.3421302">https://dl.acm.org/doi/10.1145/3419111.3421302</a></td>
+					</tr>
+					<tr>
+					<th>访问时间</th>
+						<td>2021/10/11 下午6:59:48</td>
+					</tr>
+					<tr>
+					<th>地点</th>
+						<td>Virtual Event USA</td>
+					</tr>
+					<tr>
+					<th>出版社</th>
+						<td>ACM</td>
+					</tr>
+					<tr>
+					<th>ISBN</th>
+						<td>978-1-4503-8137-6</td>
+					</tr>
+					<tr>
+					<th>页码</th>
+						<td>416-430</td>
+					</tr>
+					<tr>
+					<th>投递标题</th>
+						<td>Proceedings of the 11th ACM Symposium on Cloud Computing</td>
+					</tr>
+					<tr>
+					<th>学术会议名称</th>
+						<td>SoCC '20: ACM Symposium on Cloud Computing</td>
+					</tr>
+					<tr>
+					<th>DOI</th>
+						<td><a href="http://doi.org/10.1145/3419111.3421302">10.1145/3419111.3421302</a></td>
+					</tr>
+					<tr>
+					<th>添加日期</th>
+						<td>2021/10/11 下午6:59:48</td>
+					</tr>
+					<tr>
+					<th>修改日期</th>
+						<td>2021/10/11 下午6:59:49</td>
+					</tr>
+				</tbody></table>
+				<h3 class="attachments">附件</h3>
+				<ul class="attachments">
+					<li id="item_CEFN6LSR">Jeon 等。 - 2020 - Baechi fast device placement of machine learning .pdf					</li>
+				</ul>
+			</li>
+
+
+			<li id="item_FUB5DCS4" class="item preprint">
+			<h2>Beyond Data and Model Parallelism for Deep Neural Networks</h2>
+				<table>
+					<tbody><tr>
+						<th>类型</th>
+						<td>Preprint</td>
+					</tr>
+					<tr>
+						<th class="author">作者</th>
+						<td>Zhihao Jia</td>
+					</tr>
+					<tr>
+						<th class="author">作者</th>
+						<td>Matei Zaharia</td>
+					</tr>
+					<tr>
+						<th class="author">作者</th>
+						<td>Alex Aiken</td>
+					</tr>
+					<tr>
+					<th>摘要</th>
+						<td>The computational requirements for training deep neural 
+networks (DNNs) have grown to the point that it is now standard practice
+ to parallelize training. Existing deep learning systems commonly use 
+data or model parallelism, but unfortunately, these strategies often 
+result in suboptimal parallelization performance. In this paper, we 
+deﬁne a more comprehensive search space of parallelization strategies 
+for DNNs called SOAP, which includes strategies to parallelize a DNN in 
+the Sample, Operation, Attribute, and Parameter dimensions. We also 
+propose FlexFlow, a deep learning framework that uses guided randomized 
+search of the SOAP space to ﬁnd a fast parallelization strategy for a 
+speciﬁc parallel machine. To accelerate this search, FlexFlow introduces
+ a novel execution simulator that can accurately predict a 
+parallelization strategy’s performance and is three orders of magnitude 
+faster than prior approaches that have to execute each strategy. We 
+evaluate FlexFlow with six real-world DNN benchmarks on two GPU clusters
+ and show that FlexFlow can increase training throughput by up to 3.8× 
+over state-of-the-art approaches, even when including its search time, 
+and also improves scalability.</td>
+					</tr>
+					<tr>
+					<th>日期</th>
+						<td>2018-07-14</td>
+					</tr>
+					<tr>
+					<th>语言</th>
+						<td>en</td>
+					</tr>
+					<tr>
+					<th>馆藏目录</th>
+						<td>arXiv.org</td>
+					</tr>
+					<tr>
+					<th>URL</th>
+						<td><a href="http://arxiv.org/abs/1807.05358">http://arxiv.org/abs/1807.05358</a></td>
+					</tr>
+					<tr>
+					<th>访问时间</th>
+						<td>2022/6/7 下午7:46:47</td>
+					</tr>
+					<tr>
+					<th>其它</th>
+						<td>Number: arXiv:1807.05358
+arXiv:1807.05358 [cs]</td>
+					</tr>
+					<tr>
+					<th>Repository</th>
+						<td>arXiv</td>
+					</tr>
+					<tr>
+					<th>Archive ID</th>
+						<td>arXiv:1807.05358</td>
+					</tr>
+					<tr>
+					<th>添加日期</th>
+						<td>2022/6/7 下午7:46:47</td>
+					</tr>
+					<tr>
+					<th>修改日期</th>
+						<td>2022/6/7 下午7:46:48</td>
+					</tr>
+				</tbody></table>
+				<h3 class="tags">标签：</h3>
+				<ul class="tags">
+					<li>Computer Science - Distributed, Parallel, and Cluster Computing</li>
+				</ul>
+				<h3 class="attachments">附件</h3>
+				<ul class="attachments">
+					<li id="item_SDLGKCBC">Jia 等。 - 2018 - Beyond Data and Model Parallelism for Deep Neural .pdf					</li>
+				</ul>
+			</li>
+
+
+			<li id="item_UPMLV8DM" class="item preprint">
+			<h2>Exploring Hidden Dimensions in Parallelizing Convolutional Neural Networks</h2>
+				<table>
+					<tbody><tr>
+						<th>类型</th>
+						<td>Preprint</td>
+					</tr>
+					<tr>
+						<th class="author">作者</th>
+						<td>Zhihao Jia</td>
+					</tr>
+					<tr>
+						<th class="author">作者</th>
+						<td>Sina Lin</td>
+					</tr>
+					<tr>
+						<th class="author">作者</th>
+						<td>Charles R. Qi</td>
+					</tr>
+					<tr>
+						<th class="author">作者</th>
+						<td>Alex Aiken</td>
+					</tr>
+					<tr>
+					<th>摘要</th>
+						<td>The past few years have witnessed growth in the computational 
+requirements for training deep convolutional neural networks. Current 
+approaches parallelize training onto multiple devices by applying a 
+single parallelization strategy (e.g., data or model parallelism) to all
+ layers in a network. Although easy to reason about, these approaches 
+result in suboptimal runtime performance in largescale distributed 
+training, since different layers in a network may prefer different 
+parallelization strategies. In this paper, we propose layer-wise 
+parallelism that allows each layer in a network to use an individual 
+parallelization strategy. We jointly optimize how each layer is 
+parallelized by solving a graph search problem. Our evaluation shows 
+that layer-wise parallelism outperforms state-of-the-art approaches by 
+increasing training throughput, reducing communication costs, achieving 
+better scalability to multiple GPUs, while maintaining original network 
+accuracy.</td>
+					</tr>
+					<tr>
+					<th>日期</th>
+						<td>2018-06-09</td>
+					</tr>
+					<tr>
+					<th>语言</th>
+						<td>en</td>
+					</tr>
+					<tr>
+					<th>馆藏目录</th>
+						<td>arXiv.org</td>
+					</tr>
+					<tr>
+					<th>URL</th>
+						<td><a href="http://arxiv.org/abs/1802.04924">http://arxiv.org/abs/1802.04924</a></td>
+					</tr>
+					<tr>
+					<th>访问时间</th>
+						<td>2022/6/7 下午7:46:19</td>
+					</tr>
+					<tr>
+					<th>其它</th>
+						<td>Number: arXiv:1802.04924
+arXiv:1802.04924 [cs]</td>
+					</tr>
+					<tr>
+					<th>Repository</th>
+						<td>arXiv</td>
+					</tr>
+					<tr>
+					<th>Archive ID</th>
+						<td>arXiv:1802.04924</td>
+					</tr>
+					<tr>
+					<th>添加日期</th>
+						<td>2022/6/7 下午7:46:19</td>
+					</tr>
+					<tr>
+					<th>修改日期</th>
+						<td>2022/6/7 下午7:46:19</td>
+					</tr>
+				</tbody></table>
+				<h3 class="tags">标签：</h3>
+				<ul class="tags">
+					<li>Computer Science - Distributed, Parallel, and Cluster Computing</li>
+					<li>Computer Science - Machine Learning</li>
+					<li>Computer Science - Neural and Evolutionary Computing</li>
+				</ul>
+				<h3 class="attachments">附件</h3>
+				<ul class="attachments">
+					<li id="item_D9Y42MQL">Jia 等。 - 2018 - Exploring Hidden Dimensions in Parallelizing Convo.pdf					</li>
+				</ul>
+			</li>
+
+
+			<li id="item_NXD3CV7N" class="item conferencePaper">
+			<h2>Fast Training of Deep Learning Models over Multiple GPUs</h2>
+				<table>
+					<tbody><tr>
+						<th>类型</th>
+						<td>会议论文</td>
+					</tr>
+					<tr>
+						<th class="author">作者</th>
+						<td>Xiaodong Yi</td>
+					</tr>
+					<tr>
+						<th class="author">作者</th>
+						<td>Ziyue Luo</td>
+					</tr>
+					<tr>
+						<th class="author">作者</th>
+						<td>Chen Meng</td>
+					</tr>
+					<tr>
+						<th class="author">作者</th>
+						<td>Mengdi Wang</td>
+					</tr>
+					<tr>
+						<th class="author">作者</th>
+						<td>Guoping Long</td>
+					</tr>
+					<tr>
+						<th class="author">作者</th>
+						<td>Chuan Wu</td>
+					</tr>
+					<tr>
+						<th class="author">作者</th>
+						<td>Jun Yang</td>
+					</tr>
+					<tr>
+						<th class="author">作者</th>
+						<td>Wei Lin</td>
+					</tr>
+					<tr>
+					<th>摘要</th>
+						<td>This paper proposes FastT, a transparent module to work with 
+the TensorFlow framework for automatically identifying a satisfying 
+deployment and execution order of operations in DNN models over multiple
+ GPUs, for expedited model training. We propose white-box algorithms to 
+compute the strategies with small computing resource consumption in a 
+short time. Recently, similar studies have been done to optimize device 
+placement using reinforcement learning. Compared to those works which 
+learn to optimize device placement of operations in several hours using 
+large amounts of computing resources, our approach can find excellent 
+device placement and execution order within minutes using the same 
+computing node as for training. We design a list of scheduling 
+algorithms to compute the device placement and execution order for each 
+operation and also design an algorithm to split operations in the 
+critical path to support fine-grained (mixed) data and model parallelism
+ to further improve the training speed in each iteration. We compare 
+FastT with representative strategies and obtain insights on the best 
+strategies for training different types of DNN models based on extensive
+ testbed experiments.</td>
+					</tr>
+					<tr>
+					<th>日期</th>
+						<td>2020-12-07</td>
+					</tr>
+					<tr>
+					<th>语言</th>
+						<td>en</td>
+					</tr>
+					<tr>
+					<th>馆藏目录</th>
+						<td>DOI.org (Crossref)</td>
+					</tr>
+					<tr>
+					<th>URL</th>
+						<td><a href="https://dl.acm.org/doi/10.1145/3423211.3425675">https://dl.acm.org/doi/10.1145/3423211.3425675</a></td>
+					</tr>
+					<tr>
+					<th>访问时间</th>
+						<td>2021/10/11 下午6:59:45</td>
+					</tr>
+					<tr>
+					<th>地点</th>
+						<td>Delft Netherlands</td>
+					</tr>
+					<tr>
+					<th>出版社</th>
+						<td>ACM</td>
+					</tr>
+					<tr>
+					<th>ISBN</th>
+						<td>978-1-4503-8153-6</td>
+					</tr>
+					<tr>
+					<th>页码</th>
+						<td>105-118</td>
+					</tr>
+					<tr>
+					<th>投递标题</th>
+						<td>Proceedings of the 21st International Middleware Conference</td>
+					</tr>
+					<tr>
+					<th>学术会议名称</th>
+						<td>Middleware '20: 21st International Middleware Conference</td>
+					</tr>
+					<tr>
+					<th>DOI</th>
+						<td><a href="http://doi.org/10.1145/3423211.3425675">10.1145/3423211.3425675</a></td>
+					</tr>
+					<tr>
+					<th>添加日期</th>
+						<td>2021/10/11 下午6:59:45</td>
+					</tr>
+					<tr>
+					<th>修改日期</th>
+						<td>2021/10/11 下午6:59:45</td>
+					</tr>
+				</tbody></table>
+				<h3 class="attachments">附件</h3>
+				<ul class="attachments">
+					<li id="item_I75WE94E">Yi 等。 - 2020 - Fast Training of Deep Learning Models over Multipl.pdf					</li>
+				</ul>
+			</li>
+
+
+			<li id="item_PLNPT3XU" class="item journalArticle">
+			<h2>MP-DPS: A Deep Learning Adaptive Distributed Parallel Training Method Based on Node Merging and Path Prediction</h2>
+				<table>
+					<tbody><tr>
+						<th>类型</th>
+						<td>期刊文章</td>
+					</tr>
+					<tr>
+						<th class="author">作者</th>
+						<td>Zeng Yan</td>
+					</tr>
+					<tr>
+						<th class="author">作者</th>
+						<td>Ding Yong</td>
+					</tr>
+					<tr>
+						<th class="author">作者</th>
+						<td>Ou Dongyang</td>
+					</tr>
+					<tr>
+						<th class="author">作者</th>
+						<td>Zhang Jilin</td>
+					</tr>
+					<tr>
+						<th class="author">作者</th>
+						<td>Ren Yongjian</td>
+					</tr>
+					<tr>
+						<th class="author">作者</th>
+						<td>Zhang Yunquan</td>
+					</tr>
+					<tr>
+					<th>摘要</th>
+						<td>Since the increasing scale of data sets and neural network 
+models caused by widespread of deep learning, distributed training of 
+deep neural network becomes increasingly compelling. However, the 
+current distributed parallel strategies, mainly based on expert 
+experience which is inefficient and requires specialized knowledge. 
+Therefore, some researchers propose automatically implemented 
+distributed training to solve these problems. But their method has poor 
+performance in large-scale complex network. In this paper, we propose an
+ adaptive distributed parallel training method (MP-DPS), based on the 
+node merging of heterogeneous computing power-aware and path prediction,
+ to search optimal parallel strategy automatically in large-scale 
+network. Firstly, targeting the issue of onesided consideration in 
+optimization, we build a multidimensional performance cost model. 
+Secondly, we narrow graph search space by node merging of heterogeneous 
+computing power-aware to reduce the strategy search time. Finally, we 
+propose a graph search algorithm based on path prediction, to place the 
+operator and schedule. It can further shorten the execution time of the 
+computation graph by optimizing the critical path. Our experiments show 
+that, compared with the FastT which is also based on graph search, under
+ the 4 gpu and 8 gpu configuration of ResNet_50, the per-iteration time 
+can be effectively reduced by 13.8% and 7.1%, the policy search time can
+ be reduced by 3.4% and 5.5% respectively.</td>
+					</tr>
+					<tr>
+					<th>语言</th>
+						<td>en</td>
+					</tr>
+					<tr>
+					<th>馆藏目录</th>
+						<td>Zotero</td>
+					</tr>
+					<tr>
+					<th>页码</th>
+						<td>14</td>
+					</tr>
+					<tr>
+					<th>添加日期</th>
+						<td>2021/10/11 下午6:59:50</td>
+					</tr>
+					<tr>
+					<th>修改日期</th>
+						<td>2021/10/11 下午6:59:50</td>
+					</tr>
+				</tbody></table>
+				<h3 class="attachments">附件</h3>
+				<ul class="attachments">
+					<li id="item_6UFUCNRX">Yan 等。 - MP-DPS A Deep Learning Adaptive Distributed Paral.pdf					</li>
+				</ul>
+			</li>
+
+
+			<li id="item_V25F8FPG" class="item conferencePaper">
+			<h2>Supporting Very Large Models using Automatic Dataflow Graph Partitioning</h2>
+				<table>
+					<tbody><tr>
+						<th>类型</th>
+						<td>会议论文</td>
+					</tr>
+					<tr>
+						<th class="author">作者</th>
+						<td>Minjie Wang</td>
+					</tr>
+					<tr>
+						<th class="author">作者</th>
+						<td>Chien-chin Huang</td>
+					</tr>
+					<tr>
+						<th class="author">作者</th>
+						<td>Jinyang Li</td>
+					</tr>
+					<tr>
+					<th>摘要</th>
+						<td>This paper presents Tofu, a system that partitions very large 
+DNN models across multiple GPU devices to reduce per-GPU memory 
+footprint. Tofu is designed to partition a dataflow graph of 
+fine-grained tensor operators used by platforms like MXNet and 
+TensorFlow. In order to automatically partition each operator, we 
+propose to describe the semantics of an operator in a simple language 
+inspired by Halide. To optimally partition different operators in a 
+dataflow graph, Tofu uses a recursive search algorithm that minimizes 
+the total communication cost. Our experiments on an 8-GPU machine show 
+that Tofu enables the training of very large CNN and RNN models. It also
+ achieves 25% - 400% speedup over alternative approaches to train very 
+large models.</td>
+					</tr>
+					<tr>
+					<th>日期</th>
+						<td>2019-03-25</td>
+					</tr>
+					<tr>
+					<th>语言</th>
+						<td>en</td>
+					</tr>
+					<tr>
+					<th>馆藏目录</th>
+						<td>DOI.org (Crossref)</td>
+					</tr>
+					<tr>
+					<th>URL</th>
+						<td><a href="https://dl.acm.org/doi/10.1145/3302424.3303953">https://dl.acm.org/doi/10.1145/3302424.3303953</a></td>
+					</tr>
+					<tr>
+					<th>访问时间</th>
+						<td>2022/6/7 下午7:47:53</td>
+					</tr>
+					<tr>
+					<th>地点</th>
+						<td>Dresden Germany</td>
+					</tr>
+					<tr>
+					<th>出版社</th>
+						<td>ACM</td>
+					</tr>
+					<tr>
+					<th>ISBN</th>
+						<td>978-1-4503-6281-8</td>
+					</tr>
+					<tr>
+					<th>页码</th>
+						<td>1-17</td>
+					</tr>
+					<tr>
+					<th>投递标题</th>
+						<td>Proceedings of the Fourteenth EuroSys Conference 2019</td>
+					</tr>
+					<tr>
+					<th>学术会议名称</th>
+						<td>EuroSys '19: Fourteenth EuroSys Conference 2019</td>
+					</tr>
+					<tr>
+					<th>DOI</th>
+						<td><a href="http://doi.org/10.1145/3302424.3303953">10.1145/3302424.3303953</a></td>
+					</tr>
+					<tr>
+					<th>添加日期</th>
+						<td>2022/6/7 下午7:47:53</td>
+					</tr>
+					<tr>
+					<th>修改日期</th>
+						<td>2022/6/7 下午7:47:54</td>
+					</tr>
+				</tbody></table>
+				<h3 class="attachments">附件</h3>
+				<ul class="attachments">
+					<li id="item_5R9EU58N">Wang 等。 - 2019 - Supporting Very Large Models using Automatic Dataf.pdf					</li>
+				</ul>
+			</li>
+
+
+			<li id="item_JIJ2FBCG" class="item journalArticle">
+			<h2>TensorOpt: Exploring the Tradeoffs in Distributed DNN Training with Auto-Parallelism</h2>
+				<table>
+					<tbody><tr>
+						<th>类型</th>
+						<td>期刊文章</td>
+					</tr>
+					<tr>
+						<th class="author">作者</th>
+						<td>Zhenkun Cai</td>
+					</tr>
+					<tr>
+						<th class="author">作者</th>
+						<td>Kaihao Ma</td>
+					</tr>
+					<tr>
+						<th class="author">作者</th>
+						<td>Xiao Yan</td>
+					</tr>
+					<tr>
+						<th class="author">作者</th>
+						<td>Yidi Wu</td>
+					</tr>
+					<tr>
+						<th class="author">作者</th>
+						<td>Yuzhen Huang</td>
+					</tr>
+					<tr>
+						<th class="author">作者</th>
+						<td>James Cheng</td>
+					</tr>
+					<tr>
+						<th class="author">作者</th>
+						<td>Teng Su</td>
+					</tr>
+					<tr>
+						<th class="author">作者</th>
+						<td>Fan Yu</td>
+					</tr>
+					<tr>
+					<th>摘要</th>
+						<td>A good parallelization strategy can signiﬁcantly improve the 
+eﬃciency or reduce the cost for the distributed training of deep neural 
+networks (DNNs). Recently, several methods have been proposed to ﬁnd 
+eﬃcient parallelization strategies but they all optimize a single 
+objective (e.g., execution time, memory consumption) and produce only 
+one strategy. We propose FT, an eﬃcient algorithm that searches for an 
+optimal set of parallelization strategies to allow the trade-oﬀ among 
+diﬀerent objectives. FT can adapt to diﬀerent scenarios by minimizing 
+the memory consumption when the number of devices is limited and fully 
+utilize additional resources to reduce the execution time. For popular 
+DNN models (e.g., vision, language), an in-depth analysis is conducted 
+to understand the trade-oﬀs among diﬀerent objectives and their inﬂuence
+ on the parallelization strategies. We also develop a user-friendly 
+system, called TensorOpt, which allows users to run their distributed 
+DNN training jobs without caring the details of parallelization 
+strategies. Experimental results show that FT runs eﬃciently and 
+provides accurate estimation of runtime costs, and TensorOpt is more 
+ﬂexible in adapting to resource availability compared with existing 
+frameworks.</td>
+					</tr>
+					<tr>
+					<th>日期</th>
+						<td>2020-04-15</td>
+					</tr>
+					<tr>
+					<th>语言</th>
+						<td>en</td>
+					</tr>
+					<tr>
+					<th>短标题</th>
+						<td>TensorOpt</td>
+					</tr>
+					<tr>
+					<th>馆藏目录</th>
+						<td>arXiv.org</td>
+					</tr>
+					<tr>
+					<th>URL</th>
+						<td><a href="http://arxiv.org/abs/2004.10856">http://arxiv.org/abs/2004.10856</a></td>
+					</tr>
+					<tr>
+					<th>访问时间</th>
+						<td>2021/7/18 下午1:47:01</td>
+					</tr>
+					<tr>
+					<th>其它</th>
+						<td>arXiv: 2004.10856</td>
+					</tr>
+					<tr>
+					<th>期刊</th>
+						<td>arXiv:2004.10856 [cs, stat]</td>
+					</tr>
+					<tr>
+					<th>添加日期</th>
+						<td>2021/7/18 下午1:47:01</td>
+					</tr>
+					<tr>
+					<th>修改日期</th>
+						<td>2021/7/18 下午1:47:01</td>
+					</tr>
+				</tbody></table>
+				<h3 class="tags">标签：</h3>
+				<ul class="tags">
+					<li>Computer Science - Machine Learning</li>
+					<li>Statistics - Machine Learning</li>
+					<li>Computer Science - Distributed, Parallel, and Cluster Computing</li>
+				</ul>
+				<h3 class="attachments">附件</h3>
+				<ul class="attachments">
+					<li id="item_WBBKZXK9">Cai 等。 - 2020 - TensorOpt Exploring the Tradeoffs in Distributed .pdf					</li>
+				</ul>
+			</li>
+
+		</ul>
+	
+</body></html>
