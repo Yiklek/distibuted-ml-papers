@@ -1,0 +1,99 @@
+{
+	"dir": {
+		"强化学习":{
+			"data":[]
+		}
+	},
+	"data":[
+	{
+		"id": "http://zotero.org/users/9280614/items/FNCUVCWB",
+		"type": "paper-conference",
+		"abstract": "Existing tensor compilers have proven their effectiveness in deploying deep neural networks on general-purpose hardware like CPU and GPU, but optimizing for neural processing units (NPUs) is still challenging due to the heterogeneous compute units and complicated memory hierarchy.",
+		"container-title": "Proceedings of the 42nd ACM SIGPLAN International Conference on Programming Language Design and Implementation",
+		"DOI": "10.1145/3453483.3454106",
+		"event": "PLDI '21: 42nd ACM SIGPLAN International Conference on Programming Language Design and Implementation",
+		"event-place": "Virtual Canada",
+		"ISBN": "978-1-4503-8391-2",
+		"language": "en",
+		"page": "1233-1248",
+		"publisher": "ACM",
+		"publisher-place": "Virtual Canada",
+		"source": "DOI.org (Crossref)",
+		"title": "AKG: automatic kernel generation for neural processing units using polyhedral transformations",
+		"title-short": "AKG",
+		"URL": "https://dl.acm.org/doi/10.1145/3453483.3454106",
+		"author": [
+			{
+				"family": "Zhao",
+				"given": "Jie"
+			},
+			{
+				"family": "Li",
+				"given": "Bojie"
+			},
+			{
+				"family": "Nie",
+				"given": "Wang"
+			},
+			{
+				"family": "Geng",
+				"given": "Zhen"
+			},
+			{
+				"family": "Zhang",
+				"given": "Renwei"
+			},
+			{
+				"family": "Gao",
+				"given": "Xiong"
+			},
+			{
+				"family": "Cheng",
+				"given": "Bin"
+			},
+			{
+				"family": "Wu",
+				"given": "Chen"
+			},
+			{
+				"family": "Cheng",
+				"given": "Yun"
+			},
+			{
+				"family": "Li",
+				"given": "Zheng"
+			},
+			{
+				"family": "Di",
+				"given": "Peng"
+			},
+			{
+				"family": "Zhang",
+				"given": "Kun"
+			},
+			{
+				"family": "Jin",
+				"given": "Xuefeng"
+			}
+		],
+		"accessed": {
+			"date-parts": [
+				[
+					"2022",
+					5,
+					26
+				]
+			]
+		},
+		"issued": {
+			"date-parts": [
+				[
+					"2021",
+					6,
+					19
+				]
+			]
+		}
+	}
+]
+}
