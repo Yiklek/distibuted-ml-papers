@@ -1,0 +1,1844 @@
+{
+ "dir": {
+  "流水线": {
+   "data": [
+    {
+     "id": "http://zotero.org/users/9280614/items/G2PVFSZ8",
+     "type": "document",
+     "title": "PipeDream Generalized Pipeline Parallelism for DNN Training.pdf"
+    },
+    {
+     "id": "http://zotero.org/users/9280614/items/KH97QEJZ",
+     "type": "article-journal",
+     "abstract": "The size of Transformer models is growing at an unprecedented rate. It has taken less than one year to reach trillion-level parameters since the release of GPT-3 (175B). Training such models requires both substantial engineering efforts and enormous computing resources, which are luxuries most research teams cannot afford. In this paper, we propose PipeTransformer, which leverages automated elastic pipelining for efﬁcient distributed training of Transformer models. In PipeTransformer, we design an adaptive on the ﬂy freeze algorithm that can identify and freeze some layers gradually during training, and an elastic pipelining system that can dynamically allocate resources to train the remaining active layers. More speciﬁcally, PipeTransformer automatically excludes frozen layers from the pipeline, packs active layers into fewer GPUs, and forks more replicas to increase data-parallel width. We evaluate PipeTransformer using Vision Transformer (ViT) on ImageNet and BERT on SQuAD and GLUE datasets. Our results show that compared to the state-of-the-art baseline, PipeTransformer attains up to 2.83fold speedup without losing accuracy. We also provide various performance analyses for a more comprehensive understanding of our algorithmic and system-wise design. Finally, we have modularized our training system with ﬂexible APIs and made the source code publicly available at https://DistML.ai.",
+     "language": "en",
+     "page": "10",
+     "source": "Zotero",
+     "title": "PipeTransformer: Automated Elastic Pipelining for Distributed Training of Large-scale Models",
+     "author": [
+      {
+       "family": "He",
+       "given": "Chaoyang"
+      },
+      {
+       "family": "Li",
+       "given": "Shen"
+      },
+      {
+       "family": "Soltanolkotabi",
+       "given": "Mahdi"
+      },
+      {
+       "family": "Avestimehr",
+       "given": "Salman"
+      }
+     ]
+    },
+    {
+     "id": "http://zotero.org/users/9280614/items/EEYMIBLA",
+     "type": "article-journal",
+     "abstract": "The last decade has witnessed growth in the computational requirements for training deep neural networks. Current approaches (e.g., data/model parallelism, pipeline parallelism) parallelize training tasks onto multiple devices. However, these approaches always rely on specific deep learning frameworks and requires elaborate manual design, which make it difficult to maintain and share between different type of models. In this paper, we propose Auto-MAP, a framework for exploring distributed execution plans for DNN workloads, which can automatically discovering fast parallelization strategies through reinforcement learning on IR level of deep learning models. Efficient exploration remains a major challenge for reinforcement learning. We leverage DQN with task-specific pruning strategies to help efficiently explore the search space including optimized strategies. Our evaluation shows that Auto-MAP can find the optimal solution in two hours, while achieving better throughput on several NLP and convolution models.",
+     "container-title": "arXiv:2007.04069 [cs]",
+     "language": "en",
+     "note": "arXiv: 2007.04069",
+     "source": "arXiv.org",
+     "title": "Auto-MAP: A DQN Framework for Exploring Distributed Execution Plans for DNN Workloads",
+     "title-short": "Auto-MAP",
+     "URL": "http://arxiv.org/abs/2007.04069",
+     "author": [
+      {
+       "family": "Wang",
+       "given": "Siyu"
+      },
+      {
+       "family": "Rong",
+       "given": "Yi"
+      },
+      {
+       "family": "Fan",
+       "given": "Shiqing"
+      },
+      {
+       "family": "Zheng",
+       "given": "Zhen"
+      },
+      {
+       "family": "Diao",
+       "given": "LanSong"
+      },
+      {
+       "family": "Long",
+       "given": "Guoping"
+      },
+      {
+       "family": "Yang",
+       "given": "Jun"
+      },
+      {
+       "family": "Liu",
+       "given": "Xiaoyong"
+      },
+      {
+       "family": "Lin",
+       "given": "Wei"
+      }
+     ],
+     "accessed": {
+      "date-parts": [
+       [
+        "2021",
+        10,
+        11
+       ]
+      ]
+     },
+     "issued": {
+      "date-parts": [
+       [
+        "2020",
+        7,
+        8
+       ]
+      ]
+     }
+    },
+    {
+     "id": "http://zotero.org/users/9280614/items/6DE449UX",
+     "type": "article-journal",
+     "abstract": "It is a challenging task to train large DNN models on sophisticated GPU platforms with diversiﬁed interconnect capabilities. Recently, pipelined training has been proposed as an effective approach for improving device utilization. However, there are still several tricky issues to address: improving computing efﬁciency while ensuring convergence, and reducing memory usage without incurring additional computing costs. We propose DAPPLE, a synchronous training framework which combines data parallelism and pipeline parallelism for large DNN models. It features a novel parallelization strategy planner to solve the partition and placement problems, and explores the optimal hybrid strategies of data and pipeline parallelism. We also propose a new runtime scheduling algorithm to reduce device memory usage, which is orthogonal to re-computation approach and does not come at the expense of training throughput. Experiments show that DAPPLE planner consistently outperforms strategies generated by PipeDreams planner by up to 3.23× speedup under synchronous training scenarios, and DAPPLE runtime outperforms GPipe by 1.6× speedup of training throughput and saves 12% of memory consumption at the same time.",
+     "container-title": "arXiv:2007.01045 [cs]",
+     "language": "en",
+     "note": "arXiv: 2007.01045",
+     "source": "arXiv.org",
+     "title": "DAPPLE: A Pipelined Data Parallel Approach for Training Large Models",
+     "title-short": "DAPPLE",
+     "URL": "http://arxiv.org/abs/2007.01045",
+     "author": [
+      {
+       "family": "Fan",
+       "given": "Shiqing"
+      },
+      {
+       "family": "Rong",
+       "given": "Yi"
+      },
+      {
+       "family": "Meng",
+       "given": "Chen"
+      },
+      {
+       "family": "Cao",
+       "given": "Zongyan"
+      },
+      {
+       "family": "Wang",
+       "given": "Siyu"
+      },
+      {
+       "family": "Zheng",
+       "given": "Zhen"
+      },
+      {
+       "family": "Wu",
+       "given": "Chuan"
+      },
+      {
+       "family": "Long",
+       "given": "Guoping"
+      },
+      {
+       "family": "Yang",
+       "given": "Jun"
+      },
+      {
+       "family": "Xia",
+       "given": "Lixue"
+      },
+      {
+       "family": "Diao",
+       "given": "Lansong"
+      },
+      {
+       "family": "Liu",
+       "given": "Xiaoyong"
+      },
+      {
+       "family": "Lin",
+       "given": "Wei"
+      }
+     ],
+     "accessed": {
+      "date-parts": [
+       [
+        "2021",
+        10,
+        11
+       ]
+      ]
+     },
+     "issued": {
+      "date-parts": [
+       [
+        "2020",
+        7,
+        2
+       ]
+      ]
+     }
+    },
+    {
+     "id": "http://zotero.org/users/9280614/items/5ZXKUCFS",
+     "type": "article-journal",
+     "abstract": "Scaling up deep neural network capacity has been known as an effective approach to improving model quality for several different machine learning tasks. In many cases, increasing model capacity beyond the memory limit of a single accelerator has required developing special algorithms or infrastructure. These solutions are often architecture-speciﬁc and do not transfer to other tasks. To address the need for efﬁcient and task-independent model parallelism, we introduce GPipe, a pipeline parallelism library that allows scaling any network that can be expressed as a sequence of layers. By pipelining different sub-sequences of layers on separate accelerators, GPipe provides the ﬂexibility of scaling a variety of different networks to gigantic sizes efﬁciently. Moreover, GPipe utilizes a novel batchsplitting pipelining algorithm, resulting in almost linear speedup when a model is partitioned across multiple accelerators. We demonstrate the advantages of GPipe by training large-scale neural networks on two different tasks with distinct network architectures: (i) Image Classiﬁcation: We train a 557-million-parameter AmoebaNet model and attain a top-1 accuracy of 84.4% on ImageNet-2012, (ii) Multilingual Neural Machine Translation: We train a single 6-billion-parameter, 128-layer Transformer model on a corpus spanning over 100 languages and achieve better quality than all bilingual models.",
+     "container-title": "arXiv:1811.06965 [cs]",
+     "language": "en",
+     "note": "arXiv: 1811.06965",
+     "source": "arXiv.org",
+     "title": "GPipe: Efficient Training of Giant Neural Networks using Pipeline Parallelism",
+     "title-short": "GPipe",
+     "URL": "http://arxiv.org/abs/1811.06965",
+     "author": [
+      {
+       "family": "Huang",
+       "given": "Yanping"
+      },
+      {
+       "family": "Cheng",
+       "given": "Youlong"
+      },
+      {
+       "family": "Bapna",
+       "given": "Ankur"
+      },
+      {
+       "family": "Firat",
+       "given": "Orhan"
+      },
+      {
+       "family": "Chen",
+       "given": "Mia Xu"
+      },
+      {
+       "family": "Chen",
+       "given": "Dehao"
+      },
+      {
+       "family": "Lee",
+       "given": "HyoukJoong"
+      },
+      {
+       "family": "Ngiam",
+       "given": "Jiquan"
+      },
+      {
+       "family": "Le",
+       "given": "Quoc V."
+      },
+      {
+       "family": "Wu",
+       "given": "Yonghui"
+      },
+      {
+       "family": "Chen",
+       "given": "Zhifeng"
+      }
+     ],
+     "accessed": {
+      "date-parts": [
+       [
+        "2021",
+        10,
+        11
+       ]
+      ]
+     },
+     "issued": {
+      "date-parts": [
+       [
+        "2019",
+        7,
+        25
+       ]
+      ]
+     }
+    },
+    {
+     "id": "http://zotero.org/users/9280614/items/UFVR9Z3J",
+     "type": "article-journal",
+     "abstract": "Distributed training of deep nets is an important technique to address some of the present day computing challenges like memory consumption and computational demands. Classical distributed approaches, synchronous or asynchronous, are based on the parameter server architecture, i.e., worker nodes compute gradients which are communicated to the parameter server while updated parameters are returned. Recently, distributed training with AllReduce operations gained popularity as well. While many of those operations seem appealing, little is reported about wall-clock training time improvements. In this paper, we carefully analyze the AllReduce based setup, propose timing models which include network latency, bandwidth, cluster size and compute time, and demonstrate that a pipelined training with a width of two combines the best of both synchronous and asynchronous training. Speciﬁcally, for a setup consisting of a four-node GPU cluster we show wall-clock time training improvements of up to 5.4× compared to conventional approaches.",
+     "language": "en",
+     "page": "12",
+     "source": "Zotero",
+     "title": "Pipe-SGD: A Decentralized Pipelined SGD Framework for Distributed Deep Net Training",
+     "author": [
+      {
+       "family": "Li",
+       "given": "Youjie"
+      },
+      {
+       "family": "Yu",
+       "given": "Mingchao"
+      },
+      {
+       "family": "Li",
+       "given": "Songze"
+      },
+      {
+       "family": "Avestimehr",
+       "given": "Salman"
+      },
+      {
+       "family": "Kim",
+       "given": "Nam Sung"
+      },
+      {
+       "family": "Schwing",
+       "given": "Alexander"
+      }
+     ]
+    }
+   ]
+  },
+  "图优化": {
+   "data": [
+    {
+     "id": "http://zotero.org/users/9280614/items/JIJ2FBCG",
+     "type": "article-journal",
+     "abstract": "A good parallelization strategy can signiﬁcantly improve the eﬃciency or reduce the cost for the distributed training of deep neural networks (DNNs). Recently, several methods have been proposed to ﬁnd eﬃcient parallelization strategies but they all optimize a single objective (e.g., execution time, memory consumption) and produce only one strategy. We propose FT, an eﬃcient algorithm that searches for an optimal set of parallelization strategies to allow the trade-oﬀ among diﬀerent objectives. FT can adapt to diﬀerent scenarios by minimizing the memory consumption when the number of devices is limited and fully utilize additional resources to reduce the execution time. For popular DNN models (e.g., vision, language), an in-depth analysis is conducted to understand the trade-oﬀs among diﬀerent objectives and their inﬂuence on the parallelization strategies. We also develop a user-friendly system, called TensorOpt, which allows users to run their distributed DNN training jobs without caring the details of parallelization strategies. Experimental results show that FT runs eﬃciently and provides accurate estimation of runtime costs, and TensorOpt is more ﬂexible in adapting to resource availability compared with existing frameworks.",
+     "container-title": "arXiv:2004.10856 [cs, stat]",
+     "language": "en",
+     "note": "arXiv: 2004.10856",
+     "source": "arXiv.org",
+     "title": "TensorOpt: Exploring the Tradeoffs in Distributed DNN Training with Auto-Parallelism",
+     "title-short": "TensorOpt",
+     "URL": "http://arxiv.org/abs/2004.10856",
+     "author": [
+      {
+       "family": "Cai",
+       "given": "Zhenkun"
+      },
+      {
+       "family": "Ma",
+       "given": "Kaihao"
+      },
+      {
+       "family": "Yan",
+       "given": "Xiao"
+      },
+      {
+       "family": "Wu",
+       "given": "Yidi"
+      },
+      {
+       "family": "Huang",
+       "given": "Yuzhen"
+      },
+      {
+       "family": "Cheng",
+       "given": "James"
+      },
+      {
+       "family": "Su",
+       "given": "Teng"
+      },
+      {
+       "family": "Yu",
+       "given": "Fan"
+      }
+     ],
+     "accessed": {
+      "date-parts": [
+       [
+        "2021",
+        7,
+        18
+       ]
+      ]
+     },
+     "issued": {
+      "date-parts": [
+       [
+        "2020",
+        4,
+        15
+       ]
+      ]
+     }
+    },
+    {
+     "id": "http://zotero.org/users/9280614/items/NXD3CV7N",
+     "type": "paper-conference",
+     "abstract": "This paper proposes FastT, a transparent module to work with the TensorFlow framework for automatically identifying a satisfying deployment and execution order of operations in DNN models over multiple GPUs, for expedited model training. We propose white-box algorithms to compute the strategies with small computing resource consumption in a short time. Recently, similar studies have been done to optimize device placement using reinforcement learning. Compared to those works which learn to optimize device placement of operations in several hours using large amounts of computing resources, our approach can find excellent device placement and execution order within minutes using the same computing node as for training. We design a list of scheduling algorithms to compute the device placement and execution order for each operation and also design an algorithm to split operations in the critical path to support fine-grained (mixed) data and model parallelism to further improve the training speed in each iteration. We compare FastT with representative strategies and obtain insights on the best strategies for training different types of DNN models based on extensive testbed experiments.",
+     "container-title": "Proceedings of the 21st International Middleware Conference",
+     "DOI": "10.1145/3423211.3425675",
+     "event": "Middleware '20: 21st International Middleware Conference",
+     "event-place": "Delft Netherlands",
+     "ISBN": "978-1-4503-8153-6",
+     "language": "en",
+     "page": "105-118",
+     "publisher": "ACM",
+     "publisher-place": "Delft Netherlands",
+     "source": "DOI.org (Crossref)",
+     "title": "Fast Training of Deep Learning Models over Multiple GPUs",
+     "URL": "https://dl.acm.org/doi/10.1145/3423211.3425675",
+     "author": [
+      {
+       "family": "Yi",
+       "given": "Xiaodong"
+      },
+      {
+       "family": "Luo",
+       "given": "Ziyue"
+      },
+      {
+       "family": "Meng",
+       "given": "Chen"
+      },
+      {
+       "family": "Wang",
+       "given": "Mengdi"
+      },
+      {
+       "family": "Long",
+       "given": "Guoping"
+      },
+      {
+       "family": "Wu",
+       "given": "Chuan"
+      },
+      {
+       "family": "Yang",
+       "given": "Jun"
+      },
+      {
+       "family": "Lin",
+       "given": "Wei"
+      }
+     ],
+     "accessed": {
+      "date-parts": [
+       [
+        "2021",
+        10,
+        11
+       ]
+      ]
+     },
+     "issued": {
+      "date-parts": [
+       [
+        "2020",
+        12,
+        7
+       ]
+      ]
+     }
+    },
+    {
+     "id": "http://zotero.org/users/9280614/items/HHPH9XZG",
+     "type": "paper-conference",
+     "abstract": "Machine Learning graphs (or models) can be challenging or impossible to train when either devices have limited memory, or the models are large. Splitting the model graph across multiple devices, today, largely relies on learning-based approaches to generate this placement. While it results in models that train fast on data (i.e., with low step times), learning-based model-parallelism is time-consuming, taking many hours or days to create a placement plan of operators on devices. We present the Baechi system, where we adopt an algorithmic approach to the placement problem for running machine learning training graphs on a small cluster of memory-constrained devices. We implemented Baechi so that it works modularly with TensorFlow. Our experimental results using GPUs show that Baechi generates placement plans in time 654×–206K × faster than today’s learning-based approaches, and the placed model’s step time is only up to 6.2% higher than expert-based placements.",
+     "container-title": "Proceedings of the 11th ACM Symposium on Cloud Computing",
+     "DOI": "10.1145/3419111.3421302",
+     "event": "SoCC '20: ACM Symposium on Cloud Computing",
+     "event-place": "Virtual Event USA",
+     "ISBN": "978-1-4503-8137-6",
+     "language": "en",
+     "page": "416-430",
+     "publisher": "ACM",
+     "publisher-place": "Virtual Event USA",
+     "source": "DOI.org (Crossref)",
+     "title": "Baechi: fast device placement of machine learning graphs",
+     "title-short": "Baechi",
+     "URL": "https://dl.acm.org/doi/10.1145/3419111.3421302",
+     "author": [
+      {
+       "family": "Jeon",
+       "given": "Beomyeol"
+      },
+      {
+       "family": "Cai",
+       "given": "Linda"
+      },
+      {
+       "family": "Srivastava",
+       "given": "Pallavi"
+      },
+      {
+       "family": "Jiang",
+       "given": "Jintao"
+      },
+      {
+       "family": "Ke",
+       "given": "Xiaolan"
+      },
+      {
+       "family": "Meng",
+       "given": "Yitao"
+      },
+      {
+       "family": "Xie",
+       "given": "Cong"
+      },
+      {
+       "family": "Gupta",
+       "given": "Indranil"
+      }
+     ],
+     "accessed": {
+      "date-parts": [
+       [
+        "2021",
+        10,
+        11
+       ]
+      ]
+     },
+     "issued": {
+      "date-parts": [
+       [
+        "2020",
+        10,
+        12
+       ]
+      ]
+     }
+    },
+    {
+     "id": "http://zotero.org/users/9280614/items/PLNPT3XU",
+     "type": "article-journal",
+     "abstract": "Since the increasing scale of data sets and neural network models caused by widespread of deep learning, distributed training of deep neural network becomes increasingly compelling. However, the current distributed parallel strategies, mainly based on expert experience which is inefficient and requires specialized knowledge. Therefore, some researchers propose automatically implemented distributed training to solve these problems. But their method has poor performance in large-scale complex network. In this paper, we propose an adaptive distributed parallel training method (MP-DPS), based on the node merging of heterogeneous computing power-aware and path prediction, to search optimal parallel strategy automatically in large-scale network. Firstly, targeting the issue of onesided consideration in optimization, we build a multidimensional performance cost model. Secondly, we narrow graph search space by node merging of heterogeneous computing power-aware to reduce the strategy search time. Finally, we propose a graph search algorithm based on path prediction, to place the operator and schedule. It can further shorten the execution time of the computation graph by optimizing the critical path. Our experiments show that, compared with the FastT which is also based on graph search, under the 4 gpu and 8 gpu configuration of ResNet_50, the per-iteration time can be effectively reduced by 13.8% and 7.1%, the policy search time can be reduced by 3.4% and 5.5% respectively.",
+     "language": "en",
+     "page": "14",
+     "source": "Zotero",
+     "title": "MP-DPS: A Deep Learning Adaptive Distributed Parallel Training Method Based on Node Merging and Path Prediction",
+     "author": [
+      {
+       "family": "Yan",
+       "given": "Zeng"
+      },
+      {
+       "family": "Yong",
+       "given": "Ding"
+      },
+      {
+       "family": "Dongyang",
+       "given": "Ou"
+      },
+      {
+       "family": "Jilin",
+       "given": "Zhang"
+      },
+      {
+       "family": "Yongjian",
+       "given": "Ren"
+      },
+      {
+       "family": "Yunquan",
+       "given": "Zhang"
+      }
+     ]
+    },
+    {
+     "id": "http://zotero.org/users/9280614/items/UPMLV8DM",
+     "type": "article",
+     "abstract": "The past few years have witnessed growth in the computational requirements for training deep convolutional neural networks. Current approaches parallelize training onto multiple devices by applying a single parallelization strategy (e.g., data or model parallelism) to all layers in a network. Although easy to reason about, these approaches result in suboptimal runtime performance in largescale distributed training, since different layers in a network may prefer different parallelization strategies. In this paper, we propose layer-wise parallelism that allows each layer in a network to use an individual parallelization strategy. We jointly optimize how each layer is parallelized by solving a graph search problem. Our evaluation shows that layer-wise parallelism outperforms state-of-the-art approaches by increasing training throughput, reducing communication costs, achieving better scalability to multiple GPUs, while maintaining original network accuracy.",
+     "language": "en",
+     "note": "number: arXiv:1802.04924\narXiv:1802.04924 [cs]",
+     "publisher": "arXiv",
+     "source": "arXiv.org",
+     "title": "Exploring Hidden Dimensions in Parallelizing Convolutional Neural Networks",
+     "URL": "http://arxiv.org/abs/1802.04924",
+     "author": [
+      {
+       "family": "Jia",
+       "given": "Zhihao"
+      },
+      {
+       "family": "Lin",
+       "given": "Sina"
+      },
+      {
+       "family": "Qi",
+       "given": "Charles R."
+      },
+      {
+       "family": "Aiken",
+       "given": "Alex"
+      }
+     ],
+     "accessed": {
+      "date-parts": [
+       [
+        "2022",
+        6,
+        7
+       ]
+      ]
+     },
+     "issued": {
+      "date-parts": [
+       [
+        "2018",
+        6,
+        9
+       ]
+      ]
+     }
+    },
+    {
+     "id": "http://zotero.org/users/9280614/items/FUB5DCS4",
+     "type": "article",
+     "abstract": "The computational requirements for training deep neural networks (DNNs) have grown to the point that it is now standard practice to parallelize training. Existing deep learning systems commonly use data or model parallelism, but unfortunately, these strategies often result in suboptimal parallelization performance. In this paper, we deﬁne a more comprehensive search space of parallelization strategies for DNNs called SOAP, which includes strategies to parallelize a DNN in the Sample, Operation, Attribute, and Parameter dimensions. We also propose FlexFlow, a deep learning framework that uses guided randomized search of the SOAP space to ﬁnd a fast parallelization strategy for a speciﬁc parallel machine. To accelerate this search, FlexFlow introduces a novel execution simulator that can accurately predict a parallelization strategy’s performance and is three orders of magnitude faster than prior approaches that have to execute each strategy. We evaluate FlexFlow with six real-world DNN benchmarks on two GPU clusters and show that FlexFlow can increase training throughput by up to 3.8× over state-of-the-art approaches, even when including its search time, and also improves scalability.",
+     "language": "en",
+     "note": "number: arXiv:1807.05358\narXiv:1807.05358 [cs]",
+     "publisher": "arXiv",
+     "source": "arXiv.org",
+     "title": "Beyond Data and Model Parallelism for Deep Neural Networks",
+     "URL": "http://arxiv.org/abs/1807.05358",
+     "author": [
+      {
+       "family": "Jia",
+       "given": "Zhihao"
+      },
+      {
+       "family": "Zaharia",
+       "given": "Matei"
+      },
+      {
+       "family": "Aiken",
+       "given": "Alex"
+      }
+     ],
+     "accessed": {
+      "date-parts": [
+       [
+        "2022",
+        6,
+        7
+       ]
+      ]
+     },
+     "issued": {
+      "date-parts": [
+       [
+        "2018",
+        7,
+        14
+       ]
+      ]
+     }
+    },
+    {
+     "id": "http://zotero.org/users/9280614/items/V25F8FPG",
+     "type": "paper-conference",
+     "abstract": "This paper presents Tofu, a system that partitions very large DNN models across multiple GPU devices to reduce per-GPU memory footprint. Tofu is designed to partition a dataflow graph of fine-grained tensor operators used by platforms like MXNet and TensorFlow. In order to automatically partition each operator, we propose to describe the semantics of an operator in a simple language inspired by Halide. To optimally partition different operators in a dataflow graph, Tofu uses a recursive search algorithm that minimizes the total communication cost. Our experiments on an 8-GPU machine show that Tofu enables the training of very large CNN and RNN models. It also achieves 25% - 400% speedup over alternative approaches to train very large models.",
+     "container-title": "Proceedings of the Fourteenth EuroSys Conference 2019",
+     "DOI": "10.1145/3302424.3303953",
+     "event": "EuroSys '19: Fourteenth EuroSys Conference 2019",
+     "event-place": "Dresden Germany",
+     "ISBN": "978-1-4503-6281-8",
+     "language": "en",
+     "page": "1-17",
+     "publisher": "ACM",
+     "publisher-place": "Dresden Germany",
+     "source": "DOI.org (Crossref)",
+     "title": "Supporting Very Large Models using Automatic Dataflow Graph Partitioning",
+     "URL": "https://dl.acm.org/doi/10.1145/3302424.3303953",
+     "author": [
+      {
+       "family": "Wang",
+       "given": "Minjie"
+      },
+      {
+       "family": "Huang",
+       "given": "Chien-chin"
+      },
+      {
+       "family": "Li",
+       "given": "Jinyang"
+      }
+     ],
+     "accessed": {
+      "date-parts": [
+       [
+        "2022",
+        6,
+        7
+       ]
+      ]
+     },
+     "issued": {
+      "date-parts": [
+       [
+        "2019",
+        3,
+        25
+       ]
+      ]
+     }
+    }
+   ]
+  },
+  "强化学习": {
+   "data": [
+    {
+     "id": "http://zotero.org/users/9280614/items/GPSZY4IA",
+     "type": "article-journal",
+     "abstract": "To afford the huge computational cost, large-scale deep neural networks (DNN) are usually trained on the distributed system, especially the widely-used parameter server architecture, consisting of a parameter server as well as multiple local workers with powerful GPU cards. During the training, local workers frequently pull the global model and push their computed gradients from/to the parameter server. Due to the limited bandwidth, such frequent communication will cause severe bottleneck for the training acceleration. As recent attempts to address this problem, quantization methods have been proposed to compress the gradients for efficient communication. However, such methods overlook the effects of compression on the model performance such that they either suffer from a low compression ratio or an accuracy drop. In this paper, to better address this problem, we investigate the distributed deep learning as a multi-agent system (MAS) problem. Specifically, 1) local workers and the parameter server are separate agents in the system; 2) the objective of these agents is to maximize the efficacy of the learned model through their cooperative interactions; 3) the strategy of the agents describes how they take actions, i.e. communicate their computed gradients or the global model; 4) rational agents always select the best-response strategy with the optimal utility. Inspired by this, we design a MAS approach for distributed training of DNN. In our method, the agents first estimate the utility (i.e., the benefit to help improve the model) of each action (i.e., transferring a subset of the gradients or the global model), and then take the best-response strategy based on their estimated utilities mixed with ϵ-random exploration. We call our new method Slim-DP as it, being different from the standard data-parallelism, only communicates a subset of the gradient or the global model. Our experimental results demonstrate that our proposed Slim-DP can reduce more communication cost and achieve better speedup without loss of accuracy than the standard data parallelism and its quantization version.",
+     "language": "en",
+     "page": "9",
+     "source": "Zotero",
+     "title": "Slim-DP: A Multi-Agent System for Communication-Efficient Distributed Deep Learning",
+     "author": [
+      {
+       "family": "Sun",
+       "given": "Shizhao"
+      },
+      {
+       "family": "Chen",
+       "given": "Wei"
+      },
+      {
+       "family": "Bian",
+       "given": "Jiang"
+      },
+      {
+       "family": "Liu",
+       "given": "Xiaoguang"
+      },
+      {
+       "family": "Liu",
+       "given": "Tie-Yan"
+      }
+     ],
+     "issued": {
+      "date-parts": [
+       [
+        "2018"
+       ]
+      ]
+     }
+    }
+   ]
+  },
+  "编译器": {
+   "data": [
+    {
+     "id": "http://zotero.org/users/9280614/items/PMDM4HHM",
+     "type": "document",
+     "title": "JeffDean.pdf"
+    },
+    {
+     "id": "http://zotero.org/users/9280614/items/4RGCUSZI",
+     "type": "article-journal",
+     "abstract": "In recent years, there is a surge on machine learning applications in industry. Many of them are based on popular AI frameworks like Tensorﬂow, Torch, Caffe, or MxNet, etc,and are enpowered by accelerator platforms such as GPUs. One important challenge of running Tensorﬂow computations on GPUs is the ﬁne granularity problem, namely, FLOPS of individual ops are far from enough to fully exploit the computing power of underlying accelerators. The XLA framework provides a solid foundation to explore this problem further. In this paper, we propose FusionStitching, a novel, comprehensive Op fusion and code generation system to stitch computations into large GPU kernels. Experimental results on four public models and two of our large inhouse applications show another 55% (geometric mean) reduction of GPU kernel launches, compared to the XLA fusion baseline. This increases the E2E performance of both of our latency critical inhouse applications up to 20%.",
+     "container-title": "arXiv:1811.05213 [cs]",
+     "language": "en",
+     "note": "arXiv: 1811.05213",
+     "source": "arXiv.org",
+     "title": "FusionStitching: Deep Fusion and Code Generation for Tensorflow Computations on GPUs",
+     "title-short": "FusionStitching",
+     "URL": "http://arxiv.org/abs/1811.05213",
+     "author": [
+      {
+       "family": "Long",
+       "given": "Guoping"
+      },
+      {
+       "family": "Yang",
+       "given": "Jun"
+      },
+      {
+       "family": "Zhu",
+       "given": "Kai"
+      },
+      {
+       "family": "Lin",
+       "given": "Wei"
+      }
+     ],
+     "accessed": {
+      "date-parts": [
+       [
+        "2021",
+        10,
+        11
+       ]
+      ]
+     },
+     "issued": {
+      "date-parts": [
+       [
+        "2018",
+        11,
+        13
+       ]
+      ]
+     }
+    },
+    {
+     "id": "http://zotero.org/users/9280614/items/MELFHXXG",
+     "type": "article-journal",
+     "abstract": "We introduce a learning-based framework to optimize tensor programs for deep learning workloads. Efﬁcient implementations of tensor operators, such as matrix multiplication and high dimensional convolution, are key enablers of effective deep learning systems. However, current systems rely on manually optimized libraries, e.g., cuDNN, that support only a narrow range of server class GPUs. Such reliance limits the applicability of high-level graph optimizations and incurs signiﬁcant engineering costs when deploying to new hardware targets. We use learning to remove this engineering burden. We learn domain-speciﬁc statistical cost models to guide the search of tensor operator implementations over billions of possible program variants. We further accelerate the search using effective model transfer across workloads. Experimental results show that our framework delivers performance that is competitive with state-of-the-art hand-tuned libraries for low-power CPUs, mobile GPUs, and server-class GPUs.",
+     "container-title": "arXiv:1805.08166 [cs, stat]",
+     "language": "en",
+     "note": "arXiv: 1805.08166",
+     "source": "arXiv.org",
+     "title": "Learning to Optimize Tensor Programs",
+     "URL": "http://arxiv.org/abs/1805.08166",
+     "author": [
+      {
+       "family": "Chen",
+       "given": "Tianqi"
+      },
+      {
+       "family": "Zheng",
+       "given": "Lianmin"
+      },
+      {
+       "family": "Yan",
+       "given": "Eddie"
+      },
+      {
+       "family": "Jiang",
+       "given": "Ziheng"
+      },
+      {
+       "family": "Moreau",
+       "given": "Thierry"
+      },
+      {
+       "family": "Ceze",
+       "given": "Luis"
+      },
+      {
+       "family": "Guestrin",
+       "given": "Carlos"
+      },
+      {
+       "family": "Krishnamurthy",
+       "given": "Arvind"
+      }
+     ],
+     "accessed": {
+      "date-parts": [
+       [
+        "2021",
+        10,
+        11
+       ]
+      ]
+     },
+     "issued": {
+      "date-parts": [
+       [
+        "2019",
+        1,
+        8
+       ]
+      ]
+     }
+    },
+    {
+     "id": "http://zotero.org/users/9280614/items/IRZPZ4M3",
+     "type": "article-journal",
+     "abstract": "Frameworks for writing, compiling, and optimizing deep learning (DL) models have recently enabled progress in areas like computer vision and natural language processing. Extending these frameworks to accommodate the rapidly diversifying landscape of DL models and hardware platforms presents challenging tradeoffs between expressivity, composability, and portability. We present Relay, a new compiler framework for DL. Relay’s functional, statically typed intermediate representation (IR) uniﬁes and generalizes existing DL IRs to express state-of-the-art models. The introduction of Relay’s expressive IR requires careful design of domain-speciﬁc optimizations, addressed via Relay’s extension mechanisms. Using these extension mechanisms, Relay supports a uniﬁed compiler that can target a variety of hardware platforms. Our evaluation demonstrates Relay’s competitive performance for a broad class of models and devices (CPUs, GPUs, and emerging accelerators). Relay’s design demonstrates how a uniﬁed IR can provide expressivity, composability, and portability without compromising performance.",
+     "container-title": "arXiv:1904.08368 [cs, stat]",
+     "language": "en",
+     "note": "arXiv: 1904.08368",
+     "source": "arXiv.org",
+     "title": "Relay: A High-Level Compiler for Deep Learning",
+     "title-short": "Relay",
+     "URL": "http://arxiv.org/abs/1904.08368",
+     "author": [
+      {
+       "family": "Roesch",
+       "given": "Jared"
+      },
+      {
+       "family": "Lyubomirsky",
+       "given": "Steven"
+      },
+      {
+       "family": "Kirisame",
+       "given": "Marisa"
+      },
+      {
+       "family": "Weber",
+       "given": "Logan"
+      },
+      {
+       "family": "Pollock",
+       "given": "Josh"
+      },
+      {
+       "family": "Vega",
+       "given": "Luis"
+      },
+      {
+       "family": "Jiang",
+       "given": "Ziheng"
+      },
+      {
+       "family": "Chen",
+       "given": "Tianqi"
+      },
+      {
+       "family": "Moreau",
+       "given": "Thierry"
+      },
+      {
+       "family": "Tatlock",
+       "given": "Zachary"
+      }
+     ],
+     "accessed": {
+      "date-parts": [
+       [
+        "2021",
+        10,
+        11
+       ]
+      ]
+     },
+     "issued": {
+      "date-parts": [
+       [
+        "2019",
+        8,
+        24
+       ]
+      ]
+     }
+    },
+    {
+     "id": "http://zotero.org/users/9280614/items/QBABD3YF",
+     "type": "article-journal",
+     "abstract": "The difﬁculty of deploying various deep learning (DL) models on diverse DL hardware has boosted the research and development of DL compilers in the community. Several DL compilers have been proposed from both industry and academia such as Tensorﬂow XLA and TVM. Similarly, the DL compilers take the DL models described in different DL frameworks as input, and then generate optimized codes for diverse DL hardware as output. However, none of the existing survey has analyzed the unique design architecture of the DL compilers comprehensively. In this article, we perform a comprehensive survey of existing DL compilers by dissecting the commonly adopted design in details, with emphasis on the DL oriented multi-level IRs, and frontend/backend optimizations. We present detailed analysis on the design of multi-level IRs and illustrate the commonly adopted optimization techniques. Finally, several insights are highlighted as the potential research directions of DL compiler. This is the ﬁrst survey article focusing on the design architecture of DL compilers, which we hope can pave the road for future research towards DL compiler.",
+     "container-title": "IEEE Transactions on Parallel and Distributed Systems",
+     "DOI": "10.1109/TPDS.2020.3030548",
+     "ISSN": "1045-9219, 1558-2183, 2161-9883",
+     "issue": "3",
+     "journalAbbreviation": "IEEE Trans. Parallel Distrib. Syst.",
+     "language": "en",
+     "page": "708-727",
+     "source": "DOI.org (Crossref)",
+     "title": "The Deep Learning Compiler: A Comprehensive Survey",
+     "title-short": "The Deep Learning Compiler",
+     "URL": "https://ieeexplore.ieee.org/document/9222299/",
+     "volume": "32",
+     "author": [
+      {
+       "family": "Li",
+       "given": "Mingzhen"
+      },
+      {
+       "family": "Liu",
+       "given": "Yi"
+      },
+      {
+       "family": "Liu",
+       "given": "Xiaoyan"
+      },
+      {
+       "family": "Sun",
+       "given": "Qingxiao"
+      },
+      {
+       "family": "You",
+       "given": "Xin"
+      },
+      {
+       "family": "Yang",
+       "given": "Hailong"
+      },
+      {
+       "family": "Luan",
+       "given": "Zhongzhi"
+      },
+      {
+       "family": "Gan",
+       "given": "Lin"
+      },
+      {
+       "family": "Yang",
+       "given": "Guangwen"
+      },
+      {
+       "family": "Qian",
+       "given": "Depei"
+      }
+     ],
+     "accessed": {
+      "date-parts": [
+       [
+        "2021",
+        10,
+        11
+       ]
+      ]
+     },
+     "issued": {
+      "date-parts": [
+       [
+        "2021",
+        3,
+        1
+       ]
+      ]
+     }
+    },
+    {
+     "id": "http://zotero.org/users/9280614/items/NS3FXF9M",
+     "type": "article-journal",
+     "abstract": "Scalable frameworks, such as TensorFlow, MXNet, Caffe, and PyTorch drive the current popularity and utility of deep learning. However, these frameworks are optimized for a narrow range of server-class GPUs and deploying workloads to other platforms such as mobile phones, embedded devices, and specialized accelerators (e.g., FPGAs, ASICs) requires laborious manual effort. We propose TVM, an end-to-end optimization stack that exposes graph-level and operator-level optimizations to provide performance portability to deep learning workloads across diverse hardware back-ends. We discuss the optimization challenges speciﬁc to deep learning that TVM solves: high-level operator fusion, low-level memory reuse across threads, mapping to arbitrary hardware primitives, and memory latency hiding. Experimental results demonstrate that TVM delivers performance across hardware back-ends that is competitive with state-of-theart libraries for low-power CPU and server-class GPUs. We also demonstrate TVM’s ability to target new hardware accelerator back-ends by targeting an FPGA-based generic deep learning accelerator. The compiler infrastructure is open sourced.",
+     "container-title": "arXiv:1802.04799 [cs]",
+     "language": "en",
+     "note": "arXiv: 1802.04799",
+     "source": "arXiv.org",
+     "title": "TVM: An Automated End-to-End Optimizing Compiler for Deep Learning",
+     "title-short": "TVM",
+     "URL": "http://arxiv.org/abs/1802.04799",
+     "author": [
+      {
+       "family": "Chen",
+       "given": "Tianqi"
+      },
+      {
+       "family": "Moreau",
+       "given": "Thierry"
+      },
+      {
+       "family": "Jiang",
+       "given": "Ziheng"
+      },
+      {
+       "family": "Zheng",
+       "given": "Lianmin"
+      },
+      {
+       "family": "Yan",
+       "given": "Eddie"
+      },
+      {
+       "family": "Cowan",
+       "given": "Meghan"
+      },
+      {
+       "family": "Shen",
+       "given": "Haichen"
+      },
+      {
+       "family": "Wang",
+       "given": "Leyuan"
+      },
+      {
+       "family": "Hu",
+       "given": "Yuwei"
+      },
+      {
+       "family": "Ceze",
+       "given": "Luis"
+      },
+      {
+       "family": "Guestrin",
+       "given": "Carlos"
+      },
+      {
+       "family": "Krishnamurthy",
+       "given": "Arvind"
+      }
+     ],
+     "accessed": {
+      "date-parts": [
+       [
+        "2021",
+        10,
+        11
+       ]
+      ]
+     },
+     "issued": {
+      "date-parts": [
+       [
+        "2018",
+        10,
+        5
+       ]
+      ]
+     }
+    },
+    {
+     "id": "http://zotero.org/users/9280614/items/KYENBGVD",
+     "type": "paper-conference",
+     "container-title": "Proceedings of the 1st Workshop on Machine Learning and Systems",
+     "DOI": "10.1145/3437984.3458829",
+     "event": "EuroSys '21: Sixteenth European Conference on Computer Systems",
+     "event-place": "Online United Kingdom",
+     "ISBN": "978-1-4503-8298-4",
+     "language": "en",
+     "page": "15-23",
+     "publisher": "ACM",
+     "publisher-place": "Online United Kingdom",
+     "source": "DOI.org (Crossref)",
+     "title": "DistIR: An Intermediate Representation for Optimizing Distributed Neural Networks",
+     "title-short": "DistIR",
+     "URL": "https://dl.acm.org/doi/10.1145/3437984.3458829",
+     "author": [
+      {
+       "family": "Santhanam",
+       "given": "Keshav"
+      },
+      {
+       "family": "Krishna",
+       "given": "Siddharth"
+      },
+      {
+       "family": "Tomioka",
+       "given": "Ryota"
+      },
+      {
+       "family": "Fitzgibbon",
+       "given": "Andrew"
+      },
+      {
+       "family": "Harris",
+       "given": "Tim"
+      }
+     ],
+     "accessed": {
+      "date-parts": [
+       [
+        "2022",
+        3,
+        28
+       ]
+      ]
+     },
+     "issued": {
+      "date-parts": [
+       [
+        "2021",
+        4,
+        26
+       ]
+      ]
+     }
+    },
+    {
+     "id": "http://zotero.org/users/9280614/items/2QRM785C",
+     "type": "paper-conference",
+     "abstract": "Many recent machine learning models show dynamic shape characteristics. However, existing AI compiler optimization systems suffer a lot from problems brought by dynamic shape models, including compilation overhead, memory usage, optimization pipeline and deployment complexity. This paper provides a compiler system to natively support optimization for dynamic shape workloads, named DISC . DISC enriches a set of IR to form a fully dynamic shape representation. It generates the runtime flow at compile time to support processing dynamic shape based logic, which avoids the interpretation overhead at runtime and enlarges the opportunity of host-device co-optimization. It addresses the kernel fusion problem of dynamic shapes with shape propagation and constraints collecting methods. This is the first work to demonstrate how to build an end-to-end dynamic shape compiler based on MLIR infrastructure. Experiments show that DISC achieves up to 3.3× speedup than TensorFlow/PyTorch, and 1.8× than Nimble.",
+     "container-title": "Proceedings of the 1st Workshop on Machine Learning and Systems",
+     "DOI": "10.1145/3437984.3458838",
+     "event": "EuroSys '21: Sixteenth European Conference on Computer Systems",
+     "event-place": "Online United Kingdom",
+     "ISBN": "978-1-4503-8298-4",
+     "language": "en",
+     "page": "89-95",
+     "publisher": "ACM",
+     "publisher-place": "Online United Kingdom",
+     "source": "DOI.org (Crossref)",
+     "title": "DISC: A Dynamic Shape Compiler for Machine Learning Workloads",
+     "title-short": "DISC",
+     "URL": "https://dl.acm.org/doi/10.1145/3437984.3458838",
+     "author": [
+      {
+       "family": "Zhu",
+       "given": "K."
+      },
+      {
+       "family": "Zhao",
+       "given": "W.Y."
+      },
+      {
+       "family": "Zheng",
+       "given": "Z."
+      },
+      {
+       "family": "Guo",
+       "given": "T.Y."
+      },
+      {
+       "family": "Zhao",
+       "given": "P.Z."
+      },
+      {
+       "family": "Bai",
+       "given": "J.J."
+      },
+      {
+       "family": "Yang",
+       "given": "J."
+      },
+      {
+       "family": "Liu",
+       "given": "X.Y."
+      },
+      {
+       "family": "Diao",
+       "given": "L.S."
+      },
+      {
+       "family": "Lin",
+       "given": "W."
+      }
+     ],
+     "accessed": {
+      "date-parts": [
+       [
+        "2022",
+        3,
+        30
+       ]
+      ]
+     },
+     "issued": {
+      "date-parts": [
+       [
+        "2021",
+        4,
+        26
+       ]
+      ]
+     }
+    },
+    {
+     "id": "http://zotero.org/users/9280614/items/B92S4ALQ",
+     "type": "article-journal",
+     "abstract": "Alpa automates model-parallel training of large deep learning (DL) models by generating execution plans that unify data, operator, and pipeline parallelism. Existing model-parallel training systems either require users to manually create a parallelization plan or automatically generate one from a limited space of model parallelism conﬁgurations, which does not sufﬁce to scale out complex DL models on distributed compute devices. Alpa distributes the training of large DL models by viewing parallelisms as two hierarchical levels: inter-operator and intra-operator parallelisms. Based on it, Alpa constructs a new hierarchical space for massive model-parallel execution plans. Alpa designs a number of compilation passes to automatically derive the optimal parallel execution plan in each independent parallelism level and implements an efﬁcient runtime to orchestrate the two-level parallel execution on distributed compute devices. Our evaluation shows Alpa generates parallelization plans that match or outperform handtuned model-parallel training systems even on models they are designed for. Unlike specialized systems, Alpa also generalizes to models with heterogeneous architectures and models without manually-designed plans.",
+     "container-title": "arXiv:2201.12023 [cs]",
+     "language": "en",
+     "note": "arXiv: 2201.12023",
+     "source": "arXiv.org",
+     "title": "Alpa: Automating Inter- and Intra-Operator Parallelism for Distributed Deep Learning",
+     "title-short": "Alpa",
+     "URL": "http://arxiv.org/abs/2201.12023",
+     "author": [
+      {
+       "family": "Zheng",
+       "given": "Lianmin"
+      },
+      {
+       "family": "Li",
+       "given": "Zhuohan"
+      },
+      {
+       "family": "Zhang",
+       "given": "Hao"
+      },
+      {
+       "family": "Zhuang",
+       "given": "Yonghao"
+      },
+      {
+       "family": "Chen",
+       "given": "Zhifeng"
+      },
+      {
+       "family": "Huang",
+       "given": "Yanping"
+      },
+      {
+       "family": "Wang",
+       "given": "Yida"
+      },
+      {
+       "family": "Xu",
+       "given": "Yuanzhong"
+      },
+      {
+       "family": "Zhuo",
+       "given": "Danyang"
+      },
+      {
+       "family": "Gonzalez",
+       "given": "Joseph E."
+      },
+      {
+       "family": "Stoica",
+       "given": "Ion"
+      }
+     ],
+     "accessed": {
+      "date-parts": [
+       [
+        "2022",
+        4,
+        5
+       ]
+      ]
+     },
+     "issued": {
+      "date-parts": [
+       [
+        "2022",
+        1,
+        28
+       ]
+      ]
+     }
+    },
+    {
+     "id": "http://zotero.org/users/9280614/items/ILEBKZJR",
+     "type": "paper-conference",
+     "abstract": "Optimizing compilers exploit the memory hierarchy using loop tiling and fusion, but these two transformations usually interfere with each other due to the oversight of transformations on data in memories. We present a novel composition of loop tiling and fusion in this paper. Unlike existing tiling-afterfusion algorithms that only transform computation spaces, our approach ﬁrst applies rectangular/parallelogram tiling to live-out computation spaces for ﬁtting the memory hierarchy, followed by the computation of the memory footprints required by each tile. The upwards exposed data extracted from the memory footprints are used to determine the tile shapes of intermediate computation spaces, allowing the construction of arbitrary tile shapes. Finally, our technique implements a post-tiling fusion strategy for maximizing data locality without losing tilability or parallelism of live-out computation spaces, thereby enabling storage reduction and reuse, and optimizing the memory hierarchy. We demonstrate that our approach can achieve superior performance on both CPU and GPU architectures over the state of the art by experimenting on 11 benchmarks extracted from numerous domains including neural networks, image processing, sparse matrix computation and linear algebra. Also, the results of the ResNet-50 model on an AI accelerator show that our approach can obtain 16% performance improvement.",
+     "container-title": "2020 53rd Annual IEEE/ACM International Symposium on Microarchitecture (MICRO)",
+     "DOI": "10.1109/MICRO50266.2020.00044",
+     "event": "2020 53rd Annual IEEE/ACM International Symposium on Microarchitecture (MICRO)",
+     "event-place": "Athens, Greece",
+     "ISBN": "978-1-72817-383-2",
+     "language": "en",
+     "page": "427-441",
+     "publisher": "IEEE",
+     "publisher-place": "Athens, Greece",
+     "source": "DOI.org (Crossref)",
+     "title": "Optimizing the Memory Hierarchy by Compositing Automatic Transformations on Computations and Data",
+     "URL": "https://ieeexplore.ieee.org/document/9251965/",
+     "author": [
+      {
+       "family": "Zhao",
+       "given": "Jie"
+      },
+      {
+       "family": "Di",
+       "given": "Peng"
+      }
+     ],
+     "accessed": {
+      "date-parts": [
+       [
+        "2022",
+        5,
+        26
+       ]
+      ]
+     },
+     "issued": {
+      "date-parts": [
+       [
+        "2020",
+        10
+       ]
+      ]
+     }
+    },
+    {
+     "id": "http://zotero.org/users/9280614/items/FNCUVCWB",
+     "type": "paper-conference",
+     "abstract": "Existing tensor compilers have proven their effectiveness in deploying deep neural networks on general-purpose hardware like CPU and GPU, but optimizing for neural processing units (NPUs) is still challenging due to the heterogeneous compute units and complicated memory hierarchy.",
+     "container-title": "Proceedings of the 42nd ACM SIGPLAN International Conference on Programming Language Design and Implementation",
+     "DOI": "10.1145/3453483.3454106",
+     "event": "PLDI '21: 42nd ACM SIGPLAN International Conference on Programming Language Design and Implementation",
+     "event-place": "Virtual Canada",
+     "ISBN": "978-1-4503-8391-2",
+     "language": "en",
+     "page": "1233-1248",
+     "publisher": "ACM",
+     "publisher-place": "Virtual Canada",
+     "source": "DOI.org (Crossref)",
+     "title": "AKG: automatic kernel generation for neural processing units using polyhedral transformations",
+     "title-short": "AKG",
+     "URL": "https://dl.acm.org/doi/10.1145/3453483.3454106",
+     "author": [
+      {
+       "family": "Zhao",
+       "given": "Jie"
+      },
+      {
+       "family": "Li",
+       "given": "Bojie"
+      },
+      {
+       "family": "Nie",
+       "given": "Wang"
+      },
+      {
+       "family": "Geng",
+       "given": "Zhen"
+      },
+      {
+       "family": "Zhang",
+       "given": "Renwei"
+      },
+      {
+       "family": "Gao",
+       "given": "Xiong"
+      },
+      {
+       "family": "Cheng",
+       "given": "Bin"
+      },
+      {
+       "family": "Wu",
+       "given": "Chen"
+      },
+      {
+       "family": "Cheng",
+       "given": "Yun"
+      },
+      {
+       "family": "Li",
+       "given": "Zheng"
+      },
+      {
+       "family": "Di",
+       "given": "Peng"
+      },
+      {
+       "family": "Zhang",
+       "given": "Kun"
+      },
+      {
+       "family": "Jin",
+       "given": "Xuefeng"
+      }
+     ],
+     "accessed": {
+      "date-parts": [
+       [
+        "2022",
+        5,
+        26
+       ]
+      ]
+     },
+     "issued": {
+      "date-parts": [
+       [
+        "2021",
+        6,
+        19
+       ]
+      ]
+     }
+    },
+    {
+     "id": "http://zotero.org/users/9280614/items/BZBB727G",
+     "type": "article-journal",
+     "abstract": "We study fusion for deep neural networks (DNNs) in a just-in-time (JIT) compilation framework APOLLO. It considers both memory- and compute-bound tensor operators for fusion, and integrates graph-level node grouping and operator-level loop fusion closely, widening the fusion search space. APOLLO enables the upward feedback from the downstream loop optimizer, enforcing the graph engine to regenerate partition patterns amenable to the downstream pass and thus resolving the scalability issue. Besides data locality, APOLLO also exploits the parallelism between independent tensor operators, further improving the performance of DNN workloads. Experimental results on training workloads show that APOLLO outperforms TensorFlow and XLA by 1.86× and 1.37× on a single GPU, and 1.96× and 1.18× on multiple GPUs. APOLLO also improves the performance of a vendor-provided DNN framework by 19.7% on a domain-speciﬁc accelerator. In addition, the results of inference workloads demonstrate the general applicability of our fusion framework.",
+     "language": "en",
+     "page": "19",
+     "source": "Zotero",
+     "title": "Apollo: Automatic Partition-based Operator Fusion through Layer by Layer Optimization",
+     "author": [
+      {
+       "family": "Zhao",
+       "given": "Jie"
+      },
+      {
+       "family": "Gao",
+       "given": "Xiong"
+      },
+      {
+       "family": "Xia",
+       "given": "Ruijie"
+      },
+      {
+       "family": "Zhang",
+       "given": "Zhaochuang"
+      },
+      {
+       "family": "Chen",
+       "given": "Deshi"
+      },
+      {
+       "family": "Chen",
+       "given": "Lei"
+      },
+      {
+       "family": "Zhang",
+       "given": "Renwei"
+      },
+      {
+       "family": "Geng",
+       "given": "Zhen"
+      },
+      {
+       "family": "Cheng",
+       "given": "Bin"
+      },
+      {
+       "family": "Jin",
+       "given": "Xuefeng"
+      }
+     ]
+    }
+   ]
+  },
+  "自动并行": {
+   "data": [
+    {
+     "id": "http://zotero.org/users/9280614/items/97YUS7VA",
+     "type": "article-journal",
+     "abstract": "The past few years have witnessed growth in the computational requirements for training deep convolutional neural networks. Current approaches parallelize training onto multiple devices by applying a single parallelization strategy (e.g., data or model parallelism) to all layers in a network. Although easy to reason about, these approaches result in suboptimal runtime performance in largescale distributed training, since different layers in a network may prefer different parallelization strategies. In this paper, we propose layer-wise parallelism that allows each layer in a network to use an individual parallelization strategy. We jointly optimize how each layer is parallelized by solving a graph search problem. Our evaluation shows that layer-wise parallelism outperforms state-of-the-art approaches by increasing training throughput, reducing communication costs, achieving better scalability to multiple GPUs, while maintaining original network accuracy.",
+     "container-title": "arXiv:1802.04924 [cs]",
+     "language": "en",
+     "note": "arXiv: 1802.04924",
+     "source": "arXiv.org",
+     "title": "Exploring Hidden Dimensions in Parallelizing Convolutional Neural Networks",
+     "URL": "http://arxiv.org/abs/1802.04924",
+     "author": [
+      {
+       "family": "Jia",
+       "given": "Zhihao"
+      },
+      {
+       "family": "Lin",
+       "given": "Sina"
+      },
+      {
+       "family": "Qi",
+       "given": "Charles R."
+      },
+      {
+       "family": "Aiken",
+       "given": "Alex"
+      }
+     ],
+     "accessed": {
+      "date-parts": [
+       [
+        "2021",
+        10,
+        11
+       ]
+      ]
+     },
+     "issued": {
+      "date-parts": [
+       [
+        "2018",
+        6,
+        9
+       ]
+      ]
+     }
+    },
+    {
+     "id": "http://zotero.org/users/9280614/items/7CUD6IG5",
+     "type": "article-journal",
+     "abstract": "I present a new way to parallelize the training of convolutional neural networks across multiple GPUs. The method scales signiﬁcantly better than all alternatives when applied to modern convolutional neural networks.",
+     "container-title": "arXiv:1404.5997 [cs]",
+     "language": "en",
+     "note": "arXiv: 1404.5997",
+     "source": "arXiv.org",
+     "title": "One weird trick for parallelizing convolutional neural networks",
+     "URL": "http://arxiv.org/abs/1404.5997",
+     "author": [
+      {
+       "family": "Krizhevsky",
+       "given": "Alex"
+      }
+     ],
+     "accessed": {
+      "date-parts": [
+       [
+        "2021",
+        10,
+        11
+       ]
+      ]
+     },
+     "issued": {
+      "date-parts": [
+       [
+        "2014",
+        4,
+        26
+       ]
+      ]
+     }
+    },
+    {
+     "id": "http://zotero.org/users/9280614/items/ND4TNBF9",
+     "type": "paper-conference",
+     "abstract": "This paper presents Tofu, a system that partitions very large DNN models across multiple GPU devices to reduce per-GPU memory footprint. Tofu is designed to partition a dataﬂow graph of ﬁne-grained tensor operators used by platforms like MXNet and TensorFlow. In order to automatically partition each operator, we propose to describe the semantics of an operator in a simple language inspired by Halide. To optimally partition different operators in a dataﬂow graph, Tofu uses a recursive search algorithm that minimizes the total communication cost. Our experiments on an 8-GPU machine show that Tofu enables the training of very large CNN and RNN models. It also achieves 25% - 400% speedup over alternative approaches to train very large models.",
+     "container-title": "Proceedings of the Fourteenth EuroSys Conference 2019",
+     "DOI": "10.1145/3302424.3303953",
+     "event": "EuroSys '19: Fourteenth EuroSys Conference 2019",
+     "event-place": "Dresden Germany",
+     "ISBN": "978-1-4503-6281-8",
+     "language": "en",
+     "page": "1-17",
+     "publisher": "ACM",
+     "publisher-place": "Dresden Germany",
+     "source": "DOI.org (Crossref)",
+     "title": "Supporting Very Large Models using Automatic Dataflow Graph Partitioning",
+     "URL": "https://dl.acm.org/doi/10.1145/3302424.3303953",
+     "author": [
+      {
+       "family": "Wang",
+       "given": "Minjie"
+      },
+      {
+       "family": "Huang",
+       "given": "Chien-chin"
+      },
+      {
+       "family": "Li",
+       "given": "Jinyang"
+      }
+     ],
+     "accessed": {
+      "date-parts": [
+       [
+        "2021",
+        10,
+        11
+       ]
+      ]
+     },
+     "issued": {
+      "date-parts": [
+       [
+        "2019",
+        3,
+        25
+       ]
+      ]
+     }
+    },
+    {
+     "id": "http://zotero.org/users/9280614/items/T2JDMC3H",
+     "type": "document",
+     "title": "GDP GENERALIZED DEVICE PLACEMENT FOR.pdf"
+    },
+    {
+     "id": "http://zotero.org/users/9280614/items/7H92C9UI",
+     "type": "article-journal",
+     "abstract": "We introduce a hierarchical model for efﬁcient placement of computational graphs onto hardware devices, especially in heterogeneous environments with a mixture of CPUs, GPUs, and other computational devices. Our method learns to assign graph operations to groups and to allocate those groups to available devices. The grouping and device allocations are learned jointly. The proposed method is trained with policy gradient and requires no human intervention. Experiments with widely-used computer vision and natural language models show that our algorithm can ﬁnd optimized, non-trivial placements for TensorFlow computational graphs with over 80,000 operations. In addition, our approach outperforms placements by human experts as well as a previous state-of-the-art placement method based on deep reinforcement learning. Our method achieves runtime reductions of up to 60.6% per training step when applied to models such as Neural Machine Translation.",
+     "language": "en",
+     "page": "11",
+     "source": "Zotero",
+     "title": "A HIERARCHICAL MODEL FOR DEVICE PLACEMENT",
+     "author": [
+      {
+       "family": "Mirhoseini",
+       "given": "Azalia"
+      },
+      {
+       "family": "Goldie",
+       "given": "Anna"
+      },
+      {
+       "family": "Pham",
+       "given": "Hieu"
+      },
+      {
+       "family": "Steiner",
+       "given": "Benoit"
+      },
+      {
+       "family": "Le",
+       "given": "Quoc V"
+      },
+      {
+       "family": "Dean",
+       "given": "Jeff"
+      }
+     ],
+     "issued": {
+      "date-parts": [
+       [
+        "2018"
+       ]
+      ]
+     }
+    },
+    {
+     "id": "http://zotero.org/users/9280614/items/DUVZTY7W",
+     "type": "article",
+     "abstract": "The computational requirements for training deep neural networks (DNNs) have grown to the point that it is now standard practice to parallelize training. Existing deep learning systems commonly use data or model parallelism, but unfortunately, these strategies often result in suboptimal parallelization performance. In this paper, we deﬁne a more comprehensive search space of parallelization strategies for DNNs called SOAP, which includes strategies to parallelize a DNN in the Sample, Operation, Attribute, and Parameter dimensions. We also propose FlexFlow, a deep learning framework that uses guided randomized search of the SOAP space to ﬁnd a fast parallelization strategy for a speciﬁc parallel machine. To accelerate this search, FlexFlow introduces a novel execution simulator that can accurately predict a parallelization strategy’s performance and is three orders of magnitude faster than prior approaches that have to execute each strategy. We evaluate FlexFlow with six real-world DNN benchmarks on two GPU clusters and show that FlexFlow can increase training throughput by up to 3.8× over state-of-the-art approaches, even when including its search time, and also improves scalability.",
+     "language": "en",
+     "note": "number: arXiv:1807.05358\narXiv:1807.05358 [cs]",
+     "publisher": "arXiv",
+     "source": "arXiv.org",
+     "title": "Beyond Data and Model Parallelism for Deep Neural Networks",
+     "URL": "http://arxiv.org/abs/1807.05358",
+     "author": [
+      {
+       "family": "Jia",
+       "given": "Zhihao"
+      },
+      {
+       "family": "Zaharia",
+       "given": "Matei"
+      },
+      {
+       "family": "Aiken",
+       "given": "Alex"
+      }
+     ],
+     "accessed": {
+      "date-parts": [
+       [
+        "2022",
+        6,
+        7
+       ]
+      ]
+     },
+     "issued": {
+      "date-parts": [
+       [
+        "2018",
+        7,
+        14
+       ]
+      ]
+     }
+    },
+    {
+     "id": "http://zotero.org/users/9280614/items/VDGGTQI3",
+     "type": "article",
+     "abstract": "We present Placeto, a reinforcement learning (RL) approach to efﬁciently ﬁnd device placements for distributed neural network training. Unlike prior approaches that only ﬁnd a device placement for a speciﬁc computation graph, Placeto can learn generalizable device placement policies that can be applied to any graph. We propose two key ideas in our approach: (1) we represent the policy as performing iterative placement improvements, rather than outputting a placement in one shot; (2) we use graph embeddings to capture relevant information about the structure of the computation graph, without relying on node labels for indexing. These ideas allow Placeto to train efﬁciently and generalize to unseen graphs. Our experiments show that Placeto requires up to 6.1× fewer training steps to ﬁnd placements that are on par with or better than the best placements found by prior approaches. Moreover, Placeto is able to learn a generalizable placement policy for any given family of graphs, which can then be used without any retraining to predict optimized placements for unseen graphs from the same family. This eliminates the large overhead incurred by prior RL approaches whose lack of generalizability necessitates re-training from scratch every time a new graph is to be placed.",
+     "language": "en",
+     "note": "number: arXiv:1906.08879\narXiv:1906.08879 [cs, stat]",
+     "publisher": "arXiv",
+     "source": "arXiv.org",
+     "title": "Placeto: Learning Generalizable Device Placement Algorithms for Distributed Machine Learning",
+     "title-short": "Placeto",
+     "URL": "http://arxiv.org/abs/1906.08879",
+     "author": [
+      {
+       "family": "Addanki",
+       "given": "Ravichandra"
+      },
+      {
+       "family": "Venkatakrishnan",
+       "given": "Shaileshh Bojja"
+      },
+      {
+       "family": "Gupta",
+       "given": "Shreyan"
+      },
+      {
+       "family": "Mao",
+       "given": "Hongzi"
+      },
+      {
+       "family": "Alizadeh",
+       "given": "Mohammad"
+      }
+     ],
+     "accessed": {
+      "date-parts": [
+       [
+        "2022",
+        6,
+        7
+       ]
+      ]
+     },
+     "issued": {
+      "date-parts": [
+       [
+        "2019",
+        6,
+        20
+       ]
+      ]
+     }
+    },
+    {
+     "id": "http://zotero.org/users/9280614/items/UYARPV5D",
+     "type": "article-journal",
+     "abstract": "Deep Learning (DL) has had an immense success in the recent past, leading to state-of-the-art results in various domains, such as image recognition and natural language processing. One of the reasons for this success is the increasing size of DL models and the proliferation of vast amounts of training data being available. To keep on improving the performance of DL, increasing the scalability of DL systems is necessary. In this survey, we perform a broad and thorough investigation on challenges, techniques and tools for scalable DL on distributed infrastructures. This incorporates infrastructures for DL, methods for parallel DL training, multi-tenant resource scheduling, and the management of training and model data. Further, we analyze and compare 11 current open-source DL frameworks and tools and investigate which of the techniques are commonly implemented in practice. Finally, we highlight future research trends in DL systems that deserve further research.",
+     "container-title": "ACM Computing Surveys",
+     "DOI": "10.1145/3363554",
+     "ISSN": "0360-0300, 1557-7341",
+     "issue": "1",
+     "journalAbbreviation": "ACM Comput. Surv.",
+     "language": "en",
+     "page": "1-37",
+     "source": "DOI.org (Crossref)",
+     "title": "Scalable Deep Learning on Distributed Infrastructures: Challenges, Techniques, and Tools",
+     "title-short": "Scalable Deep Learning on Distributed Infrastructures",
+     "URL": "https://dl.acm.org/doi/10.1145/3363554",
+     "volume": "53",
+     "author": [
+      {
+       "family": "Mayer",
+       "given": "Ruben"
+      },
+      {
+       "family": "Jacobsen",
+       "given": "Hans-Arno"
+      }
+     ],
+     "accessed": {
+      "date-parts": [
+       [
+        "2022",
+        6,
+        7
+       ]
+      ]
+     },
+     "issued": {
+      "date-parts": [
+       [
+        "2021",
+        1,
+        31
+       ]
+      ]
+     }
+    }
+   ]
+  },
+  "综述": {
+   "data": [
+    {
+     "id": "http://zotero.org/users/9280614/items/MCMX5JTR",
+     "type": "document",
+     "title": "2020（Hao Zhang）Machine Learning Parallelism Could Be Adaptive, Composable and Automated.pdf"
+    },
+    {
+     "id": "http://zotero.org/users/9280614/items/SFWB65MQ",
+     "type": "article-journal",
+     "language": "en",
+     "page": "189",
+     "source": "Zotero",
+     "title": "Fast and Accurate Machine Learning on Distributed Systems and Supercomputers",
+     "author": [
+      {
+       "family": "You",
+       "given": "Yang"
+      }
+     ]
+    },
+    {
+     "id": "http://zotero.org/users/9280614/items/9QAB6CZ7",
+     "type": "article-journal",
+     "language": "en",
+     "page": "114",
+     "source": "Zotero",
+     "title": "On Systems and Algorithms for Distributed Machine Learning",
+     "author": [
+      {
+       "family": "Nishihara",
+       "given": "Robert K"
+      }
+     ]
+    },
+    {
+     "id": "http://zotero.org/users/9280614/items/GF643KND",
+     "type": "article-journal",
+     "language": "en",
+     "page": "104",
+     "source": "Zotero",
+     "title": "Ray: A Distributed Execution Engine for the Machine Learning Ecosystem",
+     "author": [
+      {
+       "family": "Moritz",
+       "given": "Philipp C"
+      }
+     ]
+    }
+   ]
+  }
+ }
+}
