@@ -9,6 +9,7 @@ const props = defineProps({
 <template>
   <p v-if="datas== undefined || datas.length == 0">no data</p>
   <ul class="report combineChildItems" v-else>
+    <h1>分布式机器学习论文列表</h1>
     <li v-for="data in datas" :key="data" class="journalArticle">
       <h3><router-link :to="data.path">{{ data.display }}</router-link></h3>
     </li>
