@@ -1,10 +1,14 @@
 <script setup lang="ts">
+import { isString } from "@vue/shared";
 import { computed, ref } from "vue";
 import * as constant from "../constant";
 const props = defineProps({
 	datas: Array,
+  shared: {}
 })
 const fieldOrder = [
+  // constant.STR_KEY_SHARED_DATE,
+  // constant.STR_KEY_SHARED_SHARER,
   constant.STR_KEY_TYPE,
   constant.STR_KEY_AUTHOR,
   constant.STR_KEY_ABSTRACT,
@@ -35,7 +39,10 @@ let getData = (data: { [x: string]: undefined }, key: string)=> {
 let displayList = (data: { [x: string]: undefined }) =>
   fieldOrder.filter((value) => {
 	  try{
-		  getData(data, value)
+      let r = getData(data, value)
+		  if (isString(r)) {
+        return r != ""
+      }
 		  return true
 	  }catch {
 		  return false
@@ -52,15 +59,23 @@ let displayList = (data: { [x: string]: undefined }) =>
       <h2>{{ data.title }}</h2>
       <table>
         <tbody>
+          <tr v-if="shared[data.title] != undefined && shared[data.title]['date'] != undefined">
+              <th>shared.date</th>
+              <td><span class="item-shared">{{ shared[data.title]["date"] }}</span></td>
+          </tr>
+          <tr v-if="shared[data.title] != undefined && shared[data.title]['sharer'] != undefined">
+              <th>shared.sharer</th>
+              <td><span class="item-shared">{{ shared[data.title]["sharer"] }}</span></td>
+          </tr>
           <tr v-for="order in displayList(data)" :key="order">
             <th>{{ order }}</th>
             <td v-if="order == constant.STR_KEY_AUTHOR">
               {{ data[order].map((a) => a.given + " " + a.family).join(", ") }}
             </td>
-			<td v-else-if="order == constant.STR_KEY_ISSUED_DATE_PARTS">
+			      <td v-else-if="order == constant.STR_KEY_ISSUED_DATE_PARTS">
               {{ getData(data, order).map((dps) => dps.join("-")).join(", ") }}
             </td>
-			<td v-else-if="order == constant.STR_KEY_URL">
+			      <td v-else-if="order == constant.STR_KEY_URL">
               <a :href="data[order]">{{ data[order] }}</a>
             </td>
             <td v-else>{{ getData(data, order) }}</td>
@@ -74,6 +89,9 @@ let displayList = (data: { [x: string]: undefined }) =>
 </template>
 
 <style>
+.item-shared {
+  color: #900;
+}
 /**1 */
 body {
   background: white;

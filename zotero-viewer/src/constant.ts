@@ -13,7 +13,8 @@ export const STR_KEY_PUBLISHER = "publisher"
 export const STR_KEY_PUBLISHER_PLACE = "publisher-place"
 export const STR_KEY_ISSUED_DATE_PARTS = "issued.date-parts"
 export const STR_KEY_LANGUAGE = "language"
+export const STR_KEY_SHARED_DATE = "shared.date"
+export const STR_KEY_SHARED_SHARER = "shared.sharer"
 export const ROUTE_DATA_METHOD = "url"
 export const ROUTE_DATA_URL = "https://raw.githubusercontent.com/Yiklek/distibuted-ml-papers/main/datas.json"
-
-
+export const SHARED_DATA_URL = "https://raw.githubusercontent.com/Yiklek/distibuted-ml-papers/main/shared.json"

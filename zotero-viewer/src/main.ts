@@ -8,8 +8,8 @@ import * as constant from "./constant";
 import 'axios'
 import axios from 'axios'
 
-function getRoute(datas) {
-    let routes = parse(datas);
+function getRoute(datas, sharedData = {}) {
+    let routes = parse(datas, sharedData);
     let navigateData: { path: string; display: string }[] = [] 
     routes.forEach(i => {
         i.component = List
@@ -37,12 +37,17 @@ function mountApp(router) {
     app.use(router)
     app.mount('#app')
 }
-axios.get(constant.ROUTE_DATA_URL)
-    .then(res => {
-        return res.data
+Promise.all([axios.get(constant.ROUTE_DATA_URL),
+            axios.get(constant.SHARED_DATA_URL)])
+    .then(responses => {
+        let r = []
+        for (let i of responses){
+            r.push(i.data)
+        }
+        return r
     })
     .then(data =>{
-        mountApp(getRouter(getRoute(data)))
+        mountApp(getRouter(getRoute(data[0], data[1])))
     })
     .catch(() => {
         mountApp(getRouter(getErrRoute()))

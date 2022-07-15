@@ -1470,6 +1470,103 @@
   "自动并行": {
    "data": [
     {
+		"id": "http://zotero.org/users/9280614/items/LCDNWLUU",
+		"type": "article",
+		"abstract": "We present the design of a new large scale orchestration layer for accelerators. Our system, PATHWAYS, is explicitly designed to enable exploration of new systems and ML research ideas, while retaining state of the art performance for current models. PATHWAYS uses a sharded dataﬂow graph of asynchronous operators that consume and produce futures, and efﬁciently gang-schedules heterogeneous parallel computations on thousands of accelerators while coordinating data transfers over their dedicated interconnects. PATHWAYS makes use of a novel asynchronous distributed dataﬂow design that lets the control plane execute in parallel despite dependencies in the data plane. This design, with careful engineering, allows PATHWAYS to adopt a single-controller model that makes it easier to express complex new parallelism patterns. We demonstrate that PATHWAYS can achieve performance parity (∼ 100% accelerator utilization) with state-of-the-art systems when running SPMD computations over 2048 TPUs, while also delivering throughput comparable to the SPMD case for Transformer models that are pipelined across 16 stages, or sharded across two islands of accelerators connected over a data center network.",
+		"language": "en",
+		"note": "arXiv:2203.12533 [cs]",
+		"number": "arXiv:2203.12533",
+		"publisher": "arXiv",
+		"source": "arXiv.org",
+		"title": "Pathways: Asynchronous Distributed Dataflow for ML",
+		"title-short": "Pathways",
+		"URL": "http://arxiv.org/abs/2203.12533",
+		"author": [
+			{
+				"family": "Barham",
+				"given": "Paul"
+			},
+			{
+				"family": "Chowdhery",
+				"given": "Aakanksha"
+			},
+			{
+				"family": "Dean",
+				"given": "Jeff"
+			},
+			{
+				"family": "Ghemawat",
+				"given": "Sanjay"
+			},
+			{
+				"family": "Hand",
+				"given": "Steven"
+			},
+			{
+				"family": "Hurt",
+				"given": "Dan"
+			},
+			{
+				"family": "Isard",
+				"given": "Michael"
+			},
+			{
+				"family": "Lim",
+				"given": "Hyeontaek"
+			},
+			{
+				"family": "Pang",
+				"given": "Ruoming"
+			},
+			{
+				"family": "Roy",
+				"given": "Sudip"
+			},
+			{
+				"family": "Saeta",
+				"given": "Brennan"
+			},
+			{
+				"family": "Schuh",
+				"given": "Parker"
+			},
+			{
+				"family": "Sepassi",
+				"given": "Ryan"
+			},
+			{
+				"family": "Shafey",
+				"given": "Laurent El"
+			},
+			{
+				"family": "Thekkath",
+				"given": "Chandramohan A."
+			},
+			{
+				"family": "Wu",
+				"given": "Yonghui"
+			}
+		],
+		"accessed": {
+			"date-parts": [
+				[
+					"2022",
+					7,
+					15
+				]
+			]
+		},
+		"issued": {
+			"date-parts": [
+				[
+					"2022",
+					3,
+					23
+				]
+			]
+		}
+	},
+    {
      "id": "http://zotero.org/users/9280614/items/97YUS7VA",
      "type": "article-journal",
      "abstract": "The past few years have witnessed growth in the computational requirements for training deep convolutional neural networks. Current approaches parallelize training onto multiple devices by applying a single parallelization strategy (e.g., data or model parallelism) to all layers in a network. Although easy to reason about, these approaches result in suboptimal runtime performance in largescale distributed training, since different layers in a network may prefer different parallelization strategies. In this paper, we propose layer-wise parallelism that allows each layer in a network to use an individual parallelization strategy. We jointly optimize how each layer is parallelized by solving a graph search problem. Our evaluation shows that layer-wise parallelism outperforms state-of-the-art approaches by increasing training throughput, reducing communication costs, achieving better scalability to multiple GPUs, while maintaining original network accuracy.",
@@ -1839,6 +1936,85 @@
      ]
     }
    ]
+  },
+  "other": {
+    "data":[
+      {
+        "id": "http://zotero.org/users/9280614/items/7S6UYGMU",
+        "type": "article-journal",
+        "abstract": "Parallelizing Gated Recurrent Unit (GRU) networks is a challenging task, as the training procedure of GRU is inherently sequential. Prior efforts to parallelize GRU have largely focused on conventional parallelization strategies such as dataparallel and model-parallel training algorithms. However, when the given sequences are very long, existing approaches are still inevitably performance limited in terms of training time. In this paper, we present a novel parallel training scheme (called parallel-in-time) for GRU based on a multigrid reduction in time (MGRIT) solver. MGRIT partitions a sequence into multiple shorter sub-sequences and trains the sub-sequences on different processors in parallel. The key to achieving speedup is a hierarchical correction of the hidden state to accelerate end-to-end communication in both the forward and backward propagation phases of gradient descent. Experimental results on the HMDB51 dataset, where each video is an image sequence, demonstrate that the new parallel training scheme achieves up to 6.5× speedup over a serial approach. As efficiency of our new parallelization strategy is associated with the sequence length, our parallel GRU algorithm achieves significant performance improvement as the sequence length increases.",
+        "language": "en",
+        "page": "18",
+        "source": "Zotero",
+        "title": "PARALLEL TRAINING OF GRU NETWORKS WITH A MULTI-GRID SOLVER FOR LONG SEQUENCES",
+        "author": [
+          {
+            "family": "Moon",
+            "given": "Gordon Euhyun"
+          },
+          {
+            "family": "Cyr",
+            "given": "Eric C"
+          }
+        ],
+        "issued": {
+          "date-parts": [
+            [
+              "2022"
+            ]
+          ]
+        }
+      },
+      {
+        "id": "http://zotero.org/users/9280614/items/Q86A8N83",
+        "type": "article",
+        "abstract": "Optimization of directed acyclic graph (DAG) structures has many applications, such as neural architecture search (NAS) and probabilistic graphical model learning. Encoding DAGs into real vectors is a dominant component in most neural-network-based DAG optimization frameworks. Currently, most DAG encoders use an asynchronous message passing scheme which sequentially processes nodes according to the dependency between nodes in a DAG. That is, a node must not be processed until all its predecessors are processed. As a result, they are inherently not parallelizable. In this work, we propose a Parallelizable Attention-based Computation structure Encoder (PACE) that processes nodes simultaneously and encodes DAGs in parallel. We demonstrate the superiority of PACE through encoder-dependent optimization subroutines that search the optimal DAG structure based on the learned DAG embeddings. Experiments show that PACE not only improves the effectiveness over previous sequential DAG encoders with a signiﬁcantly boosted training and inference speed, but also generates smooth latent (DAG encoding) spaces that are beneﬁcial to downstream optimization subroutines. Our source code is available at https://github.com/zehaodong/PACE.",
+        "language": "en",
+        "note": "arXiv:2203.10304 [cs]",
+        "number": "arXiv:2203.10304",
+        "publisher": "arXiv",
+        "source": "arXiv.org",
+        "title": "PACE: A Parallelizable Computation Encoder for Directed Acyclic Graphs",
+        "title-short": "PACE",
+        "URL": "http://arxiv.org/abs/2203.10304",
+        "author": [
+          {
+            "family": "Dong",
+            "given": "Zehao"
+          },
+          {
+            "family": "Zhang",
+            "given": "Muhan"
+          },
+          {
+            "family": "Li",
+            "given": "Fuhai"
+          },
+          {
+            "family": "Chen",
+            "given": "Yixin"
+          }
+        ],
+        "accessed": {
+          "date-parts": [
+            [
+              "2022",
+              7,
+              13
+            ]
+          ]
+        },
+        "issued": {
+          "date-parts": [
+            [
+              "2022",
+              3,
+              19
+            ]
+          ]
+        }
+      }
+    ]
   }
  }
 }
